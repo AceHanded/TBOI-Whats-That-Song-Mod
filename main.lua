@@ -1,53 +1,121 @@
-whatsThatSong = RegisterMod("What's That Song?", 1)
+local modName = "What's That Song?"
+WhatsThatSong = RegisterMod(modName, 1)
 local musicManager = MusicManager()
 
 -- Read the config table from the configuration file
 local config = require("config")
+local configDefaults = config
 
-local function validateConfig()
-    local min, max, default
+local json = require("json")
+local SaveState = {}
+local reset = false
 
-    -- Iterate through each key-value pair in the config table, and make sure their value is valid
-    for key, value in pairs(config) do
-        if key == "ConstantDisplay" then
-            if type(value) ~= "boolean" then
-                local toboolean = {["false"] = false, [0] = false, ["true"] = true, [1] = true}
-                config[key] = toboolean[value] or false
-            end
-        elseif key == "SoundtrackChoice" then
-            if type(value) ~= "string" then
-                config[key] = "auto"
-            elseif string.lower(value) ~= "auto" and string.lower(value) ~= "repentance" and string.lower(value) ~= "antibirth" then
-                config[key] = "auto"
-            end
-        else
-            if key == "OffsetX" then
-                min, max, default = -320, 85, 0
-            elseif key == "OffsetY" then
-                min, max, default = -240, 30, 0
-            elseif key == "NotificationSpeed" then
-                min, max, default = 1, nil, 12
-            elseif key == "NotificationDuration" then
-                min, max, default = 1, nil, 10
-            elseif key == "NotificationColorR" or key == "NotificationColorG" or key == "NotificationColorB" then
-                min, max, default = 0, 255, 255
-            elseif key == "NotificationBorder" then
-                min, max, default = 0, 1, 1
+if not ModConfigMenu then
+    local function validateConfig()
+        local min, max, default
+
+        -- Iterate through each key-value pair in the config table, and make sure their value is valid
+        for key, value in pairs(config) do
+            if key == "ConstantDisplay" or key == "NotificationColorR" or key == "NotificationColorG" or key == "NotificationColorB" then
+                if type(value) ~= "boolean" then
+                    local toboolean = {["false"] = false, [0] = false, ["true"] = true, [1] = true}
+                    config[key] = toboolean[value] or false
+                end
             else
-                min, max, default = 0, 1, 0.5
-            end
-            
-            if type(value) ~= "number" then
-                local valid_value = tonumber(value) or default
-                config[key] = math.max(min, max and math.min(valid_value, max) or value)
-            else
-                config[key] = math.max(min, max and math.min(value, max) or value)
+                if key == "OffsetX" then
+                    min, max, default = -320, 85, 0
+                elseif key == "OffsetY" then
+                    min, max, default = -240, 30, 0
+                elseif key == "NotificationSpeed" then
+                    min, max, default = 1, nil, 12
+                elseif key == "NotificationDuration" then
+                    min, max, default = 1, nil, 10
+                elseif key == "NotificationColorA" then
+                    min, max, default = 0, 10, 10
+                elseif key == "SoundtrackChoice" then
+                    min, max, default = 0, 2, 0
+                else
+                    min, max, default = 0, 10, 5
+                end
+                
+                if type(value) ~= "number" then
+                    local valid_value = tonumber(value) or default
+                    config[key] = math.max(min, max and math.min(valid_value, max) or value)
+                else
+                    config[key] = math.max(min, max and math.min(value, max) or value)
+                end
             end
         end
+        return config
     end
-    return config
+    config = validateConfig()
+else
+    local soundtrackNumberToString = {
+        [0] = "auto",
+        [1] = "repentance",
+        [2] = "antibirth"
+    }
+
+    local function AddBooleanSetting(name, description)
+        ModConfigMenu.AddSetting(modName, "Configuration", {
+            Type = ModConfigMenu.OptionType.BOOLEAN,
+            CurrentSetting = function() return config[name] end,
+            Display = function() return name:gsub("(%u%l*)", " %1"):gsub("^%s+", "") .. ": " .. tostring(config[name]) end,
+            OnChange = function(val) config[name] = val end,
+            Info = {description}
+        })
+    end
+
+    local function AddNumberSetting(name, description, min, max)
+        ModConfigMenu.AddSetting(modName, "Configuration", {
+            Type = ModConfigMenu.OptionType.NUMBER,
+            CurrentSetting = function() return config[name] end,
+            Minimum = min,
+            Maximum = max,
+            Display = function() return name:gsub("(%u%l*)", " %1"):gsub("^%s+", "") .. ": " .. config[name] end,
+            OnChange = function(val) config[name] = val end,
+            Info = {description}
+        })
+    end
+
+    local function AddScrollSetting(name, description)
+        ModConfigMenu.AddSetting(modName, "Configuration", {
+            Type = ModConfigMenu.OptionType.SCROLL,
+            CurrentSetting = function() return config[name] end,
+            Display = function() return name:gsub("(%u%l*)", " %1"):gsub("^%s+", "") .. ": $scroll" .. config[name] end,
+            OnChange = function(val) config[name] = val end,
+            Info = {description}
+        })
+    end
+
+    local function AddStringSetting(name, description, min, max, stringTable)
+        ModConfigMenu.AddSetting(modName, "Configuration", {
+            Type = ModConfigMenu.OptionType.NUMBER,
+            CurrentSetting = function() return config[name] end,
+            Minimum = min,
+            Maximum = max,
+            Display = function() return name:gsub("(%u%l*)", " %1"):gsub("^%s+", "") .. ": " .. stringTable[config[name]] end,
+            OnChange = function(val) config[name] = val end,
+            Info = {description}
+        })
+    end
+    ModConfigMenu.UpdateCategory(modName, {Info = {"Configuration for the notification of the currently playing song."}})
+    ModConfigMenu.AddText(modName, "Configuration", function() return "What's That Song?" end)
+    ModConfigMenu.AddSpace(modName, "Configuration")
+
+    AddBooleanSetting("ConstantDisplay", "Whether to constantly display the notification.")
+    AddBooleanSetting("NotificationColorR", "Whether to include the red color saturation (Rgba) in the notification.")
+    AddBooleanSetting("NotificationColorG", "Whether to include the green color saturation (rGba) in the notification.")
+    AddBooleanSetting("NotificationColorB", "Whether to include the blue color saturation (rgBa) in the notification.")
+    AddScrollSetting("NotificationColorA", "Dictates the transparency, i.e. alpha saturation (rgbA) of the notification.")
+    AddNumberSetting("NotificationDuration", "Dictates the duration for which the notification is displayed in seconds.", 1, nil)
+    AddNumberSetting("NotificationSpeed", "Dictates the speed at which the notification is displayed (characters per second).", 1, nil)
+    AddNumberSetting("OffsetX", "Offset in pixels for the X coordinate of the notification.", -320, 85)
+    AddNumberSetting("OffsetY", "Offset in pixels for the Y coordinate of the notification.", -240, 30)
+    AddScrollSetting("SizeX", "Dictates the size modifier of the notification's X axis.")
+    AddScrollSetting("SizeY", "Dictates the size modifier of the notification's Y axis.")
+    AddStringSetting("SoundtrackChoice", "Dictates the usage of a specific soundtrack (requires restart).", 0, 2, soundtrackNumberToString)
 end
-config = validateConfig()
 
 local function useRepentanceMusic()
     if config["SoundtrackChoice"] == "auto" then
@@ -160,31 +228,32 @@ local musicIDs = {
     [Music.MUSIC_MINESHAFT_ESCAPE] = "",
     [Music.MUSIC_REVERSE_GENESIS] = "Ridiculon - Genesis Retake Light (Reversed)",
     [Music.NUM_MUSIC] = "",
-    [122] = "mudeth - Gloria Filio",
-    [156] = "Shoji Meguro - Specialist"
+    [122] = "mudeth - Gloria Filio"
 }
 local currentSongName = nil
 local previousMusicID = nil
 local displayTimer = 0
-local displayDuration = 60 * config.NotificationDuration  -- Converting seconds to frames
-local scrollSpeed = config.NotificationSpeed
+local displayDuration = 0
+local scrollSpeed = 0
 local scrollPos = 0
 local maxVisibleChars = 20
 
 Isaac.ConsoleOutput("What's That Song? loaded successfully.\n")
 
-function whatsThatSong:GetSongName(musicID)
+function WhatsThatSong:GetSongName(musicID)
     return musicIDs[musicID] or tostring(musicID)
 end
 
 local function resetScrollParameters(musicID)
-    currentSongName = whatsThatSong:GetSongName(musicID)
+    currentSongName = WhatsThatSong:GetSongName(musicID)
     scrollPos = 0
     displayTimer = displayDuration
 end
 
-whatsThatSong:AddCallback(ModCallbacks.MC_POST_RENDER, function()
+WhatsThatSong:AddCallback(ModCallbacks.MC_POST_RENDER, function()
     local musicID = musicManager:GetCurrentMusicID()
+    displayDuration = 60 * config.NotificationDuration  -- Converting seconds to frames
+    scrollSpeed = config.NotificationSpeed
 
     -- If the music changes, and it is present in the soundtrack, modify the notification
     if musicID ~= previousMusicID and musicIDs[musicID] ~= "" then
@@ -210,7 +279,7 @@ whatsThatSong:AddCallback(ModCallbacks.MC_POST_RENDER, function()
         -- Adjusting the rendered text position according to window size
         local textX = Isaac.GetScreenWidth() - (Isaac.GetScreenWidth() / 2.75)
         local textY = Isaac.GetScreenHeight() - (Isaac.GetScreenHeight() / 1.15)
-        Isaac.RenderScaledText("Now playing: " .. textToRender, textX + config.OffsetX, textY - config.OffsetY, config.SizeX, config.SizeY, config.NotificationColorR, config.NotificationColorG, config.NotificationColorB, config.NotificationBorder)
+        Isaac.RenderScaledText("Now playing: " .. textToRender, textX + config.OffsetX, textY - config.OffsetY, config.SizeX / 10, config.SizeY / 10, config.NotificationColorR and 1 or 0, config.NotificationColorG and 1 or 0, config.NotificationColorB and 1 or 0, config.NotificationColorA / 10)
         
         scrollPos = scrollPos + scrollSpeed * (1 / 60)
 
@@ -221,9 +290,32 @@ whatsThatSong:AddCallback(ModCallbacks.MC_POST_RENDER, function()
     end
 end)
 
+--[[ Save Settings ]]--
+
+function WhatsThatSong:OnGameExit()
+    SaveState.Settings = {}
+
+    for i, v in pairs(config) do
+        SaveState.Settings[tostring(i)] = config[i]
+    end
+    WhatsThatSong:SaveData(json.encode(SaveState))
+end
+
+function WhatsThatSong:OnGameStart()
+    if WhatsThatSong:HasData() then
+        SaveState = json.decode(WhatsThatSong:LoadData())
+
+        for i, v in pairs(SaveState.Settings) do
+            config[tostring(i)] = SaveState.Settings[i]
+        end
+    end
+end
+WhatsThatSong:AddCallback(ModCallbacks.MC_PRE_GAME_EXIT, WhatsThatSong.OnGameExit)
+WhatsThatSong:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, WhatsThatSong.OnGameStart)
+
 --[[ API ]]--
 
-whatsThatSongAPI = {}
+WhatsThatSongAPI = {}
 
 local function addSong(tbl, musicID, name, replace)
     if replace then
@@ -236,6 +328,6 @@ local function addSong(tbl, musicID, name, replace)
     return true
 end
 
-function whatsThatSongAPI:addSong(musicID, name, replace)
+function WhatsThatSongAPI:addSong(musicID, name, replace)
     return addSong(musicIDs, musicID, name, replace)
 end

@@ -2,19 +2,19 @@
 
 local config = {
     -- Option: NotificationColorR
-    -- Description: Dictates the red color saturation (Rgb) of the notification.
-    -- Type: Integer | Values: [0 ... 255] | Default: 255
-    ["NotificationColorR"] = 255
+    -- Description: Whether to include the red color saturation (Rgba) in the notification.
+    -- Type: Boolean | Values: true, false | Default: true
+    ["NotificationColorR"] = true
     ,
     -- Option: NotificationColorG
-    -- Description: Dictates the green color saturation (rGb) of the notification.
-    -- Type: Integer | Values: [0 ... 255] | Default: 255
-    ["NotificationColorG"] = 255
+    -- Description: Whether to include the green color saturation (rGba) in the notification.
+    -- Type: Boolean | Values: true, false | Default: true
+    ["NotificationColorG"] = true
     ,
     -- Option: NotificationColorB
-    -- Description: Dictates the blue color saturation (rgB) of the notification.
-    -- Type: Integer | Values: [0 ... 255] | Default: 255
-    ["NotificationColorB"] = 255
+    -- Description: Whether to include the blue color saturation (rgBa) in the notification.
+    -- Type: Boolean | Values: true, false | Default: true
+    ["NotificationColorB"] = true
     ,
     -- Option: NotificationDuration
     -- Description: Dictates the duration for which the notification is displayed.
@@ -28,11 +28,11 @@ local config = {
     -- Type: Integer | Values: [1 ... ] | Default: 12
     ["NotificationSpeed"] = 12
     ,
-    -- Option: NotificationBorder
-    -- Description: Dictates the border size of the notification.
+    -- Option: NotificationColorA
+    -- Description: Dictates the transparency, i.e. alpha saturation (rgbA) of the notification.
     --              Value of '0' hides the notification entirely.
-    -- Type: Float | Values: [0 ... 1] | Default: 1.0
-    ["NotificationBorder"] = 1.0
+    -- Type: Integer | Values: [0 ... 10] | Default: 10
+    ["NotificationColorA"] = 10
     ,
     -- Option: ConstantDisplay
     -- Description: Whether to constantly display the notification.
@@ -55,20 +55,20 @@ local config = {
     ,
     -- Option: SizeX
     -- Description: Dictates the size modifier of the notification's X axis.
-    -- Type: Float | Values: [0 ... 1] | Default: 0.5
-    ["SizeX"] = 0.5
+    -- Type: Integer | Values: [0 ... 10] | Default: 5
+    ["SizeX"] = 5
     ,
     -- Option: SizeY
     -- Description: Dictates the size modifier of the notification's Y axis.
-    -- Type: Float | Values: [0 ... 1] | Default: 0.5
-    ["SizeY"] = 0.5
+    -- Type: Integer | Values: [0 ... 10] | Default: 5
+    ["SizeY"] = 5
     ,
     -- Option: SoundtrackChoice
     -- Description: Dictates the usage of a specific soundtrack.
-    --              "auto" = Automatically choose the appropriate soundtrack.
-    --              "repentance" = Use the official repentance soundtrack.
-    --              "antibirth" = Use the antibirth soundtrack.
-    -- Type: String | Values: "auto", "repentance", "antibirth" | Default: "auto"
-    ["SoundtrackChoice"] = "auto"
+    --              0 = Automatically choose the appropriate soundtrack.
+    --              1 = Use the official Repentance soundtrack.
+    --              2 = Use the Antibirth soundtrack.
+    -- Type: Integer | Values: [0 .. 2] | Default: 0
+    ["SoundtrackChoice"] = 0
 }
 return config
