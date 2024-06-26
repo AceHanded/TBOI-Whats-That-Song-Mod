@@ -1,0 +1,27 @@
+v1.0.3
+- Changed config file name to "whatsThatConfig.lua" in order to avoid conflicts with other mods.
+   * This fixes a conflict with the Enhanced Boss Bars mod.
+- Fixed an issue that caused the automatic soundtrack checking to malfunction.
+- Added a configuration option "EnableDebug", which is primarily meant for my personal use.
+
+v1.0.2
+- Added support for Mod Config Menu Pure.
+- Modified some configuration options.
+   * NotificationColorR, NotificationColorG and NotificationColorR changed from integer to boolean values, as the game handles them as such.
+   * NotificationBorder changed to NotificationColorA to better reflect its functionality (changing transparency).
+   * SizeX, SizeY and NotificationColorA changed from float values to integer values in range [0 .. 10] to play nice with MCM.
+   * SoundtrackChoice changed from string value to integer value.
+
+v1.0.1
+- The usage of the Antibirth soundtrack is now automatically checked.
+- Added new configuration options.
+   * NotificationColorR, NotificationColorG, NotificationColorR - Makes it possible to modify individual RGB color values of the notification.
+   * NotificationBorder - Makes it possible to modify the thickness of the notification border.
+   * SizeX, SizeY - Makes it possible to modify the size of the notification on the X and Y axes.
+   * SoundtrackChoice - Makes it possible to override the utilized soundtrack.
+- Added the possibility for developers to refer to the mod using the global variable "WhatsThatSong", and to add additional songs using the "WhatsThatSongAPI" interface.
+- Added the song name to display for those using the "Specialist Dance for Good Items" mod.
+- Added the icon and changelog to the mod directory.
+
+v1.0.0
+- Initial release.

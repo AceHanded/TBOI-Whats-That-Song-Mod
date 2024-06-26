@@ -1,6 +1,6 @@
 -- Configuration file for What's That Song?
 
-local config = {
+local whatsThatConfig = {
     -- Option: NotificationColorR
     -- Description: Whether to include the red color saturation (Rgba) in the notification.
     -- Type: Boolean | Values: true, false | Default: true
@@ -70,5 +70,10 @@ local config = {
     --              2 = Use the Antibirth soundtrack.
     -- Type: Integer | Values: [0 .. 2] | Default: 0
     ["SoundtrackChoice"] = 0
+    ,
+    -- Option: EnableDebug
+    -- Description: Enables debug prints in console.
+    -- Type: Boolean | Values: true, false | Default: false
+    ["EnableDebug"] = false
 }
-return config
+return whatsThatConfig

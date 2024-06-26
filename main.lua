@@ -3,7 +3,7 @@ WhatsThatSong = RegisterMod(modName, 1)
 local musicManager = MusicManager()
 
 -- Read the config table from the configuration file
-local config = require("config")
+local config = require("whatsThatConfig")
 local configDefaults = config
 
 local json = require("json")
@@ -16,7 +16,7 @@ if not ModConfigMenu then
 
         -- Iterate through each key-value pair in the config table, and make sure their value is valid
         for key, value in pairs(config) do
-            if key == "ConstantDisplay" or key == "NotificationColorR" or key == "NotificationColorG" or key == "NotificationColorB" then
+            if key == "ConstantDisplay" or key == "NotificationColorR" or key == "NotificationColorG" or key == "NotificationColorB" or key == "EnableDebug" then
                 if type(value) ~= "boolean" then
                     local toboolean = {["false"] = false, [0] = false, ["true"] = true, [1] = true}
                     config[key] = toboolean[value] or false
@@ -56,8 +56,8 @@ else
         [2] = "antibirth"
     }
 
-    local function AddBooleanSetting(name, description)
-        ModConfigMenu.AddSetting(modName, "Configuration", {
+    local function AddBooleanSetting(category, name, description)
+        ModConfigMenu.AddSetting(modName, category, {
             Type = ModConfigMenu.OptionType.BOOLEAN,
             CurrentSetting = function() return config[name] end,
             Display = function() return name:gsub("(%u%l*)", " %1"):gsub("^%s+", "") .. ": " .. tostring(config[name]) end,
@@ -66,8 +66,8 @@ else
         })
     end
 
-    local function AddNumberSetting(name, description, min, max)
-        ModConfigMenu.AddSetting(modName, "Configuration", {
+    local function AddNumberSetting(category, name, description, min, max)
+        ModConfigMenu.AddSetting(modName, category, {
             Type = ModConfigMenu.OptionType.NUMBER,
             CurrentSetting = function() return config[name] end,
             Minimum = min,
@@ -78,8 +78,8 @@ else
         })
     end
 
-    local function AddScrollSetting(name, description)
-        ModConfigMenu.AddSetting(modName, "Configuration", {
+    local function AddScrollSetting(category, name, description)
+        ModConfigMenu.AddSetting(modName, category, {
             Type = ModConfigMenu.OptionType.SCROLL,
             CurrentSetting = function() return config[name] end,
             Display = function() return name:gsub("(%u%l*)", " %1"):gsub("^%s+", "") .. ": $scroll" .. config[name] end,
@@ -88,8 +88,8 @@ else
         })
     end
 
-    local function AddStringSetting(name, description, min, max, stringTable)
-        ModConfigMenu.AddSetting(modName, "Configuration", {
+    local function AddStringSetting(category, name, description, min, max, stringTable)
+        ModConfigMenu.AddSetting(modName, category, {
             Type = ModConfigMenu.OptionType.NUMBER,
             CurrentSetting = function() return config[name] end,
             Minimum = min,
@@ -100,27 +100,30 @@ else
         })
     end
     ModConfigMenu.UpdateCategory(modName, {Info = {"Configuration for the notification of the currently playing song."}})
-    ModConfigMenu.AddText(modName, "Configuration", function() return "What's That Song?" end)
-    ModConfigMenu.AddSpace(modName, "Configuration")
+    ModConfigMenu.AddText(modName, "Config", function() return "What's That Song?" end)
+    ModConfigMenu.AddSpace(modName, "Config")
+    ModConfigMenu.AddText(modName, "Advanced", function() return "What's That Song?" end)
+    ModConfigMenu.AddSpace(modName, "Advanced")
 
-    AddBooleanSetting("ConstantDisplay", "Whether to constantly display the notification.")
-    AddBooleanSetting("NotificationColorR", "Whether to include the red color saturation (Rgba) in the notification.")
-    AddBooleanSetting("NotificationColorG", "Whether to include the green color saturation (rGba) in the notification.")
-    AddBooleanSetting("NotificationColorB", "Whether to include the blue color saturation (rgBa) in the notification.")
-    AddScrollSetting("NotificationColorA", "Dictates the transparency, i.e. alpha saturation (rgbA) of the notification.")
-    AddNumberSetting("NotificationDuration", "Dictates the duration for which the notification is displayed in seconds.", 1, nil)
-    AddNumberSetting("NotificationSpeed", "Dictates the speed at which the notification is displayed (characters per second).", 1, nil)
-    AddNumberSetting("OffsetX", "Offset in pixels for the X coordinate of the notification.", -320, 85)
-    AddNumberSetting("OffsetY", "Offset in pixels for the Y coordinate of the notification.", -240, 30)
-    AddScrollSetting("SizeX", "Dictates the size modifier of the notification's X axis.")
-    AddScrollSetting("SizeY", "Dictates the size modifier of the notification's Y axis.")
-    AddStringSetting("SoundtrackChoice", "Dictates the usage of a specific soundtrack (requires restart).", 0, 2, soundtrackNumberToString)
+    AddBooleanSetting("Config", "ConstantDisplay", "Whether to constantly display the notification.")
+    AddBooleanSetting("Config", "NotificationColorR", "Whether to include the red color saturation (Rgba) in the notification.")
+    AddBooleanSetting("Config", "NotificationColorG", "Whether to include the green color saturation (rGba) in the notification.")
+    AddBooleanSetting("Config", "NotificationColorB", "Whether to include the blue color saturation (rgBa) in the notification.")
+    AddScrollSetting("Config", "NotificationColorA", "Dictates the transparency, i.e. alpha saturation (rgbA) of the notification.")
+    AddNumberSetting("Config", "NotificationDuration", "Dictates the duration for which the notification is displayed in seconds.", 1, nil)
+    AddNumberSetting("Config", "NotificationSpeed", "Dictates the speed at which the notification is displayed (characters per second).", 1, nil)
+    AddNumberSetting("Config", "OffsetX", "Offset in pixels for the X coordinate of the notification.", -320, 85)
+    AddNumberSetting("Config", "OffsetY", "Offset in pixels for the Y coordinate of the notification.", -240, 30)
+    AddScrollSetting("Config", "SizeX", "Dictates the size modifier of the notification's X axis.")
+    AddScrollSetting("Config", "SizeY", "Dictates the size modifier of the notification's Y axis.")
+    AddStringSetting("Config", "SoundtrackChoice", "Dictates the usage of a specific soundtrack (requires restart).", 0, 2, soundtrackNumberToString)
+    AddBooleanSetting("Advanced", "EnableDebug", "Enables debug prints in console.")
 end
 
 local function useRepentanceMusic()
-    if config["SoundtrackChoice"] == "auto" then
+    if config["SoundtrackChoice"] == 0 then
         return not antibirthmusicplusplus
-    elseif config["SoundtrackChoice"] == "repentance" then
+    elseif config["SoundtrackChoice"] == 1 then
         return true
     else
         return false
@@ -228,7 +231,8 @@ local musicIDs = {
     [Music.MUSIC_MINESHAFT_ESCAPE] = "",
     [Music.MUSIC_REVERSE_GENESIS] = "Ridiculon - Genesis Retake Light (Reversed)",
     [Music.NUM_MUSIC] = "",
-    [122] = "mudeth - Gloria Filio"
+    [122] = "Ridiculon - Periculum",
+    [(not antibirthmusicplusplus and 203) or 240] = "Shoji Meguro - Specialist"
 }
 local currentSongName = nil
 local previousMusicID = nil
