@@ -1,3 +1,17 @@
+v1.0.4
+- Added support for Soundtrack Menu (at least all the base tracks).
+- Added the name of the currently playing song to be displayed when "Tab" is held.
+- Added "Info" category to the Mod Config Menu, which contains basic information, the currently playing song (along with its ID), as well as a reset button for the configuration settings.
+- Added new configuration options.
+   * TabNotificationColorR, TabNotificationColorG, TabNotificationColorB, TabNotificationColorA - Makes it possible to modify individual RGBA color values of the "Tab" notification.
+   * TabOffsetX, TabOffsetY - Makes it possible to offset the "Tab" notification on the X and Y axes.
+   * TabSizeX, TabSizeY - Makes it possible to modify the size of the "Tab" notification on the X and Y axes.
+   * IgnoreNumerals - Makes it possible to ignore displaying numeral music IDs in the notifications.
+- Modified some configuration options.
+   * NotificationColorR, NotificationColorG and NotificationColorR changed back to integer values in range [0 ... 255], with correct functionality. You now have over 16 000 000 colors at your disposal; go crazy!
+   * SoundtrackChoice removed due to its redundancy.
+- Music ID table moved to its own file: "whatsThatMusicIDTable.lua".
+
 v1.0.3
 - Changed config file name to "whatsThatConfig.lua" in order to avoid conflicts with other mods.
    * This fixes a conflict with the Enhanced Boss Bars mod.
