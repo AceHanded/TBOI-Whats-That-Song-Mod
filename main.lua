@@ -1,13 +1,16 @@
 local modName = "What's That Song?"
 WhatsThatSong = RegisterMod(modName, 1)
+WhatsThatSong.Repentance = REPENTANCE
 local musicManager = MusicManager()
 local font = Font()
 font:Load("resources/font/teammeatfont12.fnt")
 
 -- Read the config table from the configuration file
 local config = require("whatsThatConfig")
--- Read the musicID table from the music ID file
-local musicIDs = require("whatsThatMusicIDTable")
+-- local musicIDs = require("whatsThatMusicIDTable")
+-- Read the music table from the music table file
+local musicTable = require("whatsThatMusicTableHell")
+local musicIDs = {}
 
 local json = require("json")
 local SaveState = {}
@@ -43,7 +46,7 @@ local defaultConfig = {
     ["TabSizeX"] = 6,
     ["TabSizeY"] = 6,
     ["EnableDebug"] = false,
-    ["IgnoreNumerals"] = false
+    ["IgnoreNumerals"] = true
 }
 
 if not ModConfigMenu then
@@ -195,6 +198,62 @@ local function resetScrollParameters(id)
     displayTimer = displayDuration
 end
 
+local function getFallbackID(soundtrack, index)
+    return musicTable.Fallbacks[index] and musicTable.SoundtrackTitles[soundtrack][musicTable.Fallbacks[index]] or nil
+end
+
+function WhatsThatSong:PopulateMusicIDs()
+    local trackID = 0
+
+    for i, st in ipairs(musicTable.Soundtracks) do
+        if Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[1]) ~= -1 then
+            for ii, v in ipairs(musicTable.SoundtrackTitles[st]) do
+                if st ~= nil and musicTable.TrackTypes[ii] ~= nil then
+                    trackID = Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[ii])
+
+                    -- Resolve referred soundtrack IDs
+                    if v:sub(1, 1) == "[" and v:sub(-1, -1) == "]" then
+                        local resolvedSoundtrack = nil
+
+                        for idx, soundtrack in pairs(musicTable.Soundtracks) do
+                            if v:sub(2, -2) == soundtrack then
+                                resolvedSoundtrack = soundtrack
+                                break
+                            end
+                        end
+                        
+                        if resolvedSoundtrack ~= nil and musicTable.SoundtrackTitles[resolvedSoundtrack][ii] ~= nil then
+                            musicIDs[trackID] = musicTable.SoundtrackTitles[resolvedSoundtrack][ii]
+                        else
+                            musicIDs[trackID] = musicTable.SoundtrackTitles.Rebirth[ii]
+                        end
+                    else
+                        local fallbackID = getFallbackID(st, ii)
+                        musicIDs[trackID] = musicTable.SoundtrackTitles[st][ii] or fallbackID
+                    end
+                end
+            end
+        elseif st == "Default" then
+            for ii, v in ipairs(musicTable.TrackTypes) do
+                trackID = Isaac.GetMusicIdByName(v)
+
+                if musicTable.SoundtrackTitles[musicTable.Default] ~= nil then
+                    musicIDs[trackID] = musicTable.SoundtrackTitles[musicTable.Default][ii]
+                else
+                    musicIDs[trackID] = musicTable.SoundtrackTitles.Rebirth[ii]
+                end
+            end
+        end
+    end
+
+    -- Resolve IDs for Specialist Dance for Good Items
+    if Isaac.GetMusicIdByName("specialist") ~= -1 then
+        musicIDs[Isaac.GetMusicIdByName("specialist")] = "Shoji Meguro - Specialist"
+        musicIDs[Isaac.GetMusicIdByName("paincialist")] = "Shoji Meguro - Specialist (Slowed)"
+    end
+end
+WhatsThatSong:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, WhatsThatSong.PopulateMusicIDs)
+
 WhatsThatSong:AddCallback(ModCallbacks.MC_POST_RENDER, function()
     musicID = musicManager:GetCurrentMusicID()
     displayDuration = framesPerSecond * config.NotificationDuration  -- Converting seconds to frames
@@ -252,18 +311,6 @@ WhatsThatSong:AddCallback(ModCallbacks.MC_POST_RENDER, function()
     end
 end)
 
---[[
-local debugID = 0
-WhatsThatSong:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, function()
-    musicManager:Play(debugID)
-    if debugID == 0 then
-        debugID = 171
-    else
-        debugID = debugID + 1
-    end
-end)
-]]
-
 --[[ Save Settings ]]--
 
 function WhatsThatSong:OnGameExit()
@@ -302,7 +349,43 @@ local function AddSong(tbl, id, name, replace)
     return true
 end
 
-function WhatsThatSongAPI:AddSong(id, name, replace)
-    if id == nil or name == nil or replace == nil then return end
-    return AddSong(musicIDs, id, name, replace)
+local function AddSoundtrack(tbl, name, soundtrack)
+    local soundtrackExists = false
+
+    for i, v in ipairs(tbl.Soundtracks) do
+        if v == name then
+            soundtrackExists = true
+            break
+        end
+    end
+
+    if not soundtrackExists then
+        table.insert(tbl.Soundtracks, name)
+        tbl.SoundtrackTitles[name] = soundtrack
+    else
+        return false
+    end
+    WhatsThatSong:PopulateMusicIDs()
+    return true
+end
+
+-- The "id" parameter is the ID of the added song.
+-- The "name" parameter is the name of the added song.
+-- The "replace" parameter is to be used, when you wish to replace an existing ID in the table.
+function WhatsThatSongAPI:AddSong(id --[[Integer]], name --[[String]], replace --[[Boolean]])
+    if (id == nil or type(id) ~= "number" or id % 1 ~= 0) or (name == nil or type(name) ~= "string") or (replace == nil or type(replace) ~= "boolean") then 
+        Isaac.ConsoleOutput("What's That Song API: Invalid parameters when adding song!\n")
+        return
+    end
+    return AddSong(musicIDs, id, name, replace)  -- True, if successful, otherwise false
+end
+
+-- The "name" parameter is the name of the soundtrack, and it must be same as SOUNDTRACKNAME in your music.xml file, i.e. "SOUNDTRACKNAME Basement" etc.
+-- The "soundtrack" parameter is the added soundtrack table, and it must be in correspondence with the specification of Soundtrack Menu.
+function WhatsThatSongAPI:AddSoundtrack(name --[[String]], soundtrack --[[Table]])
+    if (name == nil or type(name) ~= "string") or (soundtrack == nil or type(soundtrack) ~= "table") then 
+        Isaac.ConsoleOutput("What's That Song API: Invalid parameters when adding soundtrack!\n")
+        return
+    end
+    return AddSoundtrack(musicTable, name, soundtrack)  -- True, if successful, otherwise false
 end

@@ -112,6 +112,6 @@ local whatsThatConfig = {
     -- Option: IgnoreNumerals
     -- Description: Whether to ignore numeral music IDs.
     -- Type: Boolean | Values: true, false | Default: false
-    ["IgnoreNumerals"] = false
+    ["IgnoreNumerals"] = true
 }
 return whatsThatConfig

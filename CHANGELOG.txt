@@ -1,4 +1,18 @@
 v1.0.4
+- Overhauled the way song IDs are resolved.
+   * Moved from statically to dynamically assigned IDs, which, to be fair, should have been done from the beginning.
+   * This mod no longer messes up other music mods, and vice versa, meaning that you can use as many music altering mods, while still getting correct results for those supported by this mod.
+- Replaced "whatsThatMusicIDTable.lua" with "whatsThatMusicTableHell.lua".
+- Dropped support for "Antibirth music++", in favor of focusing on expanding Soundtrack Menu support.
+- Fixed some incorrect song titles.
+- Modified some configuration options.
+   * IgnoreNumerals is now set to "true" by default.
+- Expanded the WhatsThatSongAPI.
+   * The API is now actually usable (:D).
+   * Added new method "AddSoundtrack()" alongside the already existing "AddSong()", whose usage is easy as 1-2-3!
+   * As opposed to "AddSong()", which is meant for adding / modifying single IDs, "AddSoundtrack()" makes it possible to add support for entire soundtracks supported by Soundtrack Menu. I recommend viewing the official mod page of Soundtrack Menu for more information (https://steamcommunity.com/sharedfiles/filedetails/?id=1933285222).
+
+v1.0.4
 - Added support for Soundtrack Menu (at least all the base tracks).
 - Added the name of the currently playing song to be displayed when "Tab" is held.
 - Added "Info" category to the Mod Config Menu, which contains basic information, the currently playing song (along with its ID), as well as a reset button for the configuration settings.

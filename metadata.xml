@@ -9,16 +9,16 @@ This is a fairly simple mod that displays the name of the currently playing song
 
 The mod includes support for Mod Configuration Menu Pure, and in case you don't have that installed, and don't wish to, there is also a configuration file in the mod's directory (by default found at `/steam/steamapps/common/The Binding of Isaac Rebirth/mods/whats that song_3267389419/whatsThatConfig.lua`), where you can tweak certain aspects of the mod to your liking.
 
-There is currently also support for the mods [b]Antibirth music++[/b] and [b]Soundtrack Menu[/b] (at least all the base tracks), though you can get more tracks added by:
+There is currently also support for [b]Soundtrack Menu[/b] (at least all the base tracks), though you can get more tracks added by:
 [olist]
-    [*]Adding them directly to the `whatsThatMusicIDTable.lua` file.
-    [*]Making your own "plugin" mod, utilizing the WhatsThatSongAPI interface.
+    [*]Adding them directly to the `whatsThatMusicTableHell.lua` file (Not Recommended).
+    [*]Making your own &quot;plugin&quot; mod, utilizing the WhatsThatSongAPI interface.
     [*]Asking nicely.
 [/olist]
-If you are using other music-altering mods besides these, I cannot guarantee that the mod will work as expected. Additionally, if you opt for choices 1 or 2, it would be oh so very kind of you to share your contribution with me, so I could add it for others' use as well.
+If you are using other music-altering mods besides these, the mod should still work perfectly fine for supported soundtracks. Additionally, if you opt for choices 1 or 2, it would be oh so very kind of you to share your contribution with me, so I could add it for others' use as well.
 
 All issues, suggestions and other concerns should be brought forth on the mod's [url=https://github.com/AceHanded/TBOI-Whats-That-Song-Mod/issues]GitHub page[/url].</description>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Tweaks"/>
