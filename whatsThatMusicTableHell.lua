@@ -1,5 +1,11 @@
 -- Music table for soundtracks and their titles
 
+-- When adding soundtrack titles, "[SOUNDTRACK_NAME]" can be used to refer to the corresponding title of the given soundtrack.
+-- For example, if the first title of "Rebirth" was to be replaced with "[Antibirth]", "mudeth - Innocence Glitched" would be displayed instead of "Ridiculon - Diptera Sonata".
+-- SOUNDTRACK_NAME must be an existing value in the "Soundtracks" table.
+-- To not display certain titles, an empty string, i.e. "", can be used.
+-- Titles cannot be simply omitted, or left blank, as that would completely mess up their ordering.
+
 local musicTable = {
     ["Default"] = "Rebirth",  -- Default soundtrack to use
     ["Soundtracks"] = {  -- Names of each soundtrack
@@ -10,7 +16,11 @@ local musicTable = {
         "SuperMeatBoy",
         "TheEndIsNigh",
         "LegendOfBumbo",
-        "Genesis"
+        "Genesis",
+        "Mutations",   -- The Binding of Isaac: Mutations Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2499546769
+        "Spelunky",  -- Spelunky 1 + 2 Music - https://steamcommunity.com/sharedfiles/filedetails/?id=2523708160
+        "Hotline Miami",  -- Hotline Miami 1/2 Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2532793042
+        "A Hat in Time"  -- A Hat in Time Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2507009001
     },
     ["SoundtrackTitles"] = {  -- Song titles of each soundtrack
         ["Rebirth"] = {
@@ -308,7 +318,7 @@ local musicTable = {
             "",  -- Boss Intro
             "",  -- Boss Death
             "",  -- Boss Death (Alt)
-            "",  -- Boss Death (Hush)
+            ""  -- Boss Death (Hush)
         },
         ["TheEndIsNigh"] = {
             "Ridiculon - The End Is Anguish",  -- Basement
@@ -363,7 +373,7 @@ local musicTable = {
             "",  -- Boss Intro
             "",  -- Boss Death
             "",  -- Boss Death (Alt)
-            "",  -- Boss Death (Hush)"
+            ""  -- Boss Death (Hush)"
         },
         ["LegendOfBumbo"] = {
             "Ridiculon - Tractus",  -- Basement
@@ -418,7 +428,7 @@ local musicTable = {
             "",  -- Boss Intro
             "",  -- Boss Death
             "",  -- Boss Death (Alt)
-            "",  -- Boss Death (Hush)
+            ""  -- Boss Death (Hush)
         },
         ["Genesis"] = {
             "Broski - Lost Forever V2",  -- Basement
@@ -473,7 +483,313 @@ local musicTable = {
             "",  -- Boss Intro
             "",  -- Boss Death
             "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
+        },
+        ["Mutations"] = {
+            "[Rebirth]",  -- Basement
+            "[Rebirth]",  -- Cellar
+            "[Rebirth]",  -- Burning Basement
+            "[Rebirth]",  -- Caves
+            "Ridiculon - Regeneratione",  -- Catacombs
+            "[Rebirth]",  -- Flooded Caves
+            "Ridiculon - Depresso Loco",  -- Depths
+            "[Rebirth]",  -- Necropolis
+            "[Rebirth]",  -- Dank Depths
+            "[Rebirth]",  -- Womb/Utero
+            "[Rebirth]",  -- Scarred Womb
+            "[Rebirth]",  -- Blue Womb
+            "Ridiculon - Infernum",  -- Sheol
+            "Ridiculon - Sacris",  -- Cathedral
+            "Ridiculon - Armarium",  -- Dark Room
+            "[Rebirth]",  -- Chest
+            "[Rebirth]",  -- Void
+
+            "[Rebirth]",  -- Library
+            "[Rebirth]",  -- Devil Room
+            "[Rebirth]",  -- Angel Room
+            "Ridiculon - Cupiditas",  -- Shop
+            "[Rebirth]",  -- Arcade
+            "[Rebirth]",  -- Secret Room
+            "Ridiculon - Spiritum"  -- Boss Defeated
+        },
+        ["Spelunky"] = {
+            "Eirik Suhrke - Dwelling",  -- Basement
+            "Eirik Suhrke - Adventure Begins",  -- Cellar
+            "Eirik Suhrke - Molten Factory",  -- Burning Basement
+            "Eirik Suhrke - Mines C",  -- Caves
+            "Eirik Suhrke - Haunted Castle",  -- Catacombs
+            "Eirik Suhrke - Jungle A",  -- Flooded Caves
+            "Eirik Suhrke - The Great Tomb",  -- Depths
+            "Eirik Suhrke - Cemetary",  -- Necropolis
+            "Eirik Suhrke - Temple Egg",  -- Dank Depths
+            "Eirik Suhrke - Worm",  -- Womb/Utero
+            "Eirik Suhrke - Worm",  -- Scarred Womb
+            "Eirik Suhrke - Bottom of the Well",  -- Blue Womb
+            "Eirik Suhrke - Beyond Death",  -- Sheol
+            "Eirik Suhrke - City of Gold",  -- Cathedral
+            "Eirik Suhrke - Mother",  -- Dark Room
+            "Eirik Suhrke - Temple A",  -- Chest
+            "Eirik Suhrke - Ripple",  -- Void
+      
+            "Eirik Suhrke - Curious Alcove",  -- Library
+            "[Rebirth]",  -- Devil Room
+            "[Rebirth]",  -- Angel Room
+            "Eirik Suhrke - Shop Radio 4",  -- Shop
+            "George Buzinkai - Cave",  -- Arcade
+            "Eirik Suhrke - Mines Dim",  -- Secret Room
+            "Eirik Suhrke - Spelunky 2",  -- Boss Defeated
+            "[Rebirth]",  -- Challenge Fight
+      
+            "[Rebirth]",  -- Boss
+            "[Rebirth]",  -- Boss (Alt)
+            "Eirik Suhrke - Boss 1",  -- Boss (Mom)
+            "Eirik Suhrke - Boss 2",  -- Boss (Mom's Heart)
+            "[Rebirth]",  -- Boss (Isaac)
+            "[Rebirth]",  -- Boss (Satan)
+            "[Rebirth]",  -- Boss (The Lamb)
+            "[Rebirth]",  -- Boss (???)
+            "[Rebirth]",  -- Boss (Hush)
+            "[Rebirth]",  -- Boss (Ultra Greed)
+            "[Rebirth]",  -- Boss (Delirium)
+            "[Rebirth]",  -- Boss (Mega Satan)
+      
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
             "",  -- Boss Death (Hush)
+      
+            "Eirik Suhrke - Worm",  -- Utero
+            "Eirik Suhrke - Still Waters",  -- Downpour
+            "Eirik Suhrke - Marrow",  -- Dross
+            "Eirik Suhrke - Black Market",  -- Mines
+            "Eirik Suhrke - Beneath the Moss",  -- Ashpit
+            "Eirik Suhrke - Temple C",  -- Mausoleum
+            "Eirik Suhrke - Temple B",  -- Gehenna
+            "Eirik Suhrke - Worm (Modified)",  -- Corpse
+            "[Rebirth]",  -- Home
+              
+            "[Rebirth]",  -- Mineshaft Ambient
+            "Eirik Suhrke - Action A",  -- Mineshaft Escape
+            "Eirik Suhrke - Moon Surface",  -- Planetarium
+            "Eirik Suhrke - Temple Dim",  -- Secret Room (Alt)
+            "Eirik Suhrke - Ice Caves Dim",  -- Secret Room (Alt Alt)
+              
+            "Eirik Suhrke - Wrath of Yama",  -- Boss Rush
+            "",  -- Boss Rush Start
+            "[Rebirth]",  -- Boss Defeated (Twisted)
+            "",  -- Mom's Shadow Intro
+            "",  -- Strange Door
+            "[Rebirth]",  -- Echoes Reverse
+              
+            "[Rebirth]",  -- Boss (Alt Alt)
+            "[Rebirth]",  -- Boss (Mother)
+            "",  -- Dogma Intro
+            "[Rebirth]",  -- Boss (Dogma)
+            "[Rebirth]",  -- Boss (Beast)
+            "",  -- Boss Death (Alt Alt)
+            "",  -- Boss Mother Death
+            "",  -- Boss Dogma Death
+            "",  -- Boss Beast Death
+              
+            "Eirik Suhrke - Still Waters (Reversed)",  -- Downpour (Reversed)
+            "Eirik Suhrke - Marrow (Reversed)"  -- Dross (Reversed)
+        },
+        ["Hotline Miami"] = {
+            "M.O.O.N. - Hydrogen",  -- Basement
+            "Jasper Byrne - Voyager",  -- Cellar
+            "Scattle - To the Top",  -- Burning Basement
+            "Magna - Divide",  -- Caves
+            "Vestron Vulture - New Wave Hookers",  -- Catacombs
+            "M.O.O.N. - Crystals",  -- Flooded Caves
+            "Perturbator - Vengeance",  -- Depths
+            "Scattle - Knock Knock",  -- Necropolis
+            "MegaDrive - NARC",  -- Dank Depths
+            "Magic Sword - In the Face of Evil",  -- Womb/Utero
+            "Mitch Murder - Hollywood Heights",  -- Scarred Womb
+            "Moduleogeek - Around",  -- Blue Womb
+            "Light Club - Fahkeet",  -- Sheol
+            "Magic Sword - The Way Home",  -- Cathedral
+            "Perturbator - Future Club",  -- Dark Room
+            "Perturbator - Electric Dreams",  -- Chest
+            "iamthekidyouknowwhatimean - Run",  -- Void
+      
+            "Sun Araw - Horse Steppin",  -- Library
+            "Sjellos - Chamber of Reflections",  -- Devil Room
+            "Jasper Byrne - Miami",  -- Angel Room
+            "El Huervo - Daisuke (feat. Shelby Cinca)",  -- Shop
+            "Dag Unenge - Untitled",  -- Arcade
+            "Sun Araw - Deep Cover",  -- Secret Room
+            "El Huervo - Crush",  -- Boss Defeated
+            "Perturbator - Sexualizer (feat. Flash Arnold)",  -- Challenge Fight
+      
+            "Carpenter Brut - Le Perv",  -- Boss
+            "Scattle - Inner Animal",  -- Boss (Alt)
+            "Magna - Divide",  -- Boss (Mom)
+            "Magna - Divide",  -- Boss (Mom's Heart)
+            "CiniMod - The Rumble",  -- Boss (Isaac)
+            "El Tigr3 - She Swallowed Burning Coals",  -- Boss (Satan)
+            "MegaDrive - Acid Spit",  -- Boss (The Lamb)
+            "El Heurvo - Turf",  -- Boss (???)
+            "Scattle - Bloodline",  -- Boss (Hush)
+            "Mitch Murder - Frantic Aerobics",  -- Boss (Ultra Greed)
+            "MegaDrive - Slum Lord",  -- Boss (Delirium)
+            "Perturbator - Technonoir (Feat. Noir Deco)",  -- Boss (Mega Satan)
+      
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            "",  -- Boss Death (Hush)
+      
+            "Benny Smiles - Hotline Theme",  -- Utero
+            "Scattle - Remorse",  -- Downpour
+            "El Huervo - Rust",  -- Dross
+            "Jasper Byrne - Decade Dance",  -- Mines
+            "M.O.O.N. - Dust",  -- Ashpit
+            "Jasper Byrne - Hotline",  -- Mausoleum
+            "M.O.O.N. - Paris",  -- Gehenna
+            "Chromacle - Interlude",  -- Corpse
+            "Scattle - It's Safe Now",  -- Home
+              
+            "Old Future Fox Gang - Guided Meditation",  -- Mineshaft Ambient
+            "M.O.O.N. - Release",  -- Mineshaft Escape
+            "Eirik Suhrke - A New Morning",  -- Planetarium
+            "Light Club - She Meditates",  -- Secret Room (Alt)
+            "Old Future Fox Gang - Java",  -- Secret Room (Alt Alt)
+              
+            "Carpenter Brut - Roller Mobster",  -- Boss Rush
+            "",  -- Boss Rush Start
+            "",  -- Boss Defeated (Twisted)
+            "",  -- Mom's Shadow Intro
+            "",  -- Strange Door
+            "Endless - Disturbance",  -- Echoes Reverse
+              
+            "M.O.O.N. - Quixotic",  -- Boss (Alt Alt)
+            "Carpenter Brut - Escape from Midwitch Valley",  -- Boss (Mother)
+            "",  -- Dogma Intro
+            "El Huervo - Ghost",  -- Boss (Dogma)
+            "Carpenter Brut - Roller Mobster",  -- Boss (Beast)
+            "",  -- Boss Death (Alt Alt)
+            "",  -- Boss Mother Death
+            "",  -- Boss Dogma Death
+            "",  -- Boss Beast Death
+              
+            "Scattle - Remorse (Reversed)",  -- Downpour (Reversed)
+            "El Huervo - Rust (Reversed)",  -- Dross (Reversed)
+            "Scattle - Flatline",  -- Genesis (Reversed)
+          
+            "",  -- Game Over (Jingle)
+            "The Green Kingdom - Untitled",  -- Game Over
+            "El Heurvo - Turf"  -- "Boss (Hush Phase 1)"
+        },
+        ["A Hat in Time"] = {
+            "Pascal Michael Stiefel - Welcome to Mafia Town", -- Basement
+            "Grant Kirkhope - Her Spaceship",  -- Cellar
+            "Pascal Michael Stiefel - Heating Up Mafia Town",  -- Burning Basement
+            "Pascal Michael Stiefel - Alpine Skyline",  -- Caves
+            "Pascal Michael Stiefel - Subcon Village",  -- Catacombs
+            "Pascal Michael Stiefel - The Subcon Caves",  -- Flooded Caves
+            "Pascal Michael Stiefel - Subcon Forest",  -- Depths
+            "Pascal Michael Stiefel - Scootin' Through Subcon Forest",  -- Necropolis
+            "Pascal Michael Stiefel - Subcon Forest (Swamp)",  -- Dank Depths
+            "Pascal Michael Stiefel - Dead Bird Studio",  -- Womb/Utero
+            "Pascal Michael Stiefel - Dead Bird Studio Basement",  -- Scarred Womb
+            "Pascal Michael Stiefel - Tick Tock",  -- Blue Womb
+            "Pascal Michael Stiefel - Alpine Skyline at Night",  -- Sheol
+            "Pascal Michael Stiefel - Mustache Girl's Castle (Exterior)",  -- Cathedral
+            "Pascal Michael Stiefel - Judge, Jury, and Executioner",  -- Dark Room
+            "Pascal Michael Stiefel - Rush Hour",  -- Chest
+            "Pascal Michael Stiefel - Trainwreck of Electro Swing",  -- Void
+            
+            "Pascal Michael Stiefel - Bon Voyage!",  -- Library
+            "Pascal Michael Stiefel - Oh, It's You",  -- Devil Room
+            "Pascal Michael Stiefel - Clocktowers Beneath the Sea",  -- Angel Room
+            "Pascal Michael Stiefel - The Badge Seller",  -- Shop
+            "Pascal Michael Stiefel - Roll the Slots",  -- Arcade
+            "Pascal Michael Stiefel - Peace and Tranquility",  -- Secret Room
+            "Pascal Michael Stiefel - Time Piece Released",  -- Boss Defeated
+            "Pascal Michael Stiefel - Death Wish",  -- Challenge Fight
+            
+            "Pascal Michael Stiefel - Mafia Boss' Big Showdown",  -- Boss
+            "Pascal Michael Stiefel - Train Rush",  -- Boss (Alt)
+            "Pascal Michael Stiefel - Turn on the Pyrotechnics",  -- Boss (Mom)
+            "Pascal Michael Stiefel - Security Breach",  -- Boss (Mom's Heart)
+            "Pascal Michael Stiefel - The Battle of Award 42",  -- Boss (Isaac)
+            "Pascal Michael Stiefel - Snatcher's Contractual Obligations",  -- Boss (Satan)
+            "Pascal Michael Stiefel - Toilet of Doom",  -- Boss (The Lamb)
+            "Pascal Michael Stiefel - Killing Two Birds",  -- Boss (???)
+            "Pascal Michael Stiefel - Your Contract Has Expired",  -- Boss (Hush)
+            "Pascal Michael Stiefel - The Battle of Award 42",  -- Boss (Ultra Greed)
+            "Pascal Michael Stiefel - Mustache Girl EX",  -- Boss (Delirium)
+            "Pascal Michael Stiefel - You Are All Bad Guys",  -- Boss (Mega Satan)
+            
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            "",  -- Boss Death (Hush)
+            
+            "Pascal Michael Stiefel - Dead Bird Studio",  -- Utero
+            "Pascal Michael Stiefel - Green Clean Station",  -- Downpour
+            "Pascal Michael Stiefel - Nyakuza Manholes",  -- Dross
+            "Pascal Michael Stiefel - The Windmill Peak",  -- Mines
+            "Pascal Michael Stiefel - The Lava Cake Peak",  -- Ashpit
+            "Pascal Michael Stiefel - The Fire Spirits",  -- Mausoleum
+            "Pascal Michael Stiefel - The Fire Spirits",  -- Gehenna
+            "Pascal Michael Stiefel - Dead Bird Studio Is Closed",  -- Corpse
+            "Pascal Michael Stiefel - You're Safe Now",  -- Home
+            
+            "Pascal Michael Stiefel - Alpine Skyline Time Rift",  -- Mineshaft Ambient
+            "Pascal Michael Stiefel - Collapsing Time Rift",  -- Mineshaft Escape
+            "Pascal Michael Stiefel - Tour Rift: Spaceship",  -- Planetarium
+            "Pascal Michael Stiefel - The Twilight Bell Peak",  -- Secret Room (Alt)
+            "Pascal Michael Stiefel - The Twilight Bell Peak (Reversed)",  -- Secret Room (Alt Alt)
+            
+            "Pascal Michael Stiefel - Death Wish",  -- Boss Rush
+            "",  -- Boss Rush Start
+            "",  -- Boss Defeated (Twisted)
+            "",  -- Mom's Shadow Intro
+            "",  -- Strange Door
+            "Pascal Michael Stiefel - Entering Vanessa Manor",  -- Echoes Reverse
+            
+            "Pascal Michael Stiefel - Mafia Boss' Big Showdown",  -- Boss (Alt Alt)
+            "Pascal Michael Stiefel - Your Contract Has Expired",  -- Boss (Mother)
+            "",  -- Dogma Intro
+            "Pascal Michael Stiefel - Death Wish",  -- Boss (Dogma)
+            "Pascal Michael Stiefel - You Are All Bad Guys",  -- Boss (Beast)
+            "",  -- Boss Death (Alt Alt)
+            "",  -- Boss Mother Death
+            "",  -- Boss Dogma Death
+            "",  -- Boss Beast Death
+            
+            "Pascal Michael Stiefel - Green Clean Station (Reversed)",  -- Downpour (Reversed)
+            "Pascal Michael Stiefel - Nyakuza Manholes (Reversed)",  -- Dross (Reversed)
+            "Pascal Michael Stiefel - Goodbye Everyone"  -- Genesis (Reversed)
         }
     },
     ["TrackTypes"] = {  -- Track types, as declared by Soundtrack Menu

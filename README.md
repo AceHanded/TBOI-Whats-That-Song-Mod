@@ -8,17 +8,25 @@
 
 This is a fairly simple mod that displays the name of the currently playing song, as it is in the official soundtrack.
 
-The mod includes support for Mod Configuration Menu Pure, and in case you don't have that installed, and don't wish to, there is also a configuration file in the mod's directory 
+The mod includes support for <b>Mod Configuration Menu Pure</b>, and in case you don't have that installed, and don't wish to, there is also a configuration file in the mod's directory 
 (by default found at `/steam/steamapps/common/The Binding of Isaac Rebirth/mods/whats that song_3267389419/whatsThatConfig.lua`), where you can tweak certain aspects of the mod to your liking.
 
-There is currently also support for the <b>Soundtrack Menu</b> (at least all the base tracks), though you can get more tracks added by:
+There is currently also support for the <b>Soundtrack Menu</b>, along with a few soundtrack mods, though you can get more tracks added by:
 <ol>
     <li>Adding them directly to the `whatsThatMusicTableHell.lua` file (Not Recommended).</li>
     <li>Making your own "plugin" mod, utilizing the WhatsThatSongAPI interface.</li>
     <li>Asking nicely.</li>
 </ol>
 
-If you are using other music-altering mods besides these, the mod should still work perfectly fine for supported soundtracks. Additionally, if you opt for choices 1 or 2, it would be oh so very kind of you to share your contribution with me, so I could add it for others' use as well.
+Soundtrack mods with built-in support:
+<ul>
+    <li>[The Binding of Isaac: Mutations Soundtrack](https://steamcommunity.com/sharedfiles/filedetails/?id=2499546769)</li>
+    <li>[Spelunky 1 + 2 Music](https://steamcommunity.com/sharedfiles/filedetails/?id=2523708160)</li>
+    <li>[Hotline Miami 1/2 Soundtrack](https://steamcommunity.com/sharedfiles/filedetails/?id=2532793042)</li>
+    <li>[A Hat in Time Soundtrack](https://steamcommunity.com/sharedfiles/filedetails/?id=2507009001)</li>
+</ul>
+
+If you are using other music-altering mods besides these, the mod should still work perfectly fine for supported soundtracks. Additionally, if you opt for choice 1 for some reason, it would be oh so very kind of you to share your contribution with me, so I could add it for others' use as well.
 
 Below is an example of how to use the WhatsThatSongAPI, alongside Soundtrack Menu.
 ```lua

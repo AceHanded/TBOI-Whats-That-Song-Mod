@@ -202,12 +202,23 @@ local function getFallbackID(soundtrack, index)
     return musicTable.Fallbacks[index] and musicTable.SoundtrackTitles[soundtrack][musicTable.Fallbacks[index]] or nil
 end
 
+local function containsValidTracks(tbl, st)
+    for _, trackType in ipairs(tbl) do
+        if Isaac.GetMusicIdByName(st .. " " .. trackType) ~= -1 then
+            return true
+        end
+    end
+    return false
+end
+
 function WhatsThatSong:PopulateMusicIDs()
     local trackID = 0
 
-    for i, st in ipairs(musicTable.Soundtracks) do
-        if Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[1]) ~= -1 then
+    for _, st in ipairs(musicTable.Soundtracks) do
+        if containsValidTracks(musicTable.TrackTypes, st) then
             for ii, v in ipairs(musicTable.SoundtrackTitles[st]) do
+                local fallbackID = getFallbackID(st, ii)
+
                 if st ~= nil and musicTable.TrackTypes[ii] ~= nil then
                     trackID = Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[ii])
 
@@ -223,12 +234,11 @@ function WhatsThatSong:PopulateMusicIDs()
                         end
                         
                         if resolvedSoundtrack ~= nil and musicTable.SoundtrackTitles[resolvedSoundtrack][ii] ~= nil then
-                            musicIDs[trackID] = musicTable.SoundtrackTitles[resolvedSoundtrack][ii]
+                            musicIDs[trackID] = musicTable.SoundtrackTitles[resolvedSoundtrack][ii] or fallbackID
                         else
                             musicIDs[trackID] = musicTable.SoundtrackTitles.Rebirth[ii]
                         end
                     else
-                        local fallbackID = getFallbackID(st, ii)
                         musicIDs[trackID] = musicTable.SoundtrackTitles[st][ii] or fallbackID
                     end
                 end
@@ -238,7 +248,7 @@ function WhatsThatSong:PopulateMusicIDs()
                 trackID = Isaac.GetMusicIdByName(v)
 
                 if musicTable.SoundtrackTitles[musicTable.Default] ~= nil then
-                    musicIDs[trackID] = musicTable.SoundtrackTitles[musicTable.Default][ii]
+                    musicIDs[trackID] = musicTable.SoundtrackTitles[musicTable.Default][ii] or fallbackID
                 else
                     musicIDs[trackID] = musicTable.SoundtrackTitles.Rebirth[ii]
                 end

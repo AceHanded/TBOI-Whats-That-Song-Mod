@@ -1,3 +1,10 @@
+v1.0.5
+- Added built-in support for new soundtracks.
+   * The Binding of Isaac: Mutations Soundtrack
+   * Spelunky 1 + 2 Music
+   * Hotline Miami 1/2 Soundtrack
+   * A Hat in Time Soundtrack
+
 v1.0.4
 - Overhauled the way song IDs are resolved.
    * Moved from statically to dynamically assigned IDs, which, to be fair, should have been done from the beginning.
