@@ -1,6 +1,8 @@
 # What's That Song?
 
 ![Demonstration](https://raw.githubusercontent.com/AceHanded/TBOI-Whats-That-Song-Mod/main/Images/ModShowcase.gif)
+![Demonstration2](https://raw.githubusercontent.com/AceHanded/TBOI-Whats-That-Song-Mod/main/Images/ModShowcase2.gif)
+![DemonstrationMenu](https://raw.githubusercontent.com/AceHanded/TBOI-Whats-That-Song-Mod/main/Images/ModMenuShowcase.png)
 
 -----
 

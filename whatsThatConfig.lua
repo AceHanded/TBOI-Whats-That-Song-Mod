@@ -3,32 +3,32 @@
 local whatsThatConfig = {
     -- Option: NotificationColorR
     -- Description: Dictates the red color saturation (Rgba) of the notification.
-    -- Type: Integer | Values: [0 ... 255] | Default: 255
+    -- Type: Integer | Values: [-1 ... 255] | Default: 255
     ["NotificationColorR"] = 255
     ,
     -- Option: NotificationColorG
     -- Description: Dictates the green color saturation (rGba) of the notification.
-    -- Type: Integer | Values: [0 ... 255] | Default: 255
+    -- Type: Integer | Values: [-1 ... 255] | Default: 255
     ["NotificationColorG"] = 255
     ,
     -- Option: NotificationColorB
     -- Description: Dictates the blue color saturation (rgBa) of the notification.
-    -- Type: Integer | Values: [0 ... 255] | Default: 255
+    -- Type: Integer | Values: [-1 ... 255] | Default: 255
     ["NotificationColorB"] = 255
     ,
     -- Option: TabNotificationColorR
     -- Description: Dictates the red color saturation (Rgba) of the notification that appears when 'Tab' is held.
-    -- Type: Integer | Values: [0 ... 255] | Default: 255
+    -- Type: Integer | Values: [-1 ... 255] | Default: 255
     ["TabNotificationColorR"] = 255
     ,
     -- Option: TabNotificationColorG
     -- Description: Dictates the green color saturation (rGba) of the notification that appears when 'Tab' is held.
-    -- Type: Integer | Values: [0 ... 255] | Default: 255
+    -- Type: Integer | Values: [-1 ... 255] | Default: 255
     ["TabNotificationColorG"] = 255
     ,
     -- Option: TabNotificationColorB
     -- Description: Dictates the blue color saturation (rgBa) of the notification that appears when 'Tab' is held.
-    -- Type: Integer | Values: [0 ... 255] | Default: 255
+    -- Type: Integer | Values: [-1 ... 255] | Default: 255
     ["TabNotificationColorB"] = 255
     ,
     -- Option: NotificationDuration

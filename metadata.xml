@@ -6,10 +6,12 @@
     <description>[h1]Image Showcase[/h1]
 
 [img]https://raw.githubusercontent.com/AceHanded/TBOI-Whats-That-Song-Mod/main/Images/ModShowcase.gif[/img]
+[img]https://raw.githubusercontent.com/AceHanded/TBOI-Whats-That-Song-Mod/main/Images/ModShowcase2.gif[/img]
+[img]https://raw.githubusercontent.com/AceHanded/TBOI-Whats-That-Song-Mod/main/Images/ModMenuShowcase.png[/img]
 
 [h1]Description[/h1]
 
-[b]Have you ever wondered: "Hey! What's that song that's currently playing actually called?" Well, wonder no more, as I have the solution to your problem![/b]
+[b]Have you ever wondered: &quot;Hey! What's that song that's currently playing actually called?&quot; Well, wonder no more, as I have the solution to your problem![/b]
 
 This is a fairly simple mod that displays the name of the currently playing song, as it is in the official soundtrack.
 
@@ -18,7 +20,7 @@ The mod includes support for [b]Mod Configuration Menu Pure[/b], and in case you
 There is currently also support for the [b]Soundtrack Menu[/b], along with a few soundtrack mods, though you can get more tracks added by:
 [olist]
     [*]Adding them directly to the `whatsThatMusicTableHell.lua` file (Not Recommended).
-    [*]Making your own "plugin" mod, utilizing the WhatsThatSongAPI interface.
+    [*]Making your own &quot;plugin&quot; mod, utilizing the WhatsThatSongAPI interface.
     [*]Asking nicely.
 [/olist]
 Soundtrack mods with built-in support:
@@ -37,7 +39,7 @@ If you are using other music-altering mods besides these, the mod should still w
 
 --[[ API ]]--
 
-YourModName = RegisterMod("ModName", 1)
+YourModName = RegisterMod(&quot;ModName&quot;, 1)
 
 local yourSoundtrackTitles = {
     -- Here go the displayed titles, in correspondence with the formatting of Soundtrack Menu.
@@ -46,26 +48,26 @@ local yourSoundtrackTitles = {
 YourModName:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, function()
     -- Check existance of Soundtrack Menu
     if SoundtrackSongList then
-        -- The value used in place of "Your Soundtrack Name"
+        -- The value used in place of &quot;Your Soundtrack Name&quot;
         -- should be same in both AddSoundtrackToMenu and WhatsThatSongAPI:AddSoundtrack
-        AddSoundtrackToMenu("Your Soundtrack Name")
+        AddSoundtrackToMenu(&quot;Your Soundtrack Name&quot;)
 
         -- Check existance of What's That Song?
         if WhatsThatSong then
             -- Very simple to use; returns true if addition was successful, otherwise false
-            if WhatsThatSongAPI:AddSoundtrack("Your Soundtrack Name", yourSoundtrackTitles) then
-                Isaac.ConsoleOutput("Successfully added titles of Your Soundtrack to What's That Song?\n")
+            if WhatsThatSongAPI:AddSoundtrack(&quot;Your Soundtrack Name&quot;, yourSoundtrackTitles) then
+                Isaac.ConsoleOutput(&quot;Successfully added titles of Your Soundtrack to What's That Song?\n&quot;)
             else
-                Isaac.ConsoleOutput("Failed to add titles of Your Soundtrack to What's That Song?\n")
+                Isaac.ConsoleOutput(&quot;Failed to add titles of Your Soundtrack to What's That Song?\n&quot;)
             end
         end
     else
-        Isaac.ConsoleOutput("Soundtrack Menu is required for adding the soundtrack!\n")
+        Isaac.ConsoleOutput(&quot;Soundtrack Menu is required for adding the soundtrack!\n&quot;)
     end
 end)
 
 All issues, suggestions and other concerns should be brought forth on the mod's [url=https://github.com/AceHanded/TBOI-Whats-That-Song-Mod/issues]GitHub page[/url].</description>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Tweaks"/>

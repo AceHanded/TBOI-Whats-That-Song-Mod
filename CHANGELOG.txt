@@ -1,11 +1,15 @@
-v1.0.5
+v1.0.7
+- Added rainbow colorization option for the notifications, enabled by setting all color values of that notification to -1.
+- Removed notifications for the jingles at the beginning of the game.
+
+v1.0.6
 - Added built-in support for new soundtracks.
    * The Binding of Isaac: Mutations Soundtrack
    * Spelunky 1 + 2 Music
    * Hotline Miami 1/2 Soundtrack
    * A Hat in Time Soundtrack
 
-v1.0.4
+v1.0.5
 - Overhauled the way song IDs are resolved.
    * Moved from statically to dynamically assigned IDs, which, to be fair, should have been done from the beginning.
    * This mod no longer messes up other music mods, and vice versa, meaning that you can use as many music altering mods, while still getting correct results for those supported by this mod.

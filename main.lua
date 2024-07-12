@@ -14,17 +14,11 @@ local musicIDs = {}
 
 local json = require("json")
 local SaveState = {}
-local currentSongName = nil
-local musicID = 0
-local framesPerSecond = 60
-local previousMusicID = nil
-local displayTimer = 0
-local displayDuration = 0
-local scrollSpeed = 0
-local scrollPos = 0
-local maxVisibleChars = 20
-local displayDelay = 0
-local debugPreviousMusicID = 0
+local FPS, MAX_VISIBLE_CHARS = 60, 20
+local currentSongName, previousMusicID = nil, nil
+local musicID, displayTimer, displayDuration, scrollSpeed, scrollPos, displayDelay, debugPreviousMusicID = 0, 0, 0, 0, 0, 0, 0
+local rainbowR, rainbowG, rainbowB, rainbowPos = 0, 0, 0, 0
+local rainbowEnabled, rainbowTabEnabled = false, false
 local defaultConfig = {
     ["NotificationColorR"] = 255,
     ["NotificationColorG"] = 255,
@@ -151,19 +145,19 @@ else
     ModConfigMenu.AddText(modName, "Info", function() return "(ID: " .. tostring(musicID) .. ")" end)
     ModConfigMenu.AddSpace(modName, "Info")
     ModConfigMenu.AddText(modName, "Info", function() return "What's That Song?" end)
-    ModConfigMenu.AddText(modName, "Info", function() return "V1.0.4" end)
+    ModConfigMenu.AddText(modName, "Info", function() return "V1.0.7" end)
     ModConfigMenu.AddText(modName, "Info", function() return "Courtesy of AceHand" end)
     ModConfigMenu.AddSpace(modName, "Info")
     AddResetButton("Info", "ResetToDefaults", "Resets all configuration fields to their default values.")
 
     AddBooleanSetting("General", "ConstantDisplay", "Whether to constantly display the notification.")
-    AddNumberSetting("General", "NotificationColorR", "Dictates the red color saturation (Rgba) of the notification.", 0, 255)
-    AddNumberSetting("General", "NotificationColorG", "Dictates the green color saturation (rGba) of the notification.", 0, 255)
-    AddNumberSetting("General", "NotificationColorB", "Dictates the blue color saturation (rgBa) of the notification.", 0, 255)
+    AddNumberSetting("General", "NotificationColorR", "Dictates the red color saturation (Rgba) of the notification.", -1, 255)
+    AddNumberSetting("General", "NotificationColorG", "Dictates the green color saturation (rGba) of the notification.", -1, 255)
+    AddNumberSetting("General", "NotificationColorB", "Dictates the blue color saturation (rgBa) of the notification.", -1, 255)
     AddScrollSetting("General", "NotificationColorA", "Dictates the transparency, i.e. alpha (rgbA) of the notification.")
-    AddNumberSetting("General", "TabNotificationColorR", "Dictates the red color saturation (Rgba) of the notification that appears when 'Tab' is held.", 0, 255)
-    AddNumberSetting("General", "TabNotificationColorG", "Dictates the green color saturation (rGba) of the notification that appears when 'Tab' is held.", 0, 255)
-    AddNumberSetting("General", "TabNotificationColorB", "Dictates the blue color saturation (rgBa) of the notification that appears when 'Tab' is held.", 0, 255)
+    AddNumberSetting("General", "TabNotificationColorR", "Dictates the red color saturation (Rgba) of the notification that appears when 'Tab' is held.", -1, 255)
+    AddNumberSetting("General", "TabNotificationColorG", "Dictates the green color saturation (rGba) of the notification that appears when 'Tab' is held.", -1, 255)
+    AddNumberSetting("General", "TabNotificationColorB", "Dictates the blue color saturation (rgBa) of the notification that appears when 'Tab' is held.", -1, 255)
     AddScrollSetting("General", "TabNotificationColorA", "Dictates the transparency, i.e. alpha (rgbA) of the notification that appears when 'Tab' is held.")
     AddNumberSetting("General", "NotificationDuration", "Dictates the duration for which the notification is displayed in seconds.", 1, nil)
     AddNumberSetting("General", "NotificationSpeed", "Dictates the speed at which the notification is displayed (characters per second).", 1, nil)
@@ -181,11 +175,44 @@ end
 
 Isaac.ConsoleOutput("What's That Song? loaded successfully.\n")
 
+local function all(tbl, comp)
+    local count = 0
+    if comp == nil then comp = true end
+
+    for _, v in ipairs(tbl) do
+        if v == comp then count = count + 1 end
+    end
+
+    if count == #tbl then
+        return true
+    end
+    return false
+end
+
+local function any(tbl, comp)
+    if comp == nil then comp = true end
+
+    for _, v in ipairs(tbl) do
+        if v == comp then return true end
+    end
+    return false
+end
+
 local function convertRGB(rgb)
     if type(rgb) ~= "number" then
         rgb = 255
     end
     return math.floor((rgb / 255) * 10^3 + 0.5) / 10^3  -- Round to three decimal points
+end
+
+local function getRainbowColor()
+    rainbowPos = (rainbowPos + 0.05) % (2 * math.pi)  -- Limit max value of rainbowPos to 2 * math.pi
+
+    local r = convertRGB(math.sin(rainbowPos) * 127.5 + 127.5)
+    local g = convertRGB(math.sin(rainbowPos + 2 * math.pi / 3) * 127.5 + 127.5)
+    local b = convertRGB(math.sin(rainbowPos + 4 * math.pi / 3) * 127.5 + 127.5)
+
+    return r, g, b
 end
 
 function WhatsThatSong:GetSongName(id)
@@ -255,6 +282,9 @@ function WhatsThatSong:PopulateMusicIDs()
             end
         end
     end
+    -- IDs for the beginning jingles
+    musicIDs[64] = ""
+    musicIDs[95] = ""
 
     -- Resolve IDs for Specialist Dance for Good Items
     if Isaac.GetMusicIdByName("specialist") ~= -1 then
@@ -266,19 +296,35 @@ WhatsThatSong:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, WhatsThatSong.Popul
 
 WhatsThatSong:AddCallback(ModCallbacks.MC_POST_RENDER, function()
     musicID = musicManager:GetCurrentMusicID()
-    displayDuration = framesPerSecond * config.NotificationDuration  -- Converting seconds to frames
+    displayDuration = FPS * config.NotificationDuration  -- Converting seconds to frames
     scrollSpeed = config.NotificationSpeed
 
     -- Adjusting the rendered text position according to window size
     local textX = Isaac.GetScreenWidth() - (Isaac.GetScreenWidth() / 2.75)
     local textY = Isaac.GetScreenHeight() - (Isaac.GetScreenHeight() / 1.15)
 
+    -- Calculate rainbow color only if all color values of either notification are -1
+    local rainbowValues = all({config.NotificationColorR, config.NotificationColorG, config.NotificationColorB}, -1)
+    local rainbowTabValues = all({config.TabNotificationColorR, config.TabNotificationColorG, config.TabNotificationColorB}, -1)
+
+    if rainbowValues or rainbowTabValues then
+        rainbowR, rainbowG, rainbowB = getRainbowColor()
+        if rainbowValues then rainbowEnabled = true else rainbowEnabled = false end
+        if rainbowTabValues then rainbowTabEnabled = true else rainbowTabEnabled = false end
+    elseif rainbowEnabled or rainbowTabEnabled then
+        rainbowEnabled, rainbowTabEnabled = false, false
+    end
+
     if (not config.IgnoreNumerals or type(tonumber(currentSongName)) ~= "number") and Input.IsButtonPressed(Keyboard.KEY_TAB, 0) then
         -- Ensure the tab notification only appears when the button is held, by setting a short delay
-        if displayDelay < framesPerSecond / 2 then
+        if displayDelay < FPS / 2 then
             displayDelay = displayDelay + 1
         else
-            font:DrawStringScaledUTF8(tostring(currentSongName), textX / 1.275 + config.TabOffsetX, textY / 2.2 - config.TabOffsetY, config.TabSizeX / 10, config.TabSizeY / 10, KColor(convertRGB(config.TabNotificationColorR), convertRGB(config.TabNotificationColorG), convertRGB(config.TabNotificationColorB), config.TabNotificationColorA / 10), 1, true)
+            if rainbowTabEnabled then
+                font:DrawStringScaledUTF8(tostring(currentSongName), textX / 1.275 + config.TabOffsetX, textY / 2.2 - config.TabOffsetY, config.TabSizeX / 10, config.TabSizeY / 10, KColor(rainbowR, rainbowG, rainbowB, config.TabNotificationColorA / 10), 1, true)
+            else
+                font:DrawStringScaledUTF8(tostring(currentSongName), textX / 1.275 + config.TabOffsetX, textY / 2.2 - config.TabOffsetY, config.TabSizeX / 10, config.TabSizeY / 10, KColor(convertRGB(config.TabNotificationColorR), convertRGB(config.TabNotificationColorG), convertRGB(config.TabNotificationColorB), config.TabNotificationColorA / 10), 1, true)
+            end
         end
     elseif displayDelay ~= 0 then
         displayDelay = 0
@@ -300,19 +346,24 @@ WhatsThatSong:AddCallback(ModCallbacks.MC_POST_RENDER, function()
         local textToRender
 
         -- Creating a scrolling effect for the notification
-        if #currentSongName > maxVisibleChars then
-            local startPos = math.floor(scrollPos) % (#currentSongName + maxVisibleChars)
+        if #currentSongName > MAX_VISIBLE_CHARS then
+            local startPos = math.floor(scrollPos) % (#currentSongName + MAX_VISIBLE_CHARS)
 
-            if startPos < maxVisibleChars then
-                textToRender = string.rep(" ", maxVisibleChars - startPos) .. string.sub(currentSongName, 1, startPos)
+            if startPos < MAX_VISIBLE_CHARS then
+                textToRender = string.rep(" ", MAX_VISIBLE_CHARS - startPos) .. string.sub(currentSongName, 1, startPos)
             else
-                textToRender = string.sub(currentSongName, startPos - maxVisibleChars + 1, startPos)
+                textToRender = string.sub(currentSongName, startPos - MAX_VISIBLE_CHARS + 1, startPos)
             end
         else
             textToRender = currentSongName
         end
-        Isaac.RenderScaledText("Now playing: " .. textToRender, textX + config.OffsetX, textY - config.OffsetY, config.SizeX / 10, config.SizeY / 10, convertRGB(config.NotificationColorR), convertRGB(config.NotificationColorG), convertRGB(config.NotificationColorB), config.NotificationColorA / 10)
-        scrollPos = scrollPos + scrollSpeed * (1 / framesPerSecond)
+
+        if rainbowEnabled then
+            Isaac.RenderScaledText("Now playing: " .. textToRender, textX + config.OffsetX, textY - config.OffsetY, config.SizeX / 10, config.SizeY / 10, rainbowR, rainbowG, rainbowB, config.NotificationColorA / 10)
+        else
+            Isaac.RenderScaledText("Now playing: " .. textToRender, textX + config.OffsetX, textY - config.OffsetY, config.SizeX / 10, config.SizeY / 10, convertRGB(config.NotificationColorR), convertRGB(config.NotificationColorG), convertRGB(config.NotificationColorB), config.NotificationColorA / 10)
+        end
+        scrollPos = scrollPos + scrollSpeed * (1 / FPS)
 
         -- The timer does not need to be decremented if the notification is constantly displayed
         if not config.ConstantDisplay then
