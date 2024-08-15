@@ -20,7 +20,8 @@ local musicTable = {
         "Mutations",   -- The Binding of Isaac: Mutations Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2499546769
         "Spelunky",  -- Spelunky 1 + 2 Music - https://steamcommunity.com/sharedfiles/filedetails/?id=2523708160
         "Hotline Miami",  -- Hotline Miami 1/2 Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2532793042
-        "A Hat in Time"  -- A Hat in Time Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2507009001
+        "A Hat in Time",  -- A Hat in Time Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2507009001
+        "Excelsior"  -- Excelsior Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2701118263
     },
     ["SoundtrackTitles"] = {  -- Song titles of each soundtrack
         ["Rebirth"] = {
@@ -790,6 +791,102 @@ local musicTable = {
             "Pascal Michael Stiefel - Green Clean Station (Reversed)",  -- Downpour (Reversed)
             "Pascal Michael Stiefel - Nyakuza Manholes (Reversed)",  -- Dross (Reversed)
             "Pascal Michael Stiefel - Goodbye Everyone"  -- Genesis (Reversed)
+        },
+        ["Excelsior"] = {
+            "RENREN - Six Feet Under",  -- Basement
+            "RENREN - Nave",  -- Cellar
+            "RENREN - Sodom & Gomorrah",  -- Burning Basement
+            "RENREN - Black Gold",  -- Caves
+            "RENREN - Undercroft",  -- Catacombs
+            "RENREN - Of Chariots And Horsemen",  -- Flooded Caves
+            "RENREN - Vantasm",  -- Depths
+            "RENREN - Kings Of Osseous",  -- Necropolis
+            "RENREN - Sodden Leisure",  -- Dank Depths
+            "RENREN - Martyr's Tribunal",  -- Womb/Utero
+            "RENREN - Deanimus",  -- Scarred Womb
+            "RENREN - Stiflor",  -- Blue Womb
+            "RENREN - 4th Dimension",  -- Sheol
+            "RENREN - Inexorable",  -- Cathedral
+            "RENREN - Paean",  -- Dark Room
+            "RENREN - Hungarian Rhapsody No. 2",  -- Chest
+            "RENREN - Chimera",  -- Void
+      
+            "RENREN - Grimordia",  -- Library
+            "RENREN - Grata Retro",  -- Devil Room
+            "RENREN - Joyous",  -- Angel Room
+            "RENREN - My Brother's Keeper",  -- Shop
+            "RENREN - DoubleTap",  -- Arcade
+            "RENREN - At Fault",  -- Secret Room
+            "RENREN - Aria Voice",  -- Boss Defeated
+            "RENREN - Plasma",  -- Challenge Fight
+      
+            "RENREN - Brass Knuckle",  -- Boss
+            "RENREN - Vomitorium",  -- Boss (Alt)
+            "RENREN (feat. jm2k) - Bloody Mary",  -- Boss (Mom)
+            "RENREN (feat. Scary Lemon) - Infinitae Nativitatis",  -- Boss (Mom's Heart)
+            "RENREN - Angel1",  -- Boss (Isaac)
+            "RENREN - THA DEVILLLLL",  -- Boss (Satan)
+            "RENREN (feat. Kallen) - Rex Ivdæorvm",  -- Boss (The Lamb)
+            "RENREN - FLYBOY",  -- Boss (???)
+            "RENREN (feat. Noisemaker) - Tirade Husk",  -- Boss (Hush)
+            "RENREN (feat. Taitoki) - Heartbroker",  -- Boss (Ultra Greed)
+            "RENREN - Memoryrave",  -- Boss (Delirium)
+            "RENREN - THA DEVILLLLL",  -- Boss (Mega Satan)
+      
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            "",  -- Boss Death (Hush)
+      
+            "RENREN - Suipelagic",  -- Utero
+            "RENREN - Petrichord",  -- Downpour
+            "RENREN - Outfall",  -- Dross
+            "RENREN - Rocker Switch",  -- Mines
+            "RENREN - Dancing Devil",  -- Ashpit
+            "RENREN - Heretic's Clarion",  -- Mausoleum
+            "RENREN - Below Zion",  -- Gehenna
+            "RENREN - Four-Days Dead",  -- Corpse
+            "RENREN - Jesu, Joy of Man's Desiring",  -- Home
+              
+            "RENREN - Playwright",  -- Mineshaft Ambient
+            "RENREN - Drama Queen",  -- Mineshaft Escape
+            "RENREN - Clair de Lune",  -- Planetarium
+            "RENREN - Faltering",  -- Secret Room (Alt)
+            "RENREN - Falte Red",  -- Secret Room (Alt Alt)
+              
+            "RENREN - Sicarus",  -- Boss Rush
+            "",  -- Boss Rush Start
+            "RENREN - A Voice",  -- Boss Defeated (Twisted)
+            "",  -- Mom's Shadow Intro
+            "",  -- Strange Door
+            "RENREN - Awakening",  -- Echoes Reverse
+              
+            "RENREN - The Nazarite",  -- Boss (Alt Alt)
+            "RENREN (feat. WakerLink) - Malicemaker",  -- Boss (Mother)
+            "",  -- Dogma Intro
+            "RENREN (feat. WakerLink) - 1:1",  -- Boss (Dogma)
+            "RENREN - Forever Nevermore",  -- Boss (Beast)
+            "",  -- Boss Death (Alt Alt)
+            "",  -- Boss Mother Death
+            "",  -- Boss Dogma Death
+            "",  -- Boss Beast Death
+              
+            "RENREN - Petrichord (Reversed)",  -- Downpour (Reversed)
+            "RENREN - Outfall (Reversed)",  -- Dross (Reversed)
+            "RENREN - Journey to Moriah",  -- Genesis (Reversed)
+          
+            "",  -- Game Over (Jingle)
+            "RENREN - Tredecim",  -- Game Over
+            "RENREN - FLYBOY" -- "Boss (Hush Phase 1)"
         }
     },
     ["TrackTypes"] = {  -- Track types, as declared by Soundtrack Menu

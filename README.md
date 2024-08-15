@@ -20,12 +20,16 @@ There is currently also support for the <b>Soundtrack Menu</b>, along with a few
     <li>Asking nicely.</li>
 </ol>
 
-Soundtrack mods with built-in support:
+Supported soundtrack mods:
 <ul>
     <li>[The Binding of Isaac: Mutations Soundtrack](https://steamcommunity.com/sharedfiles/filedetails/?id=2499546769)</li>
     <li>[Spelunky 1 + 2 Music](https://steamcommunity.com/sharedfiles/filedetails/?id=2523708160)</li>
     <li>[Hotline Miami 1/2 Soundtrack](https://steamcommunity.com/sharedfiles/filedetails/?id=2532793042)</li>
     <li>[A Hat in Time Soundtrack](https://steamcommunity.com/sharedfiles/filedetails/?id=2507009001)</li>
+    <li>[A Hat in Time Soundtrack](https://steamcommunity.com/sharedfiles/filedetails/?id=2507009001)</li>
+    <li>[A Hat in Time Soundtrack](https://steamcommunity.com/sharedfiles/filedetails/?id=2507009001)</li>
+    <li>[Disco Elysium Soundtrack](https://steamcommunity.com/sharedfiles/filedetails/?id=3282947983)</li>
+    <li>[Excelsior Soundtrack](https://steamcommunity.com/sharedfiles/filedetails/?id=2701118263)</li>
 </ul>
 
 If you are using other music-altering mods besides these, the mod should still work perfectly fine for supported soundtracks. Additionally, if you opt for choice 1 for some reason, it would be oh so very kind of you to share your contribution with me, so I could add it for others' use as well.

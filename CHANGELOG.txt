@@ -1,5 +1,9 @@
+v1.0.8
+- Added built-in support for new soundtracks.
+    * Excelsior Soundtrack
+
 v1.0.7
-- Added rainbow colorization option for the notifications, enabled by setting all color values of that notification to -1.
+- Added rainbow colorization option for the notifications, enabled by setting all color values of the corresponding notification to -1.
 - Removed notifications for the jingles at the beginning of the game.
 
 v1.0.6

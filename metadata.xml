@@ -23,12 +23,14 @@ There is currently also support for the [b]Soundtrack Menu[/b], along with a few
     [*]Making your own &quot;plugin&quot; mod, utilizing the WhatsThatSongAPI interface.
     [*]Asking nicely.
 [/olist]
-Soundtrack mods with built-in support:
+Supported soundtrack mods:
 [list]
     [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2499546769]The Binding of Isaac: Mutations Soundtrack[/url] 
     [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2523708160]Spelunky 1 + 2 Music[/url] 
     [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2532793042]Hotline Miami 1/2 Soundtrack[/url] 
     [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2507009001]A Hat in Time Soundtrack[/url] 
+    [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3282947983]Disco Elysium Soundtrack[/url] 
+    [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2701118263]Excelsior Soundtrack[/url] 
 [/list]
 If you are using other music-altering mods besides these, the mod should still work perfectly fine for supported soundtracks. Additionally, if you opt for choice 1 for some reason, it would be oh so very kind of you to share your contribution with me, so I could add it for others' use as well.
 
@@ -67,7 +69,7 @@ YourModName:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, function()
 end)
 
 All issues, suggestions and other concerns should be brought forth on the mod's [url=https://github.com/AceHanded/TBOI-Whats-That-Song-Mod/issues]GitHub page[/url].</description>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Tweaks"/>
