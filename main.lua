@@ -145,7 +145,7 @@ else
     ModConfigMenu.AddText(modName, "Info", function() return "(ID: " .. tostring(musicID) .. ")" end)
     ModConfigMenu.AddSpace(modName, "Info")
     ModConfigMenu.AddText(modName, "Info", function() return "What's That Song?" end)
-    ModConfigMenu.AddText(modName, "Info", function() return "V1.0.7" end)
+    ModConfigMenu.AddText(modName, "Info", function() return "V1.0.9" end)
     ModConfigMenu.AddText(modName, "Info", function() return "Courtesy of AceHand" end)
     ModConfigMenu.AddSpace(modName, "Info")
     AddResetButton("Info", "ResetToDefaults", "Resets all configuration fields to their default values.")
@@ -248,9 +248,15 @@ function WhatsThatSong:PopulateMusicIDs()
 
                 if st ~= nil and musicTable.TrackTypes[ii] ~= nil then
                     trackID = Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[ii])
+                    local variants = (Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[ii] .. " 2") > 0)
+
+                    -- Check if a soundtrack has multiple different tracks for the same track type
+                    if variants and trackID < 0 then
+                        trackID = Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[ii] .. " 1")
+                    end
 
                     -- Resolve referred soundtrack IDs
-                    if v:sub(1, 1) == "[" and v:sub(-1, -1) == "]" then
+                    if type(v) == "string" and v:sub(1, 1) == "[" and v:sub(-1, -1) == "]" then
                         local resolvedSoundtrack = nil
 
                         for idx, soundtrack in pairs(musicTable.Soundtracks) do
@@ -266,7 +272,14 @@ function WhatsThatSong:PopulateMusicIDs()
                             musicIDs[trackID] = musicTable.SoundtrackTitles.Rebirth[ii]
                         end
                     else
-                        musicIDs[trackID] = musicTable.SoundtrackTitles[st][ii] or fallbackID
+                        if variants then  -- Load the different variants for this track type
+                            for iii = 1, #musicTable.SoundtrackTitles[st][ii] do
+                                trackID = Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[ii] .. " " .. iii)
+                                musicIDs[trackID] = musicTable.SoundtrackTitles[st][ii][iii]
+                            end
+                        else
+                            musicIDs[trackID] = musicTable.SoundtrackTitles[st][ii] or fallbackID
+                        end
                     end
                 end
             end
@@ -298,6 +311,11 @@ WhatsThatSong:AddCallback(ModCallbacks.MC_POST_RENDER, function()
     musicID = musicManager:GetCurrentMusicID()
     displayDuration = FPS * config.NotificationDuration  -- Converting seconds to frames
     scrollSpeed = config.NotificationSpeed
+
+    -- If Soundtrack Menu is using layer/jingle to play something that won't show up on GetCurrentMusicID
+    if JukeBoxTrackOverride and JukeBoxTrackOverride > 0 then
+        musicID = JukeBoxTrackOverride
+    end
 
     -- Adjusting the rendered text position according to window size
     local textX = Isaac.GetScreenWidth() - (Isaac.GetScreenWidth() / 2.75)
@@ -449,4 +467,13 @@ function WhatsThatSongAPI:AddSoundtrack(name --[[String]], soundtrack --[[Table]
         return
     end
     return AddSoundtrack(musicTable, name, soundtrack)  -- True, if successful, otherwise false
+end
+
+--[[ Jukebox Compatibility ]]--
+
+-- Get track titles from a mod with Jukebox functionality
+if Titles == nil then Titles = true end
+
+function AddTitlesToJukebox(tableid, name, displayname, soundtrack)
+    WhatsThatSongAPI:AddSoundtrack(name, soundtrack)
 end

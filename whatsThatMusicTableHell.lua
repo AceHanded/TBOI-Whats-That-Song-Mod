@@ -21,7 +21,34 @@ local musicTable = {
         "Spelunky",  -- Spelunky 1 + 2 Music - https://steamcommunity.com/sharedfiles/filedetails/?id=2523708160
         "Hotline Miami",  -- Hotline Miami 1/2 Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2532793042
         "A Hat in Time",  -- A Hat in Time Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2507009001
-        "Excelsior"  -- Excelsior Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2701118263
+        "Excelsior",  -- Excelsior Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2701118263
+
+        "Blackhole",  -- Blackhole Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2009013333
+        "Symphony of the Night",  -- [REP] Castlevania: Symphony of the Night/Rondo of Blood Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2012290569
+        "Chrono Trigger",  -- Chrono Trigger Music - https://steamcommunity.com/sharedfiles/filedetails/?id=1992523444
+        "Crawl",  -- Crawl Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=1970399215
+        "Doom",  -- Doom Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2025155116
+        "Dan Terminus",  -- Dan Terminus Music - https://steamcommunity.com/sharedfiles/filedetails/?id=1985663179
+        "Darkest Dungeon",  -- Darkest Dungeon Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=1997127797
+        "Dead Cells",  -- Dead Cells Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=1987528220
+        "Diablo II",  -- Diablo II Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2010995366
+        "Downwell",  -- Downwell Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2000077286
+        "FTL",  -- FTL Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=1983611765
+        "Lisa",  -- [REP] LISA the Painful RPG Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=1996945524
+        "PaperMario",  -- Paper Mario Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2008292492
+        "Pitfall",  -- Pitfall: The Mayan Adventure Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=1989101385
+        "Shovel Knight",  -- Shovel Knight Soundtracks - https://steamcommunity.com/sharedfiles/filedetails/?id=1993758635
+        "Plague Knight",
+        "Specter Knight",
+        "King Knight",
+        "Slay the Spire",  -- Slay the Spire Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2007741797
+        "SovietJumpGame",  -- Soviet Jump Game Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=1966703348
+        "SuperSmashBros",  -- Super Smash Bros Soundtrack [Rep. Ver.] - https://steamcommunity.com/sharedfiles/filedetails/?id=1997736026
+        "P1",  -- (AB+/Rep) Persona Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2006986040
+        "P2",  -- (AB+/Rep) Persona 2 Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2006989742
+        "P3",  -- (AB+/Rep) Persona 3 Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2006994282
+        "P4",  -- (AB+/Rep) Persona 4 Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2006999553
+        "SMTif"  -- (AB+/Rep) Shin Megami Tensei: If... Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2006979546
     },
     ["SoundtrackTitles"] = {  -- Song titles of each soundtrack
         ["Rebirth"] = {
@@ -401,7 +428,7 @@ local musicTable = {
             "[Rebirth]",  -- Shop
             "[Rebirth]",  -- Arcade
             "[Rebirth]",  -- Secret Room
-            "[Rebirth]",  -- Boss Defeated
+            "Ridiculon - Fortitudo",  -- Boss Defeated
             "[Rebirth]",  -- Challenge Fight
       
             "Ridiculon - Dominus",  -- Boss
@@ -887,6 +914,1073 @@ local musicTable = {
             "",  -- Game Over (Jingle)
             "RENREN - Tredecim",  -- Game Over
             "RENREN - FLYBOY" -- "Boss (Hush Phase 1)"
+        },
+        ["Blackhole"] = {
+            "Jakub Miřejovský - Easy Mission",  -- Basement
+            "Jakub Miřejovský - No-Man's Land",  -- Cellar
+            "Jakub Miřejovský - Happy Mummy",  -- Burning Basement
+            "Jakub Miřejovský - Everything Apart",  -- Caves
+            "Jakub Miřejovský - Climbing Up",  --Catacombs
+            "Jakub Miřejovský - Save The Life",  --Flooded Caves
+            "Jakub Miřejovský - City Of The Nanobots",  -- Depths
+            "Jakub Miřejovský - What Is Going On",  -- Necropolis
+            "Jakub Miřejovský - City Of The Knowledge",  -- Dank Depths
+            "Jakub Miřejovský - Living Entity",  -- Womb/Utero
+            "Jakub Miřejovský - Secret Of The Vault",  -- Scarred Womb
+            "Jakub Miřejovský - Oasis Of Happiness",  -- Blue Womb
+            "Jakub Miřejovský - Sacred Library",  -- Sheol
+            "Jakub Miřejovský - Dissappearance",  -- Cathedral
+            "Jakub Miřejovský - Beyond The Void",  -- Dark Room
+            "Jakub Miřejovský - Suicide Run (Finale Theme)",  -- Chest
+            "Jakub Miřejovský - Important Person",  -- Void
+
+            "Jakub Miřejovský - Exploration",  -- Library
+            "Jakub Miřejovský - Somewhere",  -- Devil Room
+            "Jakub Miřejovský - Nice Place",  -- Angel Room
+            "Jakub Miřejovský - Up & Down",  -- Shop
+            "Jakub Miřejovský - Lasers Everywhere",  -- Arcade
+            "Jakub Miřejovský - BLACKHOLE (Menu Theme)",  -- Secret Room
+            "Jakub Miřejovský - Endera",  -- Boss Defeated
+            "Jakub Miřejovský - Battle With Mr. Flower",  -- Challenge Fight
+
+            "Jakub Miřejovský - World Of Glass",  -- Boss
+            "Jakub Miřejovský - World Of Glass",  -- Boss (Alt)
+            "Jakub Miřejovský - World Of Glass",  -- Boss (Mom)
+            "Jakub Miřejovský - World Of Glass",  -- Boss (Mom's Heart)
+            "Jakub Miřejovský - Dangeours Path",  -- Boss (Isaac)
+            "Jakub Miřejovský - Dangeours Path",  -- Boss (Satan)
+            "Jakub Miřejovský - Dangeours Path",  -- Boss (The Lamb)
+            "Jakub Miřejovský - Dangeours Path",  -- Boss (???)
+            "Jakub Miřejovský - Big Mistake",  -- Boss (Hush)
+            "Jakub Miřejovský - Big Mistake",  -- Boss (Ultra Greed)
+            "Jakub Miřejovský - Big Mistake",  -- Boss (Delirium)
+            "Jakub Miřejovský - Big Mistake"  -- Boss (Mega Satan)
+        },
+        ["Symphony of the Night"] = {
+            "Michiru Yamane - Dracula's Castle",  -- Basement
+            "Michiru Yamane - Marble Gallery",  -- Cellar
+            "Michiru Yamane - Dance of Gold",  -- Burning Basement
+            "Michiru Yamane - Tower of Mist",  -- Caves
+            "Michiru Yamane - Requiem for the Gods",  -- Catacombs
+            "Michiru Yamane - Crystal Teardrops",  -- Flooded Caves
+            "Michiru Yamane - Abandoned Pit",  -- Depths
+            "Michiru Yamane - Dance of Pales",  -- Necropolis
+            "Michiru Yamane - Wandering Ghost",  -- Dank Depths
+            "Michiru Yamane - The Tragic Prince",  -- Womb/Utero
+            "Michiru Yamane - Heavenly Doorway",  -- Scarred Womb
+            "Michiru Yamane - Rainbow Cemetery",  -- Blue Womb
+            "Michiru Yamane - Curze Zone",  -- Sheol
+            "Michiru Yamane - Lost Painting",  -- Cathedral
+            "Michiru Yamane - The Door to the Abyss",  -- Dark Room
+            "Michiru Yamane - The Door to the Abyss",  -- Chest
+            "Michiru Yamane - Finale Toccata",  -- Void
+
+            "Michiru Yamane - Wood Carving Partita",  -- Library
+            "Michiru Yamane - The Door to the Abyss",  -- Devil Room
+            "Michiru Yamane - Prayer",  -- Angel Room
+            "Michiru Yamane - Library Shop",  -- Shop
+            "Michiru Yamane - Library Shop",  -- Arcade
+            "",  -- Secret Room
+            "Michiru Yamane - Moonlight Nocturne",  -- Boss Defeated
+            "Michiru Yamane - Prologue",  -- Challenge Fight
+
+            "Michiru Yamane - Festival of Servants",  -- Boss
+            "Michiru Yamane - Festival of Servants",  -- Boss (Alt)
+            "Michiru Yamane - Blood Relations",  -- Boss (Mom)
+            "Michiru Yamane - Enchanted Banquet",  -- Boss (Mom's Heart)
+            "Michiru Yamane - Death Ballad",  -- Boss (Isaac)
+            "Michiru Yamane - Death Ballad",  -- Boss (Satan)
+            "Michiru Yamane - Death Ballad",  -- Boss (The Lamb)
+            "Michiru Yamane - Death Ballad",  -- Boss (???)
+            "Michiru Yamane - Death Ballad",  -- Boss (Hush)
+            "Michiru Yamane - Black Banquet",  -- Boss (Ultra Greed)
+            "Michiru Yamane - Black Banquet",  -- Boss (Delirium)
+            "Michiru Yamane - Black Banquet"  -- Boss (Mega Satan)
+        },
+        ["Chrono Trigger"] = {
+            "Yasunori Mitsuda - Secrets of the Forest",  -- Basement
+            "Yasunori Mitsuda - The Trial",  -- Cellar
+            "Yasunori Mitsuda - Burn! Bobonga!",  -- Burning Basement
+            "Yasunori Mitsuda - Ayla's Theme",  -- Caves
+            "Yasunori Mitsuda - Dome-16's Ruin",  -- Catacombs
+            "Yasunori Mitsuda - Underground Sewers",  -- Flooded Caves
+            "Yasunori Mitsuda - Tyran Castle",  -- Depths
+            "Yasunori Mitsuda - People Who Threw Away the Will to Live",  -- Necropolis
+            "Yasunori Mitsuda - Sealed Door",  -- Dank Depths
+            "Yasunori Mitsuda - Undersea Palace",  -- Womb/Utero
+            "Yasunori Mitsuda - Black Dream",  -- Scarred Womb
+            "Yasunori Mitsuda - Confusing Melody",  -- Blue Womb
+            "Yasunori Mitsuda - Remains of the Factory",  -- Sheol
+            "Yasunori Mitsuda - Silent Light",  -- Cathedral
+            "Yasunori Mitsuda - Zeal Palace",  -- Dark Room
+            "Yasunori Mitsuda - Corridors of Time",  -- Chest
+            "Yasunori Mitsuda - To Far Away Times",  -- Void
+
+            "Yasunori Mitsuda - The Brink of Time",  -- Library
+            "Yasunori Mitsuda - Magus' Castle",  -- Devil Room
+            "Yasunori Mitsuda - Manoria Cathedral",  -- Angel Room
+            "Yasunori Mitsuda - Robo's Theme",  -- Shop
+            "Yasunori Mitsuda - Gato's Theme",  -- Arcade
+            "Yasunori Mitsuda - Rhythm of Wind, Sky, and Earth",  -- Secret Room
+            "Yasunori Mitsuda - Morning Sunlight",  -- Boss Defeated
+            "Yasunori Mitsuda - Boss Battle",  -- Challenge Fight
+
+            "Yasunori Mitsuda - Battle Theme",  -- Boss
+            "Yasunori Mitsuda - Battle Theme 2",  -- Boss (Alt)
+            "Yasunori Mitsuda - Boss Battle",  -- Boss (Mom)
+            "Yasunori Mitsuda - Boss Battle 2",  -- Boss (Mom's Heart)
+            "Yasunori Mitsuda - World Revolution",  -- Boss (Isaac)
+            "Yasunori Mitsuda - Battle with Magus",  -- Boss (Satan)
+            "Yasunori Mitsuda - A Shot in Crisis",  -- Boss (The Lamb)
+            "Yasunori Mitsuda - Bike Chase",  -- Boss (???)
+            "Yasunori Mitsuda - Last Battle",  -- Boss (Hush)
+            "[Rebirth]",  -- Boss (Ultra Greed)
+            "Yasunori Mitsuda - Last Battle",  -- Boss (Delirium)
+            "Yasunori Mitsuda - Battle with Magus"  -- Boss (Mega Satan)
+        },
+        ["Crawl"] = {
+            "Alex Yoder - Fugue",  -- Basement
+            "Alex Yoder - Fugue",  -- Cellar
+            "Alex Yoder - Fugue",  -- Burning Basement
+            "Alex Yoder - Toccata",  -- Caves
+            "Alex Yoder - Toccata",  -- Catacombs
+            "Alex Yoder - Toccata",  -- Flooded Caves
+            "Alex Yoder - Ritual",  -- Depths
+            "Alex Yoder - Ritual",  -- Necropolis
+            "Alex Yoder - Ritual",  -- Dank Depths
+            "Alex Yoder - Abyss",  -- Womb/Utero
+            "Alex Yoder - Abyss",  -- Scarred Womb
+            "Alex Yoder - Abyss",  -- Blue Womb
+            "Alex Yoder - Curses",  -- Sheol
+            "Alex Yoder - Darkness",  -- Cathedral
+            "Alex Yoder - Curses",  -- Dark Room
+            "Alex Yoder - Crawl",  -- Chest
+            "Alex Yoder - Crawl",  -- Void
+
+            "Alex Yoder - Below",  -- Library
+            "Alex Yoder - Loss",  -- Devil Room
+            "Alex Yoder - Darkness",  -- Angel Room
+            "Alex Yoder - Below",  -- Shop
+            "Alex Yoder - Below",  -- Arcade
+            "Alex Yoder - Below",  -- Secret Room
+            "Alex Yoder - Boss Lead-In",  -- Boss Defeated
+            "Alex Yoder - Clash",  -- Challenge Fight
+
+            "Alex Yoder - Clash",  -- Boss
+            "Alex Yoder - Clash",  -- Boss (Alt)
+            "Alex Yoder - Clash",  -- Boss (Mom)
+            "Alex Yoder - Clash",  -- Boss (Mom's Heart)
+            "Alex Yoder - Clash",  -- Boss (Isaac)
+            "Alex Yoder - Clash",  -- Boss (Satan)
+            "Alex Yoder - Clash",  -- Boss (The Lamb)
+            "Alex Yoder - Clash",  -- Boss (???)
+            "Alex Yoder - Clash",  -- Boss (Hush)
+            "Alex Yoder - Clash",  -- Boss (Ultra Greed)
+            "Alex Yoder - Clash",  -- Boss (Delirium)
+            "Alex Yoder - Clash"  -- Boss (Mega Satan)
+        },
+        ["Doom"] = {
+            "Robert Prince - At Doom's Gate (E1M1)",  -- Basement
+            "Robert Prince - At Doom's Gate (E1M1)",  -- Cellar
+            "Robert Prince - On The Hunt (E1M6)",  -- Burning Basement
+            "Robert Prince - The Imp's Song (E1M2)",  -- Caves
+            "Robert Prince - Sinister (E2M6)",  -- Catacombs
+            "Robert Prince - Dark Halls (E1M3)",  -- Flooded Caves
+            "Robert Prince - Deep Into The Code (E3M3)",  -- Depths
+            "Robert Prince - Waltz Of The Demons (E2M7)",  -- Necropolis
+            "Robert Prince - Hell Keep/Untitled (E3M1)",  -- Dank Depths
+            "Robert Prince - Nobody Told Me About id (E2M8)",  -- Womb/Utero
+            "Robert Prince - Nobody Told Me About id (E2M8)",  -- Scarred Womb
+            "Robert Prince - Bunny",  -- Blue Womb
+            "Robert Prince - Suspense (E1M5)",  -- Sheol
+            "Robert Prince - They're Going To Get You (E2M4)",  -- Cathedral
+            "Robert Prince - Demons On The Prey (E1M7)",  -- Dark Room
+            "Robert Prince - I Sawed The Demons (E2M1)",  -- Chest
+            "Robert Prince - Donna To The Rescue (E3M2)",  -- Void
+
+            "Robert Prince - The Demons From Adrian's Pen (E2M2)",  -- Library
+            "Robert Prince - Sign Of Evil (E1M8)",  -- Devil Room
+            "Robert Prince - They're Going To Get You (E2M4)",  -- Angel Room
+            "Robert Prince - Victory",  -- Shop
+            "Robert Prince - Victory",  -- Arcade
+            "Robert Prince - The Demons From Adrian's Pen (E2M2)",  -- Secret Room
+            "Robert Prince - Intermission From DOOM (E2M3)",  -- Boss Defeated
+            "Robert Prince - Hiding The Secrets (E1M9)",  -- Challenge Fight
+
+            "Robert Prince - Kitchen Ace (And Taking Names) (E1M4)",  -- Boss
+            "Robert Prince - Hiding The Secrets (E1M9)",  -- Boss (Alt)
+            "Robert Prince - Kitchen Ace (And Taking Names) (E1M4)",  -- Boss (Mom)
+            "Robert Prince - Kitchen Ace (And Taking Names) (E1M4)",  -- Boss (Mom's Heart)
+            "Robert Prince - Kitchen Ace (And Taking Names) (E1M4)",  -- Boss (Isaac)
+            "Robert Prince - Kitchen Ace (And Taking Names) (E1M4)",  -- Boss (Satan)
+            "Robert Prince - Kitchen Ace (And Taking Names) (E1M4)",  -- Boss (The Lamb)
+            "Robert Prince - Kitchen Ace (And Taking Names) (E1M4)",  -- Boss (???)
+            "Robert Prince - Facing The Spider (E3M8)",  -- Boss (Hush)
+            "Robert Prince - Facing The Spider (E3M8)",  -- Boss (Ultra Greed)
+            "Robert Prince - Facing The Spider (E3M8)",  -- Boss (Delirium)
+            "Robert Prince - Facing The Spider (E3M8)"  -- Boss (Mega Satan)
+        },
+        ["Dan Terminus"] = {
+            "Dan Terminus - Pegasus Pro Ultra Fusion",  -- Basement
+            "Dan Terminus - Pegasus Pro Ultra Fusion",  -- Cellar
+            "Dan Terminus - Death by Distortion",  -- Burning Basement
+            "Dan Terminus - It's Too Bad She Won't Live",  -- Caves
+            "Dan Terminus - It's Too Bad She Won't Live",  -- Catacombs
+            "Dan Terminus - Eternal Annihilator",  -- Flooded Caves
+            "Dan Terminus - Avalanche",  -- Depths
+            "Dan Terminus - Avalanche",  -- Necropolis
+            "Dan Terminus - Angelus",  -- Dank Depths
+            "Dan Terminus - Detonation",  -- Womb/Utero
+            "Dan Terminus - Detonation",  -- Scarred Womb
+            "Dan Terminus - Refuge",  -- Blue Womb
+            "Dan Terminus - The Chasm",  -- Sheol
+            "Dan Terminus - Grimoire Blanc",  -- Cathedral
+            "Dan Terminus - The Chasm",  -- Dark Room
+            "Dan Terminus - Grim",  -- Chest
+            "Dan Terminus - Grim",  -- Void
+
+            "Dan Terminus - Dirge of the Ancient Machines",  -- Library
+            "Dan Terminus - The Chasm",  -- Devil Room
+            "Dan Terminus - Fall of the Ancient World",  -- Angel Room
+            "Dan Terminus - Tuned to a Dead Channel",  -- Shop
+            "Dan Terminus - Electronic Snow",  -- Arcade
+            "Dan Terminus - Friendship Through Cleap Plastic Walls",  -- Secret Room
+            "Dan Terminus - Vesubian",  -- Boss Defeated
+            "Dan Terminus - Vesubian",  -- Challenge Fight
+
+            "Dan Terminus - Margaritifer",  -- Boss
+            "Dan Terminus - Margaritifer",  -- Boss (Alt)
+            "Dan Terminus - Margaritifer",  -- Boss (Mom)
+            "Dan Terminus - Heavy Artillery",  -- Boss (Mom's Heart)
+            "Dan Terminus - The Wrath of Code",  -- Boss (Isaac)
+            "Dan Terminus - Restless Destroyer",  -- Boss (Satan)
+            "Dan Terminus - Restless Destroyer",  -- Boss (The Lamb)
+            "Dan Terminus - Heavy Artillery",  -- Boss (???)
+            "Dan Terminus - Cherenkov Blue Overdriver",  -- Boss (Hush)
+            "Dan Terminus - Deus Mecanicus",  -- Boss (Ultra Greed)
+            "Dan Terminus - Deus Mecanicus",  -- Boss (Delirium)
+            "Dan Terminus - Deus Mecanicus"  -- Boss (Mega Satan)
+        },
+        ["Darkest Dungeon"] = {
+            "Stuart Chatwood - The Blasted Heath",  -- Basement
+            "Stuart Chatwood - Darkest Dungeon",  -- Cellar
+            "Stuart Chatwood - The Blasted Heath",  -- Burning Basement
+            "Stuart Chatwood - Combat In The Ruins",  -- Caves
+            "Stuart Chatwood - Dark Mitochondria",  -- Catacombs
+            "Stuart Chatwood - Combat In The Ruins",  -- Flooded Caves
+            "Stuart Chatwood - Battle In The Warrens",  -- Depths
+            "Stuart Chatwood - Return To The Warrens",  -- Necropolis
+            "Stuart Chatwood - Battle In The Warrens",  -- Dank Depths
+            "Stuart Chatwood - Bloodletting Of The Crimson Court",  -- Womb/Utero
+            "Stuart Chatwood - Bloodletting Of The Crimson Court",  -- Scarred Womb
+            "Stuart Chatwood - The Chloroplast Of Cosmarium",  -- Blue Womb
+            "Stuart Chatwood - Terror And Madness",  -- Sheol
+            "Stuart Chatwood - The End",  -- Cathedral
+            "Stuart Chatwood - House Of Ruin",  -- Dark Room
+            "Stuart Chatwood - Town In Chaos",  -- Chest
+            "Stuart Chatwood - All Things Must Come",  -- Void
+
+            "Stuart Chatwood - A Brief Respite",  -- Library
+            "Stuart Chatwood - Explore The Ruins",  -- Devil Room
+            "Stuart Chatwood - A Mocking Thirst",  -- Angel Room
+            "Stuart Chatwood - The Hamlet",  -- Shop
+            "Stuart Chatwood - The Senescence",  -- Arcade
+            "Stuart Chatwood - A Brief Respite",  -- Secret Room
+            "Stuart Chatwood - A Brief Respite",  -- Boss Defeated
+            "Stuart Chatwood - Mournweald Encounter",  -- Challenge Fight
+
+            "Stuart Chatwood - The Cove Battle",  -- Boss
+            "Stuart Chatwood - The Cove Battle",  -- Boss (Alt)
+            "Stuart Chatwood - The Cove Battle Siren",  -- Boss (Mom)
+            "Stuart Chatwood - The Cove Battle Siren",  -- Boss (Mom's Heart)
+            "Stuart Chatwood - The Cove Battle",  -- Boss (Isaac)
+            "Stuart Chatwood - The Cove Battle",  -- Boss (Satan)
+            "Stuart Chatwood - The Cove Battle",  -- Boss (The Lamb)
+            "Stuart Chatwood - The Cove Battle",  -- Boss (???)
+            "Stuart Chatwood - The Final Combat",  -- Boss (Hush)
+            "Stuart Chatwood - The Final Combat",  -- Boss (Ultra Greed)
+            "Stuart Chatwood - The Final Combat",  -- Boss (Delirium)
+            "Stuart Chatwood - The Final Combat"  -- Boss (Mega Satan)
+        },
+        ["Dead Cells"] = {
+            "Yoann Laulan - Prisoner's Awakening",  -- Basement
+            "Yoann Laulan - Promenade Of The Condemned",  -- Cellar
+            "Yoann Laulan - Prison's Rooftop",  -- Burning Basement
+            "Yoann Laulan - Cavern",  -- Caves
+            "Yoann Laulan - Cavern",  -- Catacombs
+            "Yoann Laulan - Toxic Sewers",  -- Flooded Caves
+            "Yoann Laulan - The Village",  -- Depths
+            "Yoann Laulan - Prison Theme",  -- Necropolis
+            "Yoann Laulan - Prison Theme",  -- Dank Depths
+            "Yoann Laulan - Astrolab",  -- Womb/Utero
+            "Yoann Laulan - Astrolab",  -- Scarred Womb
+            "Yoann Laulan - Observatory",  -- Blue Womb
+            "Yoann Laulan - The Crypt",  -- Sheol
+            "Yoann Laulan - The Temple",  -- Cathedral
+            "Yoann Laulan - Ossuary",  -- Dark Room
+            "Yoann Laulan - The Castle",  -- Chest
+            "Yoann Laulan - ClockTower",  -- Void
+
+            "Yoann Laulan - Collector",  -- Library
+            "Yoann Laulan - The Old Sewers",  -- Devil Room
+            "Yoann Laulan - Food Merchant",  -- Angel Room
+            "Yoann Laulan - The Merchant",  -- Shop
+            "Yoann Laulan - Trap Shop",  -- Arcade
+            "Yoann Laulan - Dead Cells",  -- Secret Room
+            "Yoann Laulan - Credits",  -- Boss Defeated
+            "Yoann Laulan - Black Bridge",  -- Challenge Fight
+
+            "Yoann Laulan - Elite Fight",  -- Boss
+            "Yoann Laulan - Elite Fight",  -- Boss (Alt)
+            "Yoann Laulan - Elite Fight",  -- Boss (Mom)
+            "Yoann Laulan - Elite Fight",  -- Boss (Mom's Heart)
+            "Yoann Laulan - Time For Your Medicine",  -- Boss (Isaac)
+            "Yoann Laulan - Guardian's Haven",  -- Boss (Satan)
+            "Yoann Laulan - Guardian's Haven",  -- Boss (The Lamb)
+            "Yoann Laulan - Time For Your Medicine",  -- Boss (???)
+            "Yoann Laulan - Conjonctivius",  -- Boss (Hush)
+            "Yoann Laulan - Hand Of The King",  -- Boss (Ultra Greed)
+            "Yoann Laulan - Formerly Known As Assassin",  -- Boss (Delirium)
+            "Yoann Laulan - Hand Of The King"  -- Boss (Mega Satan)
+        },
+        ["Diablo II"] = {
+            "Matt Uelmen - Valley",  -- Basement
+            "Matt Uelmen - Tristram",  -- Cellar
+            "Matt Uelmen - Wild",  -- Burning Basement
+            "Matt Uelmen - Caves",  -- Caves
+            "Matt Uelmen - Spider Cavern",  -- Catacombs
+            "Matt Uelmen - Kurast Sewers",  -- Flooded Caves
+            "Matt Uelmen - Kurast",  -- Depths
+            "Matt Uelmen - Crypt",  -- Necropolis
+            "Matt Uelmen - Sewers",  -- Dank Depths
+            "Matt Uelmen - Harem",  -- Womb/Utero
+            "Matt Uelmen - Harem",  -- Scarred Womb
+            "Matt Uelmen - Monastery",  -- Blue Womb
+            "Matt Uelmen - Pandemonium Fortress",  -- Sheol
+            "Matt Uelmen - Baal",  -- Cathedral
+            "Matt Uelmen - Tombs",  -- Dark Room
+            "Matt Uelmen - Ice Caves",  -- Chest
+            "Matt Uelmen - Diablo",  -- Void
+
+            "Matt Uelmen - Kurast Docks",  -- Library
+            "Matt Uelmen - Sanctuary",  -- Devil Room
+            "Matt Uelmen - Harrogath",  -- Angel Room
+            "Matt Uelmen - Lut Gholein",  -- Shop
+            "Matt Uelmen - Deckard Cain Rap",  -- Arcade
+            "Matt Uelmen - Kurast Docks",  -- Secret Room
+            "Matt Uelmen - Rogue Encampment",  -- Boss Defeated
+            "Matt Uelmen - Mesa",  -- Challenge Fight
+
+            "Matt Uelmen - Mesa",  -- Boss
+            "Matt Uelmen - Mesa",  -- Boss (Alt)
+            "Matt Uelmen - Mesa",  -- Boss (Mom)
+            "Matt Uelmen - Mesa",  -- Boss (Mom's Heart)
+            "Matt Uelmen - Mesa",  -- Boss (Isaac)
+            "Matt Uelmen - Mesa",  -- Boss (Satan)
+            "Matt Uelmen - Seige",  -- Boss (The Lamb)
+            "Matt Uelmen - Seige",  -- Boss (???)
+            "Matt Uelmen - Seige",  -- Boss (Hush)
+            "Matt Uelmen - Seige",  -- Boss (Ultra Greed)
+            "Matt Uelmen - Seige",  -- Boss (Delirium)
+            "Matt Uelmen - Seige"  -- Boss (Mega Satan)
+        },
+        ["Downwell"] = {
+            "Eirik Suhrke - Uroboros",  -- Basement
+            "Eirik Suhrke - Uroboros",  -- Cellar
+            "Eirik Suhrke - Uroboros",  -- Burning Basement
+            "Eirik Suhrke - Razor Girl",  -- Caves
+            "Eirik Suhrke - Razor Girl",  -- Catacombs
+            "Eirik Suhrke - Razor Girl",  -- Flooded Caves
+            "Eirik Suhrke - We Were Fine Until You Showed Up",  -- Depths
+            "Eirik Suhrke - We Were Fine Until You Showed Up",  -- Necropolis
+            "Eirik Suhrke - We Were Fine Until You Showed Up",  -- Dank Depths
+            "Eirik Suhrke - Broken Ghost",  -- Womb/Utero
+            "Eirik Suhrke - Broken Ghost",  -- Scarred Womb
+            "Eirik Suhrke - Broken Ghost",  -- Blue Womb
+            "Eirik Suhrke - Gunboots",  -- Sheol
+            "Eirik Suhrke - Lustre",  -- Cathedral
+            "Eirik Suhrke - ilkae, Limbo var. 2",  -- Dark Room
+            "Eirik Suhrke - jpeg optimizer ver. 0.2",  -- Chest
+            "Eirik Suhrke - Credits",  -- Void
+
+            "Eirik Suhrke - Mochi yasan",  -- Library
+            "Eirik Suhrke - Choose an upgrade",  -- Devil Room
+            "Eirik Suhrke - Lustre",  -- Angel Room
+            "Eirik Suhrke - Tomato funk",  -- Arcade
+            "Eirik Suhrke - Mochi yasan",  -- Shop
+            "Eirik Suhrke - Tomato funk",  -- Arcade
+            "Eirik Suhrke - Lustre",  -- Secret Room
+            "",  -- Boss Defeated
+            "Eirik Suhrke - Slumber party",  -- Challenge Fight
+
+            "Eirik Suhrke - Slumber party",  -- Boss
+            "Eirik Suhrke - Slumber party",  -- Boss (Alt)
+            "Eirik Suhrke - Slumber party",  -- Boss (Mom)
+            "Eirik Suhrke - Slumber party",  -- Boss (Mom's Heart)
+            "Eirik Suhrke - Slumber party",  -- Boss (Isaac)
+            "Eirik Suhrke - Slumber party",  -- Boss (Satan)
+            "Eirik Suhrke - Slumber party",  -- Boss (The Lamb)
+            "Eirik Suhrke - Slumber party",  -- Boss (???)
+            "Eirik Suhrke - Slumber party",  -- Boss (Hush)
+            "Eirik Suhrke - Slumber party",  -- Boss (Ultra Greed)
+            "Eirik Suhrke - Slumber party",  -- Boss (Delirium)
+            "Eirik Suhrke - Slumber party"  -- Boss (Mega Satan)
+        },
+        ["FTL"] = {
+            "Ben Prunty - Milky Way",  -- Basement
+            "Ben Prunty - Milky Way",  -- Cellar
+            "Ben Prunty - Hacking Malfunction",  -- Burning Basement
+            "Ben Prunty - Civil",  -- Caves
+            "Ben Prunty - Civil",  -- Catacombs
+            "Ben Prunty - Rockmen",  -- Flooded Caves
+            "Ben Prunty - Deepspace",  -- Depths
+            "Ben Prunty - Deepspace",  -- Necropolis
+            "Ben Prunty - Cosmos",  -- Dank Depths
+            "Ben Prunty - Engi",  -- Womb/Utero
+            "Ben Prunty - Engi",  -- Scarred Womb
+            "Ben Prunty - Zoltan",  -- Blue Womb
+            "Ben Prunty - Void",  -- Sheol
+            "Ben Prunty - Mantis",  -- Cathedral
+            "Ben Prunty - Void",  -- Dark Room
+            "Ben Prunty - Debris",  -- Chest
+            "Ben Prunty - Colonial",  -- Void
+
+            "Ben Prunty - BONUS Federation",  -- Library
+            "Ben Prunty - Slug (Explore)",  -- Devil Room
+            "Ben Prunty - Wasteland (Explore)",  -- Angel Room
+            "Ben Prunty - Lost Ship (Explore)",  -- Shop
+            "Ben Prunty - BONUS Colony Ship (2008)",  -- Arcade
+            "Ben Prunty - BONUS Federation",  -- Secret Room
+            "Ben Prunty - Last Stand",  -- Boss Defeated
+            "Ben Prunty - Lanius (Battle)",  -- Challenge Fight
+
+            "Ben Prunty - Lanius (Battle)",  -- Boss
+            "Ben Prunty - Lanius (Battle)",  -- Boss (Alt)
+            "Ben Prunty - Lanius (Battle)",  -- Boss (Mom)
+            "Ben Prunty - Lanius (Battle)",  -- Boss (Mom's Heart)
+            "Ben Prunty - Lanius (Battle)",  -- Boss (Isaac)
+            "Ben Prunty - Lanius (Battle)",  -- Boss (Satan)
+            "Ben Prunty - Lanius (Battle)",  -- Boss (The Lamb)
+            "Ben Prunty - Lanius (Battle)",  -- Boss (???)
+            "Ben Prunty - Lanius (Battle)",  -- Boss (Hush)
+            "Ben Prunty - Lanius (Battle)",  -- Boss (Ultra Greed)
+            "Ben Prunty - Lanius (Battle)",  -- Boss (Delirium)
+            "Ben Prunty - Lanius (Battle)"  -- Boss (Mega Satan)
+        },
+        ["Lisa"] = {
+            "Austin Jorgensen - Summer Love",  -- Basement
+            "Austin Jorgensen - Boy Oh Boy",  -- Cellar
+            "Austin Jorgensen - The Highway King",  -- Burning Basement
+            "Austin Jorgensen - Desert Stroll",  -- Caves
+            "Austin Jorgensen - Men at Work",  -- Catacombs
+            "Austin Jorgensen - Muddy Waters",  -- Flooded Caves
+            "Austin Jorgensen - Praise Wally",  -- Depths
+            "Austin Jorgensen - Garbage Day",  -- Necropolis
+            "Austin Jorgensen - Beehive",  -- Dank Depths
+            "Austin Jorgensen - Bath Boys",  -- Womb/Utero
+            "Austin Jorgensen - Lord",  -- Scarred Womb
+            "Austin Jorgensen - Give Up",  -- Blue Womb
+            "Austin Jorgensen - Devil's Bath Boys",  -- Sheol
+            "Austin Jorgensen - Praise Wally (Rando Land Version)",  -- Cathedral
+            "Austin Jorgensen - Blood for Sex",  -- Dark Room
+            "Austin Jorgensen - Goodbye",  -- Chest
+            "Austin Jorgensen - LOVE",  -- Void
+
+            "Austin Jorgensen - Big Boys Call",  -- Library
+            "Austin Jorgensen - Joy Boy",  -- Devil Room
+            "Austin Jorgensen - My Lord, My Wally",  -- Angel Room
+            "Austin Jorgensen - Last Call Before Hell",  -- Shop
+            "Austin Jorgensen - Ode to the Oblivious",  -- Arcade
+            "Austin Jorgensen - Work Harder",  -- Secret Room
+            "Austin Jorgensen - Welcome Home",  -- Boss Defeated
+            "Austin Jorgensen - Tall Grass Tussle",  -- Challenge Fight
+
+            "Austin Jorgensen - Men's Hair Club",  -- Boss
+            "Austin Jorgensen - War Season",  -- Boss (Alt)
+            "Austin Jorgensen - Rando March",  -- Boss (Mom)
+            "Austin Jorgensen - Vroom Vroom",  -- Boss (Mom's Heart)
+            "Austin Jorgensen - Goodbye Baby",  -- Boss (Isaac)
+            "Austin Jorgensen - I Am Satan",  -- Boss (Satan)
+            "Austin Jorgensen - Soft Skin",  -- Boss (The Lamb)
+            "Austin Jorgensen - The End is Nigh",  -- Boss (???)
+            "Austin Jorgensen - Exploding Hearts",  -- Boss (Hush)
+            "Austin Jorgensen - Go Home Johnny",  -- Boss (Ultra Greed)
+            "Austin Jorgensen - The Big Girl Has Cometh",  -- Boss (Delirium)
+            "Austin Jorgensen - All American Badass"  -- Boss (Mega Satan)
+        },
+        ["PaperMario"] = {
+            "Naoko Mitome - Gloam Valley (SPM)",  -- Basement
+            "Yuka Tsujiyoko - Rogueport (TTYD)",  -- Cellar
+            "Yuka Tsujiyoko - Hot Times in Mt. Lavalava (PM1)",  -- Burning Basement
+            "Yuka Tsujiyoko - Rogueport Sewers (TTYD)",  -- Caves
+            "Yuka Tsujiyoko - Hooktail's Castle (TTYD)",  -- Catacombs
+            "Yuka Tsujiyoko - Shhwonk Fortress (TTYD)",  -- Flooded Caves
+            "Naoko Mitome - Yold Ruins (SPM)",  -- Depths
+            "Naoko Mitome - Floro Sapien Caverns (SPM)",  -- Necropolis
+            "Yuka Tsujiyoko - Siege on Bowser's Castle (PM1)",  -- Dank Depths
+            "Yuka Tsujiyoko - X-Naut Fortress (TTYD)",  -- Womb/Utero
+            "Yuka Tsujiyoko - The Moon (TTYD)",  -- Scarred Womb
+            "Yuka Tsujiyoko - Pit of 100 Trials (TTYD)",  -- Blue Womb
+            "Naoko Mitome - The Underwhere (SPM)",  -- Sheol
+            "Yuka Tsujiyoko - Crystal Palace Crawl (PM1)",  -- Cathedral
+            "Yuka Tsujiyoko - Deep Into the Shadows (TTYD)",  -- Dark Room
+            "Naoko Mitome - Pit of 100 Trials (SPM)",  -- Chest
+            "Naoko Mitome - Castle Bleck (SPM)",  -- Void
+
+            "Yuka Tsujiyoko - Merlon's Hut (Toad Town) (PM1)",  -- Library
+            "Yuka Tsujiyoko - Creepy Steeple (TTYD)",  -- Devil Room
+            "Yuka Tsujiyoko - The Sanctum (TTYD)",  -- Angel Room
+            "Naoko Mitome - Forget Me Not (SPM)",  -- Shop
+            "Yuka Tsujiyoko - The 65th Super Fun Quirk Quiz (TTYD)",  -- Arcade
+            "Yuka Tsujiyoko - Tower of Riddles (TTYD)",  -- Secret Room
+            "Yuka Tsujiyoko - A City in the Stars (PM1)",  -- Boss Defeated
+            "Naoko Mitome - One Shot (SPM)",  -- Challenge Fight
+
+            "Yuka Tsujiyoko - Battle Theme (TTYD)",  -- Boss
+            "Naoko Mitome - Ready... GO! (SPM)",  -- Boss (Alt)
+            "Yuka Tsujiyoko - Attack of the Koopa Bros. (PM1)",  -- Boss (Mom)
+            "Yuka Tsujiyoko - Boss - The Smorgs (TTYD)",  -- Boss (Mom's Heart)
+            "Naoko Mitome - I'm Not Nice (SPM)",  -- Boss (Isaac)
+            "Yuka Tsujiyoko - King of the Koopas (PM1)",  -- Boss (Satan)
+            "Yuka Tsujiyoko - Boss - Shadow Queen Part 1 (Peach Form) (TTYD)",  -- Boss (The Lamb)
+            "Naoko Mitome - Closing Battle (SPM)",  -- Boss (???)
+            "Naoko Mitome - The Ultimate Show (Short Intro) (SPM)",  -- Boss (Hush)
+            "Yuka Tsujiyoko - Boss - Rawk Hawk (TTYD)",  -- Boss (Ultra Greed)
+            "Yuka Tsujiyoko - Boss - Shadow Queen Part 2 (TTYD)",  -- Boss (Delirium)
+            "Yuka Tsujiyoko - Boss - Bowser (TTYD)"  -- Boss (Mega Satan)
+        },
+        ["Pitfall"] = {
+            "Soundelux Design Music Group - Ceiba Jungle",  -- Basement
+            "Soundelux Design Music Group - Ceiba Jungle",  -- Cellar
+            "Soundelux Design Music Group - Tomb of Palenque",  -- Burning Basement
+            "Soundelux Design Music Group - Lost City of Copan",  -- Caves
+            "Soundelux Design Music Group - Lost City of Copan",  -- Catacombs
+            "Soundelux Design Music Group - Palenque Ruins",  -- Flooded Caves
+            "Soundelux Design Music Group - Balankanche Mine",  -- Depths
+            "Soundelux Design Music Group - Tazamul Mines",  -- Necropolis
+            "Soundelux Design Music Group - Balankanche Mine",  -- Dank Depths
+            "Soundelux Design Music Group - Xibalba Falls",  -- Womb/Utero
+            "Soundelux Design Music Group - Jaina Island Falls",  -- Scarred Womb
+            "Soundelux Design Music Group - Palenque Ruins",  -- Blue Womb
+            "Soundelux Design Music Group - Copan Temple",  -- Sheol
+            "Soundelux Design Music Group - Temple of Tikal",  -- Cathedral
+            "Soundelux Design Music Group - Tikal Ruins",  -- Dark Room
+            "Soundelux Design Music Group - Lakamul Rainforest",  -- Chest
+            "Soundelux Design Music Group - Closing Credits Medley",  -- Void
+
+            "Soundelux Design Music Group - Abduction of Pitfall Harry",  -- Library
+            "Soundelux Design Music Group - Continue Your Journey?",  -- Devil Room
+            "Soundelux Design Music Group - Yaxchilan Lagoon",  -- Angel Room
+            "Soundelux Design Music Group - Examining The Map",  -- Shop
+            "Soundelux Design Music Group - Mayan Adventure Jungle Dance Mix",  -- Arcade
+            "Soundelux Design Music Group - Abduction of Pitfall Harry",  -- Secret Room
+            "Soundelux Design Music Group - Examining The Map",  -- Boss Defeated
+            "Soundelux Design Music Group - Mayan Adventure Theme",  -- Challenge Fight
+
+            "Soundelux Design Music Group - Warrior Spirit",  -- Boss
+            "Soundelux Design Music Group - Warrior Spirit",  -- Boss (Alt)
+            "Soundelux Design Music Group - Warrior Spirit",  -- Boss (Mom)
+            "Soundelux Design Music Group - Warrior Spirit",  -- Boss (Mom's Heart)
+            "Soundelux Design Music Group - Warrior Spirit",  -- Boss (Isaac)
+            "Soundelux Design Music Group - Warrior Spirit",  -- Boss (Satan)
+            "Soundelux Design Music Group - Warrior Spirit",  -- Boss (The Lamb)
+            "Soundelux Design Music Group - Warrior Spirit",  -- Boss (???)
+            "Soundelux Design Music Group - Warrior Spirit",  -- Boss (Hush)
+            "Soundelux Design Music Group - Warrior Spirit",  -- Boss (Ultra Greed)
+            "Soundelux Design Music Group - Warrior Spirit",  -- Boss (Delirium)
+            "Soundelux Design Music Group - Warrior Spirit"  -- Boss (Mega Satan)
+        },
+        ["Shovel Knight"] = {
+            "Jake Kaufman - Strike the Earth!",  -- Basement
+            "Jake Kaufman - In the Halls of the Usurper",  -- Cellar
+            "Jake Kaufman - Of Devious Machinations",  -- Burning Basement
+            "Jake Kaufman - A Cool Reception",  -- Caves
+            "Jake Kaufman - The Adventure Awaits",  -- Catacombs
+            "Jake Kaufman - A Thousand Leagues Below",  -- Flooded Caves
+            "Jake Kaufman - An Underlying Problem",  -- Depths
+            "Jake Kaufman - La Danse Macabre",  -- Necropolis
+            "Jake Kaufman - Flowers of Antimony",  -- Dank Depths
+            "Jake Kaufman - The Inner Struggle",  -- Womb/Utero
+            "Jake Kaufman - The Inner Struggle",  -- Scarred Womb
+            "Jake Kaufman - The Fateful Return",  -- Blue Womb
+            "Jake Kaufman - The Forlorn Sanctum",  -- Sheol
+            "Jake Kaufman - High Above the Land",  -- Cathedral
+            "Jake Kaufman - End of Days",  -- Dark Room
+            "Jake Kaufman - A Return to Order",  -- Chest
+            "Jake Kaufman - The Donor's Despair",  -- Void
+
+            "Jake Kaufman - Pastorale",  -- Library
+            "Jake Kaufman - The Forlorn Sanctum",  -- Devil Room
+            "Jake Kaufman - The Starlit Wilds",  -- Angel Room
+            "Jake Kaufman - Pastorale",  -- Shop
+            "Jake Kaufman - Spin Ye Bottle",  -- Arcade
+            "Jake Kaufman - Steel Thy Shovel",  -- Secret Room
+            "Jake Kaufman - The Requiem of Shield Knight",  -- Boss Defeated
+            "Jake Kaufman - Fighting with All of Our Might",  -- Challenge Fight
+
+            "Jake Kaufman - The Rival",  -- Boss
+            "Jake Kaufman - The Defender",  -- Boss (Alt)
+            "Jake Kaufman - The Bounty Hunter",  -- Boss (Mom)
+            "Jake Kaufman - The Claws of Fate",  -- Boss (Mom's Heart)
+            "Jake Kaufman - The Spin Controller",  -- Boss (Isaac)
+            "Jake Kaufman - The Destroyer",  -- Boss (Satan)
+            "Jake Kaufman - The Vital Vitriol",  -- Boss (The Lamb)
+            "Jake Kaufman - The Possessor",  -- Boss (???)
+            "Jake Kaufman - The Betrayer",  -- Boss (Hush)
+            "Jake Kaufman - The Decadent Dandy",  -- Boss (Ultra Greed)
+            "Jake Kaufman - Backed into a Corner",  -- Boss (Delirium)
+            "Jake Kaufman - The Apparition"  -- Boss (Mega Satan)
+        },
+        ["Plague Knight"] = {
+            "Jake Kaufman - Strike the Earth!",  -- Basement
+            "Jake Kaufman - In the Halls of the Usurper",  -- Cellar
+            "Jake Kaufman - Of Devious Machinations",  -- Burning Basement
+            "Jake Kaufman - A Cool Reception",  -- Caves
+            "Jake Kaufman - The Adventure Awaits",  -- Catacombs
+            "Jake Kaufman - A Thousand Leagues Below",  -- Flooded Caves
+            "Jake Kaufman - An Underlying Problem",  -- Depths
+            "Jake Kaufman - La Danse Macabre",  -- Necropolis
+            "Jake Kaufman - Flowers of Antimony",  -- Dank Depths
+            "Jake Kaufman - The Inner Struggle",  -- Womb/Utero
+            "Jake Kaufman - The Inner Struggle",  -- Scarred Womb
+            "Jake Kaufman - The Fateful Return",  -- Blue Womb
+            "Jake Kaufman - Prime Your Potions!",  -- Sheol
+            "Jake Kaufman - The Alchemist's Haven",  -- Cathedral
+            "Jake Kaufman - Out of the Shadows",  -- Dark Room
+            "Jake Kaufman - Disturbing the Peace",  -- Chest
+            "Jake Kaufman - Art Through Adversity",  -- Void
+
+            "Jake Kaufman - Pastorale",  -- Library
+            "Jake Kaufman - The Forlorn Sanctum",  -- Devil Room
+            "Jake Kaufman - The Starlit Wilds",  -- Angel Room
+            "Jake Kaufman - Waltz for One",  -- Shop
+            "Jake Kaufman - Tango of the Troupple King",  -- Arcade
+            "Jake Kaufman - Steel Thy Shovel",  -- Secret Room
+            "Jake Kaufman - The Final Note",  -- Boss Defeated
+            "Jake Kaufman - Battling the Burrower",  -- Challenge Fight
+
+            "Jake Kaufman - Battling the Burrower",  -- Boss
+            "Jake Kaufman - Battling the Burrower",  -- Boss (Alt)
+            "Jake Kaufman - Battling the Burrower",  -- Boss (Mom)
+            "Jake Kaufman - The Claws of Fate",  -- Boss (Mom's Heart)
+            "Jake Kaufman - The Spin Controller",  -- Boss (Isaac)
+            "Jake Kaufman - The Destroyer",  -- Boss (Satan)
+            "Jake Kaufman - The Vital Vitriol",  -- Boss (The Lamb)
+            "Jake Kaufman - The Possessor",  --  Boss (???)
+            "Jake Kaufman - The Stalwart",  -- Boss (Hush)
+            "Jake Kaufman - The Battle Within",  -- Boss (Ultra Greed)
+            "Jake Kaufman - The Battle Within",  -- Boss (Delirium)
+            "Jake Kaufman - The Battle Within"  -- Boss (Mega Satan)
+        },
+        ["Specter Knight"] = {
+            "Jake Kaufman - From the Shadows",  -- Basement
+            "Jake Kaufman - In the Halls of the King",  -- Cellar
+            "Jake Kaufman - Tools of War",  -- Burning Basement
+            "Jake Kaufman - A Wintry Paradise",  -- Caves
+            "Jake Kaufman - The Adventure Awaits",  -- Catacombs
+            "Jake Kaufman - The Price of Doing Business",  -- Flooded Caves
+            "Jake Kaufman - Facing the Task",  -- Depths
+            "Jake Kaufman - Hidden by Night",  -- Necropolis
+            "Jake Kaufman - Aqua Vitae",  -- Dank Depths
+            "Jake Kaufman - The Inner Struggle",  -- Womb/Utero
+            "Jake Kaufman - The Inner Struggle",  -- Scarred Womb
+            "Jake Kaufman - The Fateful Return",  -- Blue Womb
+            "Jake Kaufman - The Forlorn Sanctum",  -- Sheol
+            "Jake Kaufman - A Cargo of Fineries",  -- Cathedral
+            "Jake Kaufman - End of Days",  -- Dark Room
+            "Jake Kaufman - Fate Approaches",  -- Chest
+            "Jake Kaufman - Hitting Close to Home",  -- Void
+
+            "Jake Kaufman - Both Eyes Open",  -- Library
+            "Jake Kaufman - The Forlorn Sanctum",  -- Devil Room
+            "Jake Kaufman - The Starlit Wilds",  -- Angel Room
+            "Jake Kaufman - The Magic Mirror",  -- Shop
+            "Jake Kaufman - Spin Ye Bottle",  -- Arcade
+            "Jake Kaufman - Steel Thy Shovel",  -- Secret Room
+            "Jake Kaufman - The Lonely Parapet",  -- Boss Defeated
+            "Jake Kaufman - The Struggle Never Ends",  -- Challenge Fight
+
+            "Jake Kaufman - Embraced by Darkness",  -- Boss
+            "Jake Kaufman - Go No Further!",  -- Boss (Alt)
+            "Jake Kaufman - The Bounty Hunter",  -- Boss (Mom)
+            "Jake Kaufman - The Claws of Fate",  -- Boss (Mom's Heart)
+            "Jake Kaufman - The Spin Controller",  -- Boss (Isaac)
+            "Jake Kaufman - The Destroyer",  -- Boss (Satan)
+            "Jake Kaufman - The Vital Vitriol",  -- Boss (The Lamb)
+            "Jake Kaufman - The Possessor",  -- Boss (???)
+            "Jake Kaufman - The Betrayer",  -- Boss (Hush)
+            "Jake Kaufman - The Decadent Dandy",  -- Boss (Ultra Greed)
+            "Jake Kaufman - Backed into a Corner",  -- Boss (Delirium)
+            "Jake Kaufman - Know Thy True Self"  -- Boss (Mega Satan)
+        },
+        ["King Knight"] = {
+            "Jake Kaufman - Pride Before Order",  -- Basement
+            "Jake Kaufman - Pride Before Order",  -- Cellar
+            "Jake Kaufman - Pride Before Order",  -- Burning Basement
+            "Jake Kaufman - The Buzz in the Grotto",  -- Caves
+            "Jake Kaufman - The Buzz in the Grotto",  -- Catacombs
+            "Jake Kaufman - The Buzz in the Grotto",  -- Flooded Caves
+            "Jake Kaufman - An Underlying Problem",  -- Depths
+            "Jake Kaufman - La Danse Macabre",  -- Necropolis
+            "Jake Kaufman - Flowers of Antimony",  -- Dank Depths
+            "Jake Kaufman - The Inner Struggle",  -- Womb/Utero
+            "Jake Kaufman - The Inner Struggle",  -- Scarred Womb
+            "Jake Kaufman - The Fateful Return",  -- Blue Womb
+            "Jake Kaufman - Coup D'état",  -- Sheol
+            "Jake Kaufman - The Crosswise Crosswinds",  -- Cathedral
+            "Jake Kaufman - Joustus - Sonatina Della Torre",  -- Dark Room
+            "Jake Kaufman - Joustus - The Royal Overture",  -- Chest
+            "Jake Kaufman - Joustus - Infinity's Prelude",  -- Void
+
+            "Jake Kaufman - Visiting Mom",  -- Library
+            "Jake Kaufman - My Ascent Looms",  -- Devil Room
+            "Jake Kaufman - The Fairy Glade",  -- Angel Room
+            "Jake Kaufman - A Silly Talking Fish",  -- Shop
+            "Jake Kaufman - Crowd Control",  -- Arcade
+            "Jake Kaufman - Some Blasted Hill",  -- Secret Room
+            "Jake Kaufman - I Shall Be King for All Time",  -- Boss Defeated
+            "Jake Kaufman - Showdown - The War in the Mirror",  -- Challenge Fight
+
+            "Jake Kaufman - The Swift Kicker",  -- Boss
+            "Jake Kaufman - The Swift Kicker",  -- Boss (Alt)
+            "Jake Kaufman - Ye Fruitly Benediction",  -- Boss (Mom)
+            "Jake Kaufman - Ye Fruitly Benediction",  -- Boss (Mom's Heart)
+            "Jake Kaufman - The Oblique Angel",  -- Boss (Isaac)
+            "Jake Kaufman - The Twilight of Tomorrow",  -- Boss (Satan)
+            "Jake Kaufman - The Twilight of Tomorrow",  -- Boss (The Lamb)
+            "Jake Kaufman - The Oblique Angel",  -- Boss (???)
+            "Jake Kaufman - Fit to be Crowned",  -- Boss (Hush)
+            "Jake Kaufman - Fit to be Crowned",  -- Boss (Ultra Greed)
+            "Jake Kaufman - Fit to be Crowned",  -- Boss (Delirium)
+            "Jake Kaufman - Fit to be Crowned"  -- Boss (Mega Satan)
+        },
+        ["Slay the Spire"] = {
+            "Clark Aboud - Exordium",  -- Basement
+            "Clark Aboud - Exordium",  -- Cellar
+            "Clark Aboud - Exordium",  -- Burning Basement
+            "Clark Aboud - The City",  -- Caves
+            "Clark Aboud - The City",  -- Catacombs
+            "Clark Aboud - The City",  -- Flooded Caves
+            "Clark Aboud - Dramatic Entrance",  -- Depths
+            "Clark Aboud - Dramatic Entrance",  -- Necropolis
+            "Clark Aboud - Dramatic Entrance",  -- Dank Depths
+            "Clark Aboud - Escape Plan",  -- Womb/Utero
+            "Clark Aboud - Escape Plan",  -- Scarred Womb
+            "Clark Aboud - Battle Trance",  -- Blue Womb
+            "Clark Aboud - The Beyond",  -- Sheol
+            "Clark Aboud - After Image",  -- Cathedral
+            "Clark Aboud - Mind Bloom",  -- Dark Room
+            "Clark Aboud - The Guardian Emerges",  -- Chest
+            "Clark Aboud - Facing The Elite",  -- Void
+
+            "Clark Aboud - The Unknown",  -- Library
+            "Clark Aboud - The Ending",  -- Devil Room
+            "Clark Aboud - Slay The Spire",  -- Angel Room
+            "Clark Aboud - Meet The Merchant",  -- Shop
+            "Clark Aboud - Meet The Merchant",  -- Arcade
+            "Clark Aboud - The Unknown",  -- Secret Room
+            "",  -- Boss Defeated
+            "Clark Aboud - Battle With The Champ",  -- Challenge Fight
+
+            "Clark Aboud - Battle With The Champ",  -- Boss
+            "Clark Aboud - Battle With The Champ",  -- Boss (Alt)
+            "Clark Aboud - Battle With The Champ",  -- Boss (Mom)
+            "Clark Aboud - Battle With The Champ",  -- Boss (Mom's Heart)
+            "Clark Aboud - Battle With The Champ",  -- Boss (Isaac)
+            "Clark Aboud - Battle With The Champ",  -- Boss (Satan)
+            "Clark Aboud - The Awakened One",  -- Boss (The Lamb)
+            "Clark Aboud - The Awakened One",  -- Boss (???)
+            "Clark Aboud - The Heart",  -- Boss (Hush)
+            "Clark Aboud - The Heart",  -- Boss (Ultra Greed)
+            "Clark Aboud - The Heart",  -- Boss (Delirium)
+            "Clark Aboud - The Heart"  -- Boss (Mega Satan)
+        },
+        ["SovietJumpGame"] = {
+            "Alex Yoder - Moscow Streets",  -- Basement
+            "Alex Yoder - Moscow Streets",  -- Cellar
+            "Alex Yoder - Moscow Streets",  -- Burning Basement
+            "Alex Yoder - Moscow Sewers",  -- Caves
+            "Alex Yoder - Moscow Sewers",  -- Catacombs
+            "Alex Yoder - Moscow Sewers",  -- Flooded Caves
+            "Alex Yoder - Crypts",  -- Depths
+            "Alex Yoder - Crypts",  -- Necropolis
+            "Alex Yoder - Crypts",  -- Dank Depths
+            "Alex Yoder - Irradiated Waters",  -- Womb/Utero
+            "Alex Yoder - Irradiated Waters",  -- Scarred Womb
+            "Alex Yoder - Irradiated Waters",  -- Blue Womb
+            "Alex Yoder - Nuclear Bunker",  -- Sheol
+            "Alex Yoder - Mountains of Siberia",  -- Cathedral
+            "Alex Yoder - Nuclear Bunker",  -- Dark Room
+            "Alex Yoder - Kremlin Castle",  -- Chest
+            "Alex Yoder - Main Theme",  -- Void
+
+            "Alex Yoder - Skies Over Chernobyl",  -- Library
+            "Alex Yoder - Shameful Defeat",  -- Devil Room
+            "Alex Yoder - Mountains of Siberia",  -- Angel Room
+            "Alex Yoder - Fortune",  -- Shop
+            "Alex Yoder - Fruits of Our Labor",  -- Arcade
+            "Alex Yoder - Skies Over Chernobyl",  -- Secret Room
+            "Alex Yoder - Glorious Victory",  -- Boss Defeated
+            "Alex Yoder - Peril and Heroism",  -- Challenge Fight
+
+            "Alex Yoder - Peril and Heroism",  -- Boss
+            "Alex Yoder - Peril and Heroism",  -- Boss (Alt)
+            "Alex Yoder - Peril and Heroism",  -- Boss (Mom)
+            "Alex Yoder - Peril and Heroism",  -- Boss (Mom's Heart)
+            "Alex Yoder - Peril and Heroism",  -- Boss (Isaac)
+            "Alex Yoder - Peril and Heroism",  -- Boss (Satan)
+            "Alex Yoder - Peril and Heroism",  -- Boss (The Lamb)
+            "Alex Yoder - Peril and Heroism",  -- Boss (???)
+            "Alex Yoder - Peril and Heroism",  -- Boss (Hush)
+            "Alex Yoder - Peril and Heroism",  -- Boss (Ultra Greed)
+            "Alex Yoder - Peril and Heroism",  -- Boss (Delirium)
+            "Alex Yoder - Peril and Heroism",  -- Boss (Mega Satan)
+        },
+        ["SuperSmashBros"] = {
+            "Takahiro Nishi - Step: The Plain (Brawl)", -- Basement
+            "Takahiro Nishi - Overworld Theme (The Legend of Zelda) (Brawl)", -- Cellar
+            "Takahiro Nishi - Brinstar (SSE Version) (Brawl)", -- Burning Basement
+            "Keiki Kobayashi - Route 10 (3DS/Wii U)", -- Caves
+            "Takahiro Nishi - Opening/Menu (Metroid Prime) (SSE Version) (Brawl)", -- "Catacombs
+            "Takahiro Nishi - Stickerbush Symphony (Brawl)", -- Flooded Caves
+            "Takahiro Nishi - Underground Theme (Super Mario Land) (Brawl)", -- Depths
+            "Hideki Sakamoto - Death Mountain (Ultimate)", -- Necropolis
+            "Takahiro Nishi - Step: The Cave (Brawl)", -- Dank Depths
+            "Takahiro Nishi - Norfair (Brawl)", -- Womb/Utero
+            "Hirokazu Ando - Brinstar Depths (Melee)", -- Scarred Womb
+            "Hideki Sakamoto - The Dark Realm (Ultimate)", -- Blue Womb
+            "Takahiro Nishi - Step: Subspace Medley (Brawl)", -- Sheol
+            "Keiki Kobayashi - Destroyed Skyworld (3DS/Wii U)", -- Cathedral
+            "Hideki Sakamoto - Theme of Solid Snake (Ultimate)", -- Dark Room
+            "Takahiro Nishi - Great Temple (Brawl)", -- Chest
+            "Hideki Sakamoto - Galeem / Dharkon (Ultimate)", -- Void
+
+            "Takahiro Nishi - Sticker Album / Album / Chronicle (Brawl)", -- Library
+            "Takahiro Nishi - Save Point (Brawl)", -- Devil Room
+            "Takahiro Nishi - All Star Rest Area (Brawl)", -- Angel Room
+            "Hideki Sakamoto - Shop (Ultimate)", -- Shop
+            "Hirokazu Ando - Trophies (Melee)", -- Arcade
+            "Hirokazu Ando - All Clear (64)", -- Secret Room
+            "Hideki Sakamoto - Main Theme Piano Solo (Ultimate)", -- Boss Defeated
+            "Hirokazu Ando - Metal Battle (Melee)", -- Challenge Fight
+
+            "Takahiro Nishi - Boss Battle (Brawl)", -- Boss
+            "Takahiro Nishi - Boss Battle Song 1 (Brawl)", -- Boss (Alt)
+            "Hirokazu Ando - Multi-Man Melee 1 (Melee)", -- Boss (Mom)
+            "Keiki Kobayashi - Final Destination Ver. 2 (3DS/Wii U)", -- Boss (Mom's Heart)
+            "Takahiro Nishi - 02 Battle (Brawl)", -- Boss (Isaac)
+            "Hirokazu Ando - Final Destination (Melee)", -- Boss (Satan)
+            "Keiki Kobayashi - Master Core (3DS/Wii U)", -- Boss (The Lamb)
+            "Hideki Sakamoto - Galeem (Ultimate)", -- Boss (???)
+            "Hideki Sakamoto - Dharkon (Ultimate)", -- Boss (Hush)
+            "Takahiro Nishi - Fire Field (Brawl)", -- Boss (Ultra Greed)
+            "Hirokazu Ando - Multi-Man Melee 2 (Melee)", -- Boss (Delirium)
+            "Hirokazu Ando - Giga Bowser (Melee)" -- Boss (Mega Satan)
+        },
+        ["P1"] = {
+            "Shoji Meguro - Dungeon - Hospital (Before the Disaster)",  -- Basement
+            "Shoji Meguro - Dungeon - No. 1",  -- Cellar
+            "Shoji Meguro - Dungeon - Hospital (After the Disaster)",  -- Burning Basement
+            "Shoji Meguro - Dungeon - SEBEC Above Ground",  -- Caves
+            "Shoji Meguro - Dungeon - Abandoned Factory Underground Passage",  -- Catacombs
+            "Shoji Meguro - Dungeon - SEBEC Underground Research Lab",  -- Flooded Caves
+            "Shoji Meguro - Dungeon - Ruins",  -- Depths
+            "Shoji Meguro - Dungeon - Black Market",  -- Necropolis
+            "Shoji Meguro - Dungeon - Kama Palace",  -- Dank Depths
+            "Shoji Meguro - Dungeon - Ice Castle",  -- Womb/Utero
+            "Shoji Meguro - Dungeon - Hypno's Tower",  -- Scarred Womb
+            "Shoji Meguro - Dungeon - Reverse Dream World",  -- Blue Womb
+            "Shoji Meguro - Dungeon - Nemesis Tower",  -- Sheol
+            "Shoji Meguro - Dungeon - Deva-Yuga",  -- Cathedral
+            "Shoji Meguro - Dungeon - Devil's Peak",  -- Dark Room
+            "Shoji Meguro - Pandora's Den (Deepmost Area)",  -- Chest
+            "Shoji Meguro - Thanatos Tower",  -- Void
+
+            "Shoji Meguro - Boutique",  -- Library
+            "Shoji Meguro - Poems for Everybody's Souls (Arranged Version)",  -- Devil Room
+            "Shoji Meguro - Poem for Everyone's Souls",  -- Angel Room
+            "Shoji Meguro - Convenience Store",  -- Shop
+            "Shoji Meguro - Casino",  -- Arcade
+            "Shoji Meguro - Shrine",  -- Secret Room
+            "Shoji Meguro - Spring of Restoration",  -- Boss Defeated
+            "Shoji Meguro - Time Count Event (Unused)",  -- Challenge Fight
+
+            "Shoji Meguro - Normal Battle",  -- Boss
+            "Shoji Meguro - A Lone Prayer",  -- Boss (Alt)
+            "Shoji Meguro - Kandori's Theme - Sorrow",  -- Boss (Mom)
+            "Shoji Meguro - Battle - Awakening",  -- Boss (Mom's Heart)
+            "Shoji Meguro - Confrontation",  -- Boss (Isaac)
+            "Shoji Meguro - Battle - Mid-Boss",  -- Boss (Satan)
+            "Shoji Meguro - Brown's Theme",  -- Boss (The Lamb)
+            "Shoji Meguro - Battle - Pandora",  -- Boss (???)
+            "Shoji Meguro - Battle - Night Queen",  -- Boss (Hush)
+            "Shoji Meguro - Foolish Boss Battle",  -- Boss (Ultra Greed)
+            "Shoji Meguro - Battle - Tesso",  -- Boss (Delirium)
+            "Shoji Meguro - Battle - Mid-Boss"  -- Boss (Mega Satan)
+        },
+        ["P2"] = {
+            "Toshiko Tasaki - Seven Sisters High School A",  -- Basement
+            "Toshiko Tasaki - Kasugayama High School",  -- Cellar
+            "Toshiko Tasaki - Seven Sisters High School",  -- Burning Basement
+            "Toshiko Tasaki - Abandoned Factory",  -- Caves
+            "Toshiko Tasaki - Kurosu Theme",  -- Catacombs
+            "Toshiko Tasaki - Undersea Ruins",  -- Flooded Caves
+            "Toshiko Tasaki - BGM II",  -- Depths
+            "Toshiko Tasaki - Seven Sisters High School",  -- Necropolis
+            "Toshiko Tasaki - Yukino Theme",  -- Dank Depths
+            "Toshiko Tasaki - Control Room",  -- Womb/Utero
+            "Toshiko Tasaki - Sumaru Castle",  -- Scarred Womb
+            "Toshiko Tasaki - Battle Result (Innocent Sin)",  -- Blue Womb
+            "Toshiko Tasaki - Maya (Theme 2)",  -- Sheol
+            "Toshiko Tasaki - Maya Theme",  -- Cathedral
+            "Toshiko Tasaki - Monado Mandala",  -- Dark Room
+            "Toshiko Tasaki - Concert Hall",  -- Chest
+            "Toshiko Tasaki - Kashihara",  -- Void
+
+            "Toshiko Tasaki - Kuzunoha Detective Office",  -- Library
+            "Toshiko Tasaki - Velvet Room Nameless Arrange",  -- Devil Room
+            "Toshiko Tasaki - Velvet Room",  -- Angel Room
+            "Toshiko Tasaki - CD Shop ~ Giga Macho",  -- Shop
+            "Toshiko Tasaki - Club Zodiac",  -- Arcade
+            "Toshiko Tasaki - Eikichi Theme (Sad)",  -- Secret Room
+            "Toshiko Tasaki - Battle Result (Eternal Punishment)",  -- Boss Defeated
+            "Toshiko Tasaki - Time Count",  -- Challenge Fight
+
+            "Toshiko Tasaki - Battle (Innocent Sin)",  -- Boss
+            "Toshiko Tasaki - Battle (Eternal Punishment)",  -- Boss (Alt)
+            "Toshiko Tasaki - Boss Battle (Innocent Sin)",  -- Boss (Mom)
+            "Toshiko Tasaki - Boss Battle (Eternal Punishment)",  -- Boss (Mom's Heart)
+            "Toshiko Tasaki - Opening Innocent Sin",  -- Boss (Isaac)
+            "Toshiko Tasaki - Opening Eternal Punishment",  -- Boss (Satan)
+            "Toshiko Tasaki - Final Boss Battle",  -- Boss (The Lamb)
+            "Toshiko Tasaki - EX Final Battle",  -- Boss (???)
+            "Toshiko Tasaki - A Great Evil",  -- Boss (Hush)
+            "Toshiko Tasaki - Last Battalion",  -- Boss (Ultra Greed)
+            "Toshiko Tasaki - Knights of the Holy Spear",  -- Boss (Delirium)
+            "Toshiko Tasaki - Opening Eternal Punishment"  -- Boss (Mega Satan)
+        },
+        ["P3"] = {
+            "Shoji Meguro - Basement",  -- Basement
+            "Shoji Meguro - tartarus_0d01",  -- Cellar
+            "Shoji Meguro - A Way of Life",  -- Burning Basement
+            "Shoji Meguro - Want To Be Close",  -- Caves
+            "Shoji Meguro - tartarus_0d02",  -- Catacombs
+            "Shoji Meguro - Time",  -- Flooded Caves
+            "Shoji Meguro - Changing Seasons",  -- Depths
+            "Shoji Meguro - tartarus_0d03",  -- Necropolis
+            "Shoji Meguro - Sun",  -- Dank Depths
+            "Shoji Meguro - Memories of the School",  -- Womb/Utero
+            "Shoji Meguro - Memories of the City",  -- Scarred Womb
+            "Shoji Meguro - tartarus_0d04",  -- Blue Womb
+            "Shoji Meguro - Interstice of Time",  -- Sheol
+            "Shoji Meguro - tartarus_0d05",  -- Cathedral
+            "Shoji Meguro - Persona",  -- Dark Room
+            "Shoji Meguro - tartarus_0d06",  -- Chest
+            "Shoji Meguro - The Voice Someone Calls",
+
+            "Shoji Meguro - Determination",  -- Library
+            "Shoji Meguro - Tanaka's Shady Commodities",  -- Devil Room
+            "Shoji Meguro - Aria of the Soul",  -- Angel Room
+            "Shoji Meguro - Paulownian Mall",  -- Shop
+            "Shoji Meguro - After School",  -- Arcade
+            "Shoji Meguro - Living With Determination",  -- Secret Room
+            "Shoji Meguro - After the Battle",  -- Boss Defeated
+            "Shoji Meguro - Heartful Cry",  -- Challenge Fight
+
+            "Shoji Meguro - Mass Destruction",  -- Boss
+            "Shoji Meguro - Wiping All Out",  -- Boss (Alt)
+            "Shoji Meguro - Shadow",  -- Boss (Mom)
+            "Shoji Meguro - Master of Shadow",  -- Boss (Mom's Heart)
+            "Shoji Meguro - Master of Tartarus",  -- Boss (Isaac)
+            "Shoji Meguro - Time Castle",  -- Boss (Satan)
+            "Shoji Meguro - Darkness",  -- Boss (The Lamb)
+            "Shoji Meguro - Burn My Dread -Last Battle-",  -- Boss (???)
+            "Shoji Meguro - Danger Zone",  -- Boss (Hush)
+            "Shoji Meguro - The Snow Queen",  -- Boss (Ultra Greed)
+            "Shoji Meguro - Battle for Everyone's Souls",  -- Boss (Delirium)
+            "Shoji Meguro - Time Castle"  -- Boss (Mega Satan)
+        },
+        ["P4"] = {
+            "Shoji Meguro - Sing Of Love",  -- Basement
+            "Shoji Meguro - Your Affection",  -- Cellar
+            "Shoji Meguro - Castle",  -- Burning Basement
+            "Shoji Meguro - Sauna",  -- Caves
+            "Shoji Meguro - Heartbeat, Heartbreak",  -- Catacombs
+            "Shoji Meguro - Striptease",  -- Flooded Caves
+            "Shoji Meguro - Game",  -- Depths
+            "Shoji Meguro - Secret Base",  -- Necropolis
+            "Shoji Meguro - Backside Of The TV",  -- Dank Depths
+            "Shoji Meguro - Girl Of The Empty Forest",  -- Womb/Utero
+            "Shoji Meguro - Memory",  -- Scarred Womb
+            "Shoji Meguro - SNOWFLAKES",  -- Blue Womb
+            "Shoji Meguro - Omen",  -- Sheol
+            "Shoji Meguro - Heaven",  -- Cathedral
+            "Shoji Meguro - Long Way",  -- Dark Room
+            "Shoji Meguro - Alone",  -- Chest
+            "Shoji Meguro - Corridor",  -- Void
+
+            "Shoji Meguro - New Days",  -- Library
+            "Shoji Meguro - Tanaka's Shady Commodities",  -- Devil Room
+            "Shoji Meguro - Aria Of The Soul",  -- Angel Room
+            "Shoji Meguro - How Much?",  -- Shop
+            "Shoji Meguro - Junes Theme",  -- Arcade
+            "Shoji Meguro - Glimpse Of A Memory",  -- Secret Room
+            "Shoji Meguro - Period",  -- Boss Defeated
+            "Shoji Meguro - ZONE TIME",  -- Challenge Fight
+
+            "Shoji Meguro - Reach Out To The Truth",  -- Boss
+            "Shoji Meguro - Time To Make History",  -- Boss (Alt)
+            "Shoji Meguro - I'll Face Myself",  -- Boss (Mom)
+            "Shoji Meguro - Specialist",  -- Boss (Mom's Heart)
+            "Shoji Meguro - I'll Face Myself -Battle-",  -- Boss (Isaac)
+            "Shoji Meguro - The Almighty",  -- Boss (Satan)
+            "Shoji Meguro - A New World Fool",  -- Boss (The Lamb)
+            "Shoji Meguro - The Fog",  -- Boss (???)
+            "Shoji Meguro - SNOWFLAKES -Powder Snow Mix-",  -- Boss (Hush)
+            "Shoji Meguro - Revelations: Mitsuo",  -- Boss (Ultra Greed)
+            "Shoji Meguro - The Genesis",  -- Boss (Delirium)
+            "Shoji Meguro - The Almighty"  -- Boss (Mega Satan)
+        },
+        ["SMTif"] = {
+            "Tsukasa Masuko - Classroom",  -- Basement
+            "Tsukasa Masuko - World of Envy Event",  -- Cellar
+            "Tsukasa Masuko - World of Envy",  -- Burning Basement
+            "Tsukasa Masuko - Enemy Appearance",  -- Caves
+            "Tsukasa Masuko - World of Gluttony",  -- Catacombs
+            "Tsukasa Masuko - Enemy Encounter (Akira Chapter)",  -- Flooded Caves
+            "Tsukasa Masuko - World of Greed",  -- Depths
+            "Tsukasa Masuko - Sanzu River",  -- Necropolis
+            "Tsukasa Masuko - World of Wrath",  -- Dank Depths
+            "Tsukasa Masuko - Nomos of the Earth",  -- Womb/Utero
+            "Tsukasa Masuko - World of Sloth",  -- Scarred Womb
+            "Tsukasa Masuko - Recieving a Ring",  -- Blue Womb
+            "Tsukasa Masuko - World of Pride",  -- Sheol
+            "Tsukasa Masuko - City of the Makai",  -- Cathedral
+            "Tsukasa Masuko - Fortune Teller",  -- Dark Room
+            "Tsukasa Masuko - Deja Vu",  -- Chest
+            "Tsukasa Masuko - Dimensional Portal",  -- Void
+
+            "Tsukasa Masuko - School",  -- Library
+            "Tsukasa Masuko - Jayko Manor 2",  -- Devil Room
+            "Tsukasa Masuko - Jayko Manor 1",  -- Angel Room
+            "Tsukasa Masuko - Shop",  -- Shop
+            "Tsukasa Masuko - Casino 1",  -- Arcade
+            "Tsukasa Masuko - Computer Lab",  -- Secret Room
+            "Tsukasa Masuko - Level Up",  -- Boss Defeated
+            "Tsukasa Masuko - Old Enemy (Akira Chapter)",  -- Challenge Fight
+
+            "Tsukasa Masuko - Battle",  -- Boss
+            "Tsukasa Masuko - Battle (Akira Chapter)",  -- Boss (Alt)
+            "Tsukasa Masuko - Level Up (Akira Chapter)",  -- Boss (Mom)
+            "Tsukasa Masuko - First Nomos",  -- Boss (Mom's Heart)
+            "Tsukasa Masuko - Alice",  -- Boss (Isaac)
+            "Tsukasa Masuko - Majin",  -- Boss (Satan)
+            "Tsukasa Masuko - Spiritual World",  -- Boss (The Lamb)
+            "Tsukasa Masuko - Chamber of the Seal",  --  Boss (???)
+            "Tsukasa Masuko - Inside the Body of Orcus",  -- Boss (Hush)
+            "Tsukasa Masuko - Casino 2",  -- Boss (Ultra Greed)
+            "Tsukasa Masuko - Hazama Battle",  -- Boss (Delirium)
+            "Tsukasa Masuko - Majin"  -- Boss (Mega Satan)
         }
     },
     ["TrackTypes"] = {  -- Track types, as declared by Soundtrack Menu
