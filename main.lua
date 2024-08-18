@@ -145,7 +145,7 @@ else
     ModConfigMenu.AddText(modName, "Info", function() return "(ID: " .. tostring(musicID) .. ")" end)
     ModConfigMenu.AddSpace(modName, "Info")
     ModConfigMenu.AddText(modName, "Info", function() return "What's That Song?" end)
-    ModConfigMenu.AddText(modName, "Info", function() return "V1.0.9" end)
+    ModConfigMenu.AddText(modName, "Info", function() return "V1.1.0" end)
     ModConfigMenu.AddText(modName, "Info", function() return "Courtesy of AceHand" end)
     ModConfigMenu.AddSpace(modName, "Info")
     AddResetButton("Info", "ResetToDefaults", "Resets all configuration fields to their default values.")
@@ -243,54 +243,64 @@ function WhatsThatSong:PopulateMusicIDs()
 
     for _, st in ipairs(musicTable.Soundtracks) do
         if containsValidTracks(musicTable.TrackTypes, st) then
-            for ii, v in ipairs(musicTable.SoundtrackTitles[st]) do
-                local fallbackID = getFallbackID(st, ii)
+            for i, v in ipairs(musicTable.SoundtrackTitles[st]) do
+                local fallbackID = getFallbackID(st, i)
 
-                if st ~= nil and musicTable.TrackTypes[ii] ~= nil then
-                    trackID = Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[ii])
-                    local variants = (Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[ii] .. " 2") > 0)
+                if st ~= nil and musicTable.TrackTypes[i] ~= nil then
+                    trackID = Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[i])
+
+                    local variants = (Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[i] .. " 2") > 0)
 
                     -- Check if a soundtrack has multiple different tracks for the same track type
                     if variants and trackID < 0 then
-                        trackID = Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[ii] .. " 1")
+                        trackID = Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[i] .. " 1")
                     end
 
                     -- Resolve referred soundtrack IDs
                     if type(v) == "string" and v:sub(1, 1) == "[" and v:sub(-1, -1) == "]" then
                         local resolvedSoundtrack = nil
 
-                        for idx, soundtrack in pairs(musicTable.Soundtracks) do
+                        for _, soundtrack in ipairs(musicTable.Soundtracks) do
                             if v:sub(2, -2) == soundtrack then
                                 resolvedSoundtrack = soundtrack
                                 break
                             end
                         end
                         
-                        if resolvedSoundtrack ~= nil and musicTable.SoundtrackTitles[resolvedSoundtrack][ii] ~= nil then
-                            musicIDs[trackID] = musicTable.SoundtrackTitles[resolvedSoundtrack][ii] or fallbackID
+                        if resolvedSoundtrack ~= nil and musicTable.SoundtrackTitles[resolvedSoundtrack][i] ~= nil then
+                            musicIDs[trackID] = musicTable.SoundtrackTitles[resolvedSoundtrack][i] or fallbackID
                         else
-                            musicIDs[trackID] = musicTable.SoundtrackTitles.Rebirth[ii]
+                            musicIDs[trackID] = musicTable.SoundtrackTitles.Rebirth[i]
                         end
                     else
                         if variants then  -- Load the different variants for this track type
-                            for iii = 1, #musicTable.SoundtrackTitles[st][ii] do
-                                trackID = Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[ii] .. " " .. iii)
-                                musicIDs[trackID] = musicTable.SoundtrackTitles[st][ii][iii]
+                            for ii = 1, #musicTable.SoundtrackTitles[st][i] do
+                                trackID = Isaac.GetMusicIdByName(st .. " " .. musicTable.TrackTypes[i] .. " " .. ii)
+
+                                if any(musicTable.JingleIDs, i) then
+                                    musicIDs[trackID] = ""
+                                else
+                                    musicIDs[trackID] = musicTable.SoundtrackTitles[st][i][ii]
+                                end
                             end
                         else
-                            musicIDs[trackID] = musicTable.SoundtrackTitles[st][ii] or fallbackID
+                            if any(musicTable.JingleIDs, i) then
+                                musicIDs[trackID] = ""
+                            else
+                                musicIDs[trackID] = musicTable.SoundtrackTitles[st][i] or fallbackID
+                            end
                         end
                     end
                 end
             end
         elseif st == "Default" then
-            for ii, v in ipairs(musicTable.TrackTypes) do
+            for i, v in ipairs(musicTable.TrackTypes) do
                 trackID = Isaac.GetMusicIdByName(v)
 
                 if musicTable.SoundtrackTitles[musicTable.Default] ~= nil then
-                    musicIDs[trackID] = musicTable.SoundtrackTitles[musicTable.Default][ii] or fallbackID
+                    musicIDs[trackID] = musicTable.SoundtrackTitles[musicTable.Default][i] or fallbackID
                 else
-                    musicIDs[trackID] = musicTable.SoundtrackTitles.Rebirth[ii]
+                    musicIDs[trackID] = musicTable.SoundtrackTitles.Rebirth[i]
                 end
             end
         end

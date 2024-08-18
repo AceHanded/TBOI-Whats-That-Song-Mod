@@ -954,7 +954,21 @@ local musicTable = {
             "Jakub Miřejovský - Big Mistake",  -- Boss (Hush)
             "Jakub Miřejovský - Big Mistake",  -- Boss (Ultra Greed)
             "Jakub Miřejovský - Big Mistake",  -- Boss (Delirium)
-            "Jakub Miřejovský - Big Mistake"  -- Boss (Mega Satan)
+            "Jakub Miřejovský - Big Mistake",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["Symphony of the Night"] = {
             "Michiru Yamane - Dracula's Castle",  -- Basement
@@ -995,7 +1009,21 @@ local musicTable = {
             "Michiru Yamane - Death Ballad",  -- Boss (Hush)
             "Michiru Yamane - Black Banquet",  -- Boss (Ultra Greed)
             "Michiru Yamane - Black Banquet",  -- Boss (Delirium)
-            "Michiru Yamane - Black Banquet"  -- Boss (Mega Satan)
+            "Michiru Yamane - Black Banquet",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["Chrono Trigger"] = {
             "Yasunori Mitsuda - Secrets of the Forest",  -- Basement
@@ -1036,7 +1064,21 @@ local musicTable = {
             "Yasunori Mitsuda - Last Battle",  -- Boss (Hush)
             "[Rebirth]",  -- Boss (Ultra Greed)
             "Yasunori Mitsuda - Last Battle",  -- Boss (Delirium)
-            "Yasunori Mitsuda - Battle with Magus"  -- Boss (Mega Satan)
+            "Yasunori Mitsuda - Battle with Magus",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["Crawl"] = {
             "Alex Yoder - Fugue",  -- Basement
@@ -1077,7 +1119,21 @@ local musicTable = {
             "Alex Yoder - Clash",  -- Boss (Hush)
             "Alex Yoder - Clash",  -- Boss (Ultra Greed)
             "Alex Yoder - Clash",  -- Boss (Delirium)
-            "Alex Yoder - Clash"  -- Boss (Mega Satan)
+            "Alex Yoder - Clash",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["Doom"] = {
             "Robert Prince - At Doom's Gate (E1M1)",  -- Basement
@@ -1118,7 +1174,21 @@ local musicTable = {
             "Robert Prince - Facing The Spider (E3M8)",  -- Boss (Hush)
             "Robert Prince - Facing The Spider (E3M8)",  -- Boss (Ultra Greed)
             "Robert Prince - Facing The Spider (E3M8)",  -- Boss (Delirium)
-            "Robert Prince - Facing The Spider (E3M8)"  -- Boss (Mega Satan)
+            "Robert Prince - Facing The Spider (E3M8)",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["Dan Terminus"] = {
             "Dan Terminus - Pegasus Pro Ultra Fusion",  -- Basement
@@ -1159,7 +1229,21 @@ local musicTable = {
             "Dan Terminus - Cherenkov Blue Overdriver",  -- Boss (Hush)
             "Dan Terminus - Deus Mecanicus",  -- Boss (Ultra Greed)
             "Dan Terminus - Deus Mecanicus",  -- Boss (Delirium)
-            "Dan Terminus - Deus Mecanicus"  -- Boss (Mega Satan)
+            "Dan Terminus - Deus Mecanicus",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["Darkest Dungeon"] = {
             "Stuart Chatwood - The Blasted Heath",  -- Basement
@@ -1200,7 +1284,60 @@ local musicTable = {
             "Stuart Chatwood - The Final Combat",  -- Boss (Hush)
             "Stuart Chatwood - The Final Combat",  -- Boss (Ultra Greed)
             "Stuart Chatwood - The Final Combat",  -- Boss (Delirium)
-            "Stuart Chatwood - The Final Combat"  -- Boss (Mega Satan)
+            "Stuart Chatwood - The Final Combat",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            {"", ""},  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            {"", "", ""},  -- Boss Death
+            {"", "", ""},  -- Boss Death (Alt)
+            "",  -- Boss Death (Hush)
+
+            "Stuart Chatwood - Bloodletting of the Crimson Court",  -- Utero
+            "Stuart Chatwood - Combat in the Ruins",  -- Downpour
+            "Stuart Chatwood - Combat in the Ruins",  -- Dross
+            "Stuart Chatwood - Battle in the Warrens",  -- Mines
+            "Stuart Chatwood - Battle in the Warrens",  -- Ashpit
+            "Stuart Chatwood - Forbidden Tannin",  -- Mausoleum
+            "Stuart Chatwood - Forbidden Tannin",  -- Gehenna
+            "Stuart Chatwood - The Chloroplast of Cosmarium",  -- Corpse
+            "Stuart Chatwood - A Brief Respite",  -- Home
+
+            "[Rebirth]",  -- Mineshaft Ambient
+            "Stuart Chatwood - Mournweald Encounter",  -- Mineshaft Escape
+            "Stuart Chatwood - The Senescence",  -- Planetarium
+            "Stuart Chatwood - A Brief Respite",  -- Secret Room (Alt)
+            "Stuart Chatwood - A Brief Respite",  -- Secret Room (Alt Alt)
+
+            "Stuart Chatwood - Mournweald Encounter",  -- Boss Rush
+            "",  -- Boss Rush Start
+            "Stuart Chatwood - A Brief Respite",  -- Boss Defeated (Twisted)
+            "",  -- Mom's Shadow Intro
+            "",  -- Strange Door
+            "Stuart Chatwood - Forbidden Tannin",  -- Echoes Reverse
+
+            "Stuart Chatwood - The Cove Battle",  -- Boss (Alt Alt)
+            "Stuart Chatwood - The Final Combat",  -- Boss (Mother)
+            "",  -- Dogma Intro
+            "Stuart Chatwood - The Final Combat",  -- Boss (Dogma)
+            "Stuart Chatwood - The Final Combat",  -- Boss (Beast)
+            {"", ""},  -- Boss Death (Alt Alt)
+            "",  -- Boss Mother Death
+            "",  -- Boss Dogma Death
+            "",  -- Boss Beast Death
+
+            "Stuart Chatwood - Combat in the Ruins",  -- Downpour (Reversed)
+            "Stuart Chatwood - Combat in the Ruins",  -- Dross (Reversed)
+            "Stuart Chatwood - The Butcher's Circus Combat",  -- Genesis (Reversed)
+
+            {"", "", "", ""},  -- Game Over (Jingle)
         },
         ["Dead Cells"] = {
             "Yoann Laulan - Prisoner's Awakening",  -- Basement
@@ -1241,7 +1378,62 @@ local musicTable = {
             "Yoann Laulan - Conjonctivius",  -- Boss (Hush)
             "Yoann Laulan - Hand Of The King",  -- Boss (Ultra Greed)
             "Yoann Laulan - Formerly Known As Assassin",  -- Boss (Delirium)
-            "Yoann Laulan - Hand Of The King"  -- Boss (Mega Satan)
+            "Yoann Laulan - Hand Of The King",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            "",  -- Boss Death (Hush)
+
+            "Yoann Laulan - Shipwreck",  -- Utero
+            "Yoann Laulan - Arboretum",  -- Downpour
+            "Yoann Laulan - Arboretum",  -- Dross
+            "Yoann Laulan - Distillery",  -- Mines
+            "Yoann Laulan - Distillery",  -- Ashpit
+            "Yoann Laulan - Corrupted Prison",  -- Mausoleum
+            "Yoann Laulan - Corrupted Prison",  -- Gehenna
+            "Yoann Laulan - Swamp",  -- Corpse
+            "Yoann Laulan - The Mausoleum",  -- Home
+
+            "Yoann Laulan - Bank",  -- Mineshaft Ambient
+            "Yoann Laulan - Fractured Shrines",  -- Mineshaft Escape
+            "Yoann Laulan - Bank Shop",  -- Planetarium
+            "Yoann Laulan - Dead Cells",  -- Secret Room (Alt)
+            "Yoann Laulan - Dead Cells",  -- Secret Room (Alt Alt)
+
+            "Yoann Laulan - Undying Shores",  -- Boss Rush
+            "Yoann Laulan - Portal",  -- Boss Rush Start
+            "Yoann Laulan - Credits",  -- Boss Defeated (Twisted)
+            "[Rebirth]",  -- Mom's Shadow Intro
+            "[Rebirth]",  -- Strange Door
+            "Yoann Laulan - The Crown",  -- Echoes Reverse
+
+            "Yoann Laulan - Elite Fight",  -- Boss (Alt Alt)
+            "Yoann Laulan - Heart Of The Swamp",  -- Boss (Mother)
+            "[Rebirth]",  -- Dogma Intro
+            "Yoann Laulan - Keep Off The Flowers",  -- Boss (Dogma)
+            "Yoann Laulan - Beyond Reasoning (The Queen)",  -- Boss (Beast)
+            "Yoann Laulan - Portal",  -- Boss Death (Alt Alt)
+            "[Rebirth]",  -- Boss Mother Death
+            "[Rebirth]",  -- Boss Dogma Death
+            "[Rebirth]",  -- Boss Beast Death
+
+            "Yoann Laulan - Arboretum",  -- Downpour (Reversed)
+            "Yoann Laulan - Arboretum",  -- Dross (Reversed)
+            "Yoann Laulan - Bad Seeds",  -- Genesis (Reversed)
+
+            "Yoann Laulan - Body Desecrated",  -- Game Over (Jingle)
+            "",  -- Game Over
+            "Yoann Laulan - Guardian's Haven"  -- "Boss (Hush Phase 1)"
         },
         ["Diablo II"] = {
             "Matt Uelmen - Valley",  -- Basement
@@ -1282,7 +1474,21 @@ local musicTable = {
             "Matt Uelmen - Seige",  -- Boss (Hush)
             "Matt Uelmen - Seige",  -- Boss (Ultra Greed)
             "Matt Uelmen - Seige",  -- Boss (Delirium)
-            "Matt Uelmen - Seige"  -- Boss (Mega Satan)
+            "Matt Uelmen - Seige",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["Downwell"] = {
             "Eirik Suhrke - Uroboros",  -- Basement
@@ -1324,7 +1530,21 @@ local musicTable = {
             "Eirik Suhrke - Slumber party",  -- Boss (Hush)
             "Eirik Suhrke - Slumber party",  -- Boss (Ultra Greed)
             "Eirik Suhrke - Slumber party",  -- Boss (Delirium)
-            "Eirik Suhrke - Slumber party"  -- Boss (Mega Satan)
+            "Eirik Suhrke - Slumber party",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["FTL"] = {
             "Ben Prunty - Milky Way",  -- Basement
@@ -1365,7 +1585,44 @@ local musicTable = {
             "Ben Prunty - Lanius (Battle)",  -- Boss (Hush)
             "Ben Prunty - Lanius (Battle)",  -- Boss (Ultra Greed)
             "Ben Prunty - Lanius (Battle)",  -- Boss (Delirium)
-            "Ben Prunty - Lanius (Battle)"  -- Boss (Mega Satan)
+            "Ben Prunty - Lanius (Battle)",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            "",  -- Boss Death (Hush)
+
+            "Ben Prunty - Engi",  -- Utero
+            "Ben Prunty - Zoltan (Explore)",  -- Downpour
+            "Ben Prunty - Zoltan (Explore)",  -- Dross
+            "Ben Prunty - Hacking Malfunction (Explore)",  -- Mines
+            "Ben Prunty - Hacking Malfunction (Explore)",  -- Ashpit
+            "Ben Prunty - Lanius (Explore)",  -- Mausoleum
+            "Ben Prunty - Lanius (Explore)",  -- Gehenna
+            "Ben Prunty - Slug (Explore)",  -- Corpse
+            "Ben Prunty - Wasteland (Explore)",  -- Home
+
+            "[Rebirth]",  -- Mineshaft Ambient
+            "Ben Prunty - Lanius (Battle)",  -- Mineshaft Escape
+            "Ben Prunty - Space Cruise",  -- Planetarium
+            "Ben Prunty - BONUS Federation",  -- Secret Room (Alt)
+            "Ben Prunty - BONUS Federation",  -- Secret Room (Alt Alt)
+
+            "Ben Prunty - Lanius (Battle)",  -- Boss Rush
+            "",  -- Boss Rush Start
+            "Ben Prunty - Last Stand",  -- Boss Defeated (Twisted)
+            "[Rebirth]",  -- Mom's Shadow Intro
+            "[Rebirth]",  -- Strange Door
+            "Ben Prunty - Wasteland (Battle)",  -- Echoes Reverse
         },
         ["Lisa"] = {
             "Austin Jorgensen - Summer Love",  -- Basement
@@ -1406,7 +1663,21 @@ local musicTable = {
             "Austin Jorgensen - Exploding Hearts",  -- Boss (Hush)
             "Austin Jorgensen - Go Home Johnny",  -- Boss (Ultra Greed)
             "Austin Jorgensen - The Big Girl Has Cometh",  -- Boss (Delirium)
-            "Austin Jorgensen - All American Badass"  -- Boss (Mega Satan)
+            "Austin Jorgensen - All American Badass",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["PaperMario"] = {
             "Naoko Mitome - Gloam Valley (SPM)",  -- Basement
@@ -1447,7 +1718,21 @@ local musicTable = {
             "Naoko Mitome - The Ultimate Show (Short Intro) (SPM)",  -- Boss (Hush)
             "Yuka Tsujiyoko - Boss - Rawk Hawk (TTYD)",  -- Boss (Ultra Greed)
             "Yuka Tsujiyoko - Boss - Shadow Queen Part 2 (TTYD)",  -- Boss (Delirium)
-            "Yuka Tsujiyoko - Boss - Bowser (TTYD)"  -- Boss (Mega Satan)
+            "Yuka Tsujiyoko - Boss - Bowser (TTYD)",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["Pitfall"] = {
             "Soundelux Design Music Group - Ceiba Jungle",  -- Basement
@@ -1488,7 +1773,21 @@ local musicTable = {
             "Soundelux Design Music Group - Warrior Spirit",  -- Boss (Hush)
             "Soundelux Design Music Group - Warrior Spirit",  -- Boss (Ultra Greed)
             "Soundelux Design Music Group - Warrior Spirit",  -- Boss (Delirium)
-            "Soundelux Design Music Group - Warrior Spirit"  -- Boss (Mega Satan)
+            "Soundelux Design Music Group - Warrior Spirit",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["Shovel Knight"] = {
             "Jake Kaufman - Strike the Earth!",  -- Basement
@@ -1529,7 +1828,21 @@ local musicTable = {
             "Jake Kaufman - The Betrayer",  -- Boss (Hush)
             "Jake Kaufman - The Decadent Dandy",  -- Boss (Ultra Greed)
             "Jake Kaufman - Backed into a Corner",  -- Boss (Delirium)
-            "Jake Kaufman - The Apparition"  -- Boss (Mega Satan)
+            "Jake Kaufman - The Apparition",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["Plague Knight"] = {
             "Jake Kaufman - Strike the Earth!",  -- Basement
@@ -1570,7 +1883,21 @@ local musicTable = {
             "Jake Kaufman - The Stalwart",  -- Boss (Hush)
             "Jake Kaufman - The Battle Within",  -- Boss (Ultra Greed)
             "Jake Kaufman - The Battle Within",  -- Boss (Delirium)
-            "Jake Kaufman - The Battle Within"  -- Boss (Mega Satan)
+            "Jake Kaufman - The Battle Within",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["Specter Knight"] = {
             "Jake Kaufman - From the Shadows",  -- Basement
@@ -1611,7 +1938,21 @@ local musicTable = {
             "Jake Kaufman - The Betrayer",  -- Boss (Hush)
             "Jake Kaufman - The Decadent Dandy",  -- Boss (Ultra Greed)
             "Jake Kaufman - Backed into a Corner",  -- Boss (Delirium)
-            "Jake Kaufman - Know Thy True Self"  -- Boss (Mega Satan)
+            "Jake Kaufman - Know Thy True Self",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["King Knight"] = {
             "Jake Kaufman - Pride Before Order",  -- Basement
@@ -1652,7 +1993,21 @@ local musicTable = {
             "Jake Kaufman - Fit to be Crowned",  -- Boss (Hush)
             "Jake Kaufman - Fit to be Crowned",  -- Boss (Ultra Greed)
             "Jake Kaufman - Fit to be Crowned",  -- Boss (Delirium)
-            "Jake Kaufman - Fit to be Crowned"  -- Boss (Mega Satan)
+            "Jake Kaufman - Fit to be Crowned",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["Slay the Spire"] = {
             "Clark Aboud - Exordium",  -- Basement
@@ -1693,7 +2048,21 @@ local musicTable = {
             "Clark Aboud - The Heart",  -- Boss (Hush)
             "Clark Aboud - The Heart",  -- Boss (Ultra Greed)
             "Clark Aboud - The Heart",  -- Boss (Delirium)
-            "Clark Aboud - The Heart"  -- Boss (Mega Satan)
+            "Clark Aboud - The Heart",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["SovietJumpGame"] = {
             "Alex Yoder - Moscow Streets",  -- Basement
@@ -1735,6 +2104,20 @@ local musicTable = {
             "Alex Yoder - Peril and Heroism",  -- Boss (Ultra Greed)
             "Alex Yoder - Peril and Heroism",  -- Boss (Delirium)
             "Alex Yoder - Peril and Heroism",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["SuperSmashBros"] = {
             "Takahiro Nishi - Step: The Plain (Brawl)", -- Basement
@@ -1775,7 +2158,21 @@ local musicTable = {
             "Hideki Sakamoto - Dharkon (Ultimate)", -- Boss (Hush)
             "Takahiro Nishi - Fire Field (Brawl)", -- Boss (Ultra Greed)
             "Hirokazu Ando - Multi-Man Melee 2 (Melee)", -- Boss (Delirium)
-            "Hirokazu Ando - Giga Bowser (Melee)" -- Boss (Mega Satan)
+            "Hirokazu Ando - Giga Bowser (Melee)",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["P1"] = {
             "Shoji Meguro - Dungeon - Hospital (Before the Disaster)",  -- Basement
@@ -1816,7 +2213,21 @@ local musicTable = {
             "Shoji Meguro - Battle - Night Queen",  -- Boss (Hush)
             "Shoji Meguro - Foolish Boss Battle",  -- Boss (Ultra Greed)
             "Shoji Meguro - Battle - Tesso",  -- Boss (Delirium)
-            "Shoji Meguro - Battle - Mid-Boss"  -- Boss (Mega Satan)
+            "Shoji Meguro - Battle - Mid-Boss",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["P2"] = {
             "Toshiko Tasaki - Seven Sisters High School A",  -- Basement
@@ -1857,7 +2268,21 @@ local musicTable = {
             "Toshiko Tasaki - A Great Evil",  -- Boss (Hush)
             "Toshiko Tasaki - Last Battalion",  -- Boss (Ultra Greed)
             "Toshiko Tasaki - Knights of the Holy Spear",  -- Boss (Delirium)
-            "Toshiko Tasaki - Opening Eternal Punishment"  -- Boss (Mega Satan)
+            "Toshiko Tasaki - Opening Eternal Punishment",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["P3"] = {
             "Shoji Meguro - Basement",  -- Basement
@@ -1898,7 +2323,21 @@ local musicTable = {
             "Shoji Meguro - Danger Zone",  -- Boss (Hush)
             "Shoji Meguro - The Snow Queen",  -- Boss (Ultra Greed)
             "Shoji Meguro - Battle for Everyone's Souls",  -- Boss (Delirium)
-            "Shoji Meguro - Time Castle"  -- Boss (Mega Satan)
+            "Shoji Meguro - Time Castle",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["P4"] = {
             "Shoji Meguro - Sing Of Love",  -- Basement
@@ -1939,7 +2378,21 @@ local musicTable = {
             "Shoji Meguro - SNOWFLAKES -Powder Snow Mix-",  -- Boss (Hush)
             "Shoji Meguro - Revelations: Mitsuo",  -- Boss (Ultra Greed)
             "Shoji Meguro - The Genesis",  -- Boss (Delirium)
-            "Shoji Meguro - The Almighty"  -- Boss (Mega Satan)
+            "Shoji Meguro - The Almighty",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         },
         ["SMTif"] = {
             "Tsukasa Masuko - Classroom",  -- Basement
@@ -1980,7 +2433,21 @@ local musicTable = {
             "Tsukasa Masuko - Inside the Body of Orcus",  -- Boss (Hush)
             "Tsukasa Masuko - Casino 2",  -- Boss (Ultra Greed)
             "Tsukasa Masuko - Hazama Battle",  -- Boss (Delirium)
-            "Tsukasa Masuko - Majin"  -- Boss (Mega Satan)
+            "Tsukasa Masuko - Majin",  -- Boss (Mega Satan)
+
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            ""  -- Boss Death (Hush)
         }
     },
     ["TrackTypes"] = {  -- Track types, as declared by Soundtrack Menu
@@ -2117,7 +2584,7 @@ local musicTable = {
         BOSS_ULTRA_GREED = 35,
         BOSS_DELIRIUM = 36,
         BOSS_MEGA_SATAN = 37,
-        DEVIL_ROOM_ = 38,
+        DEVIL_ROOM = 38,
         ANGEL_ROOM = 39,
         SECRET_ROOM = 40,
         TREASURE_ROOM_ENTRY_0 = 41,
@@ -2166,7 +2633,8 @@ local musicTable = {
         GAME_OVER = 84,
         BOSS_HUSH_PHASE_1 = 85
     },
-    ["Fallbacks"] = {}  -- Fallback IDs for missing ones
+    ["Fallbacks"] = {},  -- Fallback IDs for missing ones
+    ["JingleIDs"] = {}  -- IDs of each jingle type track
 }
 
 local fallbacks = {
@@ -2202,5 +2670,28 @@ local fallbacks = {
     [musicTable.TrackEnum.BOSS_HUSH_PHASE_1] = musicTable.TrackEnum.BOSS_BLUE_BABY
 }
 musicTable.Fallbacks = fallbacks
+
+local jingles = {
+    musicTable.TrackEnum.TREASURE_ROOM_ENTRY_0,
+    musicTable.TrackEnum.TREASURE_ROOM_ENTRY_1,
+    musicTable.TrackEnum.TREASURE_ROOM_ENTRY_2,
+    musicTable.TrackEnum.TREASURE_ROOM_ENTRY_3,
+    musicTable.TrackEnum.CHALLENGE_ENTRY,
+    musicTable.TrackEnum.CHALLENGE_OUTRO,
+    musicTable.TrackEnum.BOSS_INTRO,
+    musicTable.TrackEnum.BOSS_DEATH,
+    musicTable.TrackEnum.BOSS_DEATH_ALT,
+    musicTable.TrackEnum.BOSS_DEATH_HUSH,
+    musicTable.TrackEnum.BOSS_RUSH_START,
+    musicTable.TrackEnum.MOTHERS_SHADOW,
+    musicTable.TrackEnum.STRANGE_DOOR,
+    musicTable.TrackEnum.DOGMA_INTRO,
+    musicTable.TrackEnum.BOSS_DEATH_ALT_ALT,
+    musicTable.TrackEnum.BOSS_DEATH_MOTHER,
+    musicTable.TrackEnum.BOSS_DEATH_DOGMA,
+    musicTable.TrackEnum.BOSS_DEATH_BEAST,
+    musicTable.TrackEnum.GAME_OVER_JINGLE
+}
+musicTable.JingleIDs = jingles
 
 return musicTable

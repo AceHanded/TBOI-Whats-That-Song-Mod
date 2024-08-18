@@ -1,3 +1,10 @@
+v1.1.0
+- Fixed an issue, which caused jingles imported via Jukebox to not be omitted.
+- Added missing tracks to the following soundtracks.
+    * Darkest Dungeon
+    * Dead Cells
+    * FTL
+
 v1.0.9
 - Added support for all soundtrack mods that include functionality for Jukebox, as well as for variant music tracks of Soundtrack Menu.
     * Thank you ☢ Nato Potato ☢ for providing the necessary adjustments!
