@@ -145,7 +145,7 @@ else
     ModConfigMenu.AddText(modName, "Info", function() return "(ID: " .. tostring(musicID) .. ")" end)
     ModConfigMenu.AddSpace(modName, "Info")
     ModConfigMenu.AddText(modName, "Info", function() return "What's That Song?" end)
-    ModConfigMenu.AddText(modName, "Info", function() return "V1.1.0" end)
+    ModConfigMenu.AddText(modName, "Info", function() return "V1.1.1" end)
     ModConfigMenu.AddText(modName, "Info", function() return "Courtesy of AceHand" end)
     ModConfigMenu.AddSpace(modName, "Info")
     AddResetButton("Info", "ResetToDefaults", "Resets all configuration fields to their default values.")
@@ -453,6 +453,11 @@ local function AddSoundtrack(tbl, name, soundtrack)
         tbl.SoundtrackTitles[name] = soundtrack
     else
         return false
+    end
+
+    -- For Jukebox compatibility, when both mods are simultaneously active
+    if Titles then
+        AddTitlesToJukebox(name:gsub('%W',''), name, name, soundtrack)
     end
     WhatsThatSong:PopulateMusicIDs()
     return true
