@@ -1,3 +1,6 @@
+v1.1.2
+- Fixed incorrectly displayed default tracks of Excelsior and Inner Sanctum.
+
 v1.1.1
 - Fixed an issue, which caused song titles to not be displayed in Jukebox, when active simultaneously.
 

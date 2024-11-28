@@ -48,7 +48,8 @@ local musicTable = {
         "P2",  -- (AB+/Rep) Persona 2 Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2006989742
         "P3",  -- (AB+/Rep) Persona 3 Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2006994282
         "P4",  -- (AB+/Rep) Persona 4 Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2006999553
-        "SMTif"  -- (AB+/Rep) Shin Megami Tensei: If... Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2006979546
+        "SMTif",  -- (AB+/Rep) Shin Megami Tensei: If... Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2006979546
+        "Inner Sanctum"  -- INNER SANCTUM (Soundtrack Overhaul) [RP+ Compatible!] - https://steamcommunity.com/sharedfiles/filedetails/?id=3261943270
     },
     ["SoundtrackTitles"] = {  -- Song titles of each soundtrack
         ["Rebirth"] = {
@@ -2448,6 +2449,102 @@ local musicTable = {
             "",  -- Boss Death
             "",  -- Boss Death (Alt)
             ""  -- Boss Death (Hush)
+        },
+        ["Inner Sanctum"] = {
+            "Hengus - The Cycle Reborn",  -- Basement
+            "Hengus - Your Mind Needs Tuning",  -- Cellar
+            "Hengus - Fire Under The Floorboards",  -- Burning Basement
+            "Hengus - Deeper Below",  -- Caves
+            "Hengus - Crawling Gravestones",  -- Catacombs
+            "Hengus - Adrift In A Sea of Tears",  -- Flooded Caves
+            "Hengus - Point Of No Return",  -- Depths
+            "Hengus - Where The Dead Reside",  -- Necropolis
+            "Hengus - Malignant Wastebin",  -- Dank Depths
+            "Hengus - Somewhere That Shouldn't Be",  -- Womb/Utero
+            "Hengus - Unsalvagable",  -- Scarred Womb
+            "Hengus - 471 Faces Of Agony",  -- Blue Womb
+            "Hengus - Embracing Hate",  -- Sheol
+            "Hengus - Lacing Faith",  -- Cathedral
+            "Hengus - They're Still Out There",  -- Dark Room
+            "Hengus - ...Yet I Remain",  -- Chest
+            "",  -- Void
+        
+            "Hengus - What Little Remains",  -- Library
+            "Hengus - Me And My Demons",  -- Devil Room
+            "Hengus - Heaven Is Smiling",  -- Angel Room
+            "Hengus - Flicker Of Innocence",  -- Shop
+            "Hengus - PAID KEY COPYRIGHT MORIAHSOFT 20XX",  -- Arcade
+            "Hengus - Behind False Walls",  -- Secret Room
+            "",  -- Boss Defeated
+            "Hengus - Uninvited Assault",  -- Challenge Fight
+        
+            "Hengus - Uncertain Adversary",  -- Boss
+            "Hengus - Unrelenting Compulsion",  -- Boss (Alt)
+            "Hengus - A Death Paved With Good Intent",  -- Boss (Mom)
+            "Hengus - Faith Flatlined",  -- Boss (Mom's Heart)
+            "Hengus - Behold What You Have Wrought",  -- Boss (Isaac)
+            "Hengus - Become What They Fear",  -- Boss (Satan)
+            "Hengus - A Skull Full Of Tears",  -- Boss (The Lamb)
+            "Hengus - Condemned Child's Tomb",  -- Boss (???)
+            "Hengus - What Lurks Beneath",  -- Boss (Hush)
+            "",  -- Boss (Ultra Greed)
+            "",  -- Boss (Delirium)
+            "",  -- Boss (Mega Satan)
+        
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            "",  -- Boss Death (Hush)
+        
+            "",  -- Utero
+            "",  -- Downpour
+            "",  -- Dross
+            "",  -- Mines
+            "",  -- Ashpit
+            "",  -- Mausoleum
+            "",  -- Gehenna
+            "",  -- Corpse
+            "",  -- Home
+                
+            "",  -- Mineshaft Ambient
+            "",  -- Mineshaft Escape
+            "",  -- Planetarium
+            "",  -- Secret Room (Alt)
+            "",  -- Secret Room (Alt Alt)
+                
+            "",  -- Boss Rush
+            "",  -- Boss Rush Start
+            "",  -- Boss Defeated (Twisted)
+            "",  -- Mom's Shadow Intro
+            "",  -- Strange Door
+            "",  -- Echoes Reverse
+                
+            "",  -- Boss (Alt Alt)
+            "",  -- Boss (Mother)
+            "",  -- Dogma Intro
+            "",  -- Boss (Dogma)
+            "",  -- Boss (Beast)
+            "",  -- Boss Death (Alt Alt)
+            "",  -- Boss Mother Death
+            "",  -- Boss Dogma Death
+            "",  -- Boss Beast Death
+                
+            "",  -- Downpour (Reversed)
+            "",  -- Dross (Reversed)
+            "",  -- Genesis (Reversed)
+            
+            "",  -- Game Over (Jingle)
+            "",  -- Game Over
+            ""  -- "Boss (Hush Phase 1)"
         }
     },
     ["TrackTypes"] = {  -- Track types, as declared by Soundtrack Menu
