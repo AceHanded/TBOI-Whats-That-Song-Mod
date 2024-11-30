@@ -1,3 +1,6 @@
+v1.1.3
+- Fixed adding of titles to Jukebox, when the soundtrack is already in the music table.
+
 v1.1.2
 - Fixed incorrectly displayed default tracks of Excelsior and Inner Sanctum.
 

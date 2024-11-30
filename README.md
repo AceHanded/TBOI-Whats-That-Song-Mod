@@ -1,4 +1,4 @@
-# What's That Song? V1.1.2
+# What's That Song? V1.1.3
 
 ![Demonstration](https://raw.githubusercontent.com/AceHanded/TBOI-Whats-That-Song-Mod/main/Images/ModShowcase.gif)
 ![Demonstration2](https://raw.githubusercontent.com/AceHanded/TBOI-Whats-That-Song-Mod/main/Images/ModShowcase2.gif)

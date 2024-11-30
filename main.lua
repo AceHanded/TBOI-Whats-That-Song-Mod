@@ -145,7 +145,7 @@ else
     ModConfigMenu.AddText(modName, "Info", function() return "(ID: " .. tostring(musicID) .. ")" end)
     ModConfigMenu.AddSpace(modName, "Info")
     ModConfigMenu.AddText(modName, "Info", function() return "What's That Song?" end)
-    ModConfigMenu.AddText(modName, "Info", function() return "V1.1.2" end)
+    ModConfigMenu.AddText(modName, "Info", function() return "V1.1.3" end)
     ModConfigMenu.AddText(modName, "Info", function() return "Courtesy of AceHand" end)
     ModConfigMenu.AddSpace(modName, "Info")
     AddResetButton("Info", "ResetToDefaults", "Resets all configuration fields to their default values.")
@@ -175,12 +175,19 @@ end
 
 Isaac.ConsoleOutput("What's That Song? loaded successfully.\n")
 
-local function all(tbl, comp)
+local function all(tbl, comp, compPairs)
     local count = 0
     if comp == nil then comp = true end
+    if compPairs == nil then compPairs = false end
 
-    for _, v in ipairs(tbl) do
-        if v == comp then count = count + 1 end
+    if compPairs then
+        for _, v in pairs(tbl) do
+            if v == comp then count = count + 1 end
+        end
+    else
+        for _, v in ipairs(tbl) do
+            if v == comp then count = count + 1 end
+        end
     end
 
     if count == #tbl then
@@ -189,11 +196,18 @@ local function all(tbl, comp)
     return false
 end
 
-local function any(tbl, comp)
+local function any(tbl, comp, compPairs)
     if comp == nil then comp = true end
+    if compPairs == nil then compPairs = false end
 
-    for _, v in ipairs(tbl) do
-        if v == comp then return true end
+    if compPairs then
+        for _, v in pairs(tbl) do
+            if v == comp then return true end
+        end
+    else
+        for _, v in ipairs(tbl) do
+            if v == comp then return true end
+        end
     end
     return false
 end
@@ -455,16 +469,16 @@ local function AddSoundtrack(tbl, name, soundtrack)
         end
     end
 
+    -- For Jukebox compatibility, when both mods are simultaneously active
+    if Titles ~= nil and Titles ~= true and not any(Titles.TitleList, name, true) then
+        AddTitlesToJukebox(name:gsub('%W',''), name, name, soundtrack)
+    end
+
     if not soundtrackExists then
         table.insert(tbl.Soundtracks, name)
         tbl.SoundtrackTitles[name] = soundtrack
     else
         return false
-    end
-
-    -- For Jukebox compatibility, when both mods are simultaneously active
-    if Titles then
-        AddTitlesToJukebox(name:gsub('%W',''), name, name, soundtrack)
     end
     WhatsThatSong:PopulateMusicIDs()
     return true
