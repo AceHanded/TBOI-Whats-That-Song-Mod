@@ -145,7 +145,7 @@ else
     ModConfigMenu.AddText(modName, "Info", function() return "(ID: " .. tostring(musicID) .. ")" end)
     ModConfigMenu.AddSpace(modName, "Info")
     ModConfigMenu.AddText(modName, "Info", function() return "What's That Song?" end)
-    ModConfigMenu.AddText(modName, "Info", function() return "V1.1.3" end)
+    ModConfigMenu.AddText(modName, "Info", function() return "V1.1.4" end)
     ModConfigMenu.AddText(modName, "Info", function() return "Courtesy of AceHand" end)
     ModConfigMenu.AddSpace(modName, "Info")
     AddResetButton("Info", "ResetToDefaults", "Resets all configuration fields to their default values.")
@@ -478,7 +478,14 @@ local function AddSoundtrack(tbl, name, soundtrack)
         table.insert(tbl.Soundtracks, name)
         tbl.SoundtrackTitles[name] = soundtrack
     else
-        return false
+        if not tbl.SoundtrackTitles[name] then return false end
+
+        -- Add titles defined by the mod, even if not present internally
+        for i = 1, math.max(#tbl.SoundtrackTitles[name], #soundtrack) do
+            if tbl.SoundtrackTitles[name][i] == "" and soundtrack[i] ~= "" then
+                tbl.SoundtrackTitles[name][i] = soundtrack[i]
+            end
+        end
     end
     WhatsThatSong:PopulateMusicIDs()
     return true
