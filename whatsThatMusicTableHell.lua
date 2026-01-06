@@ -49,7 +49,9 @@ local musicTable = {
         "P3",  -- (AB+/Rep) Persona 3 Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2006994282
         "P4",  -- (AB+/Rep) Persona 4 Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2006999553
         "SMTif",  -- (AB+/Rep) Shin Megami Tensei: If... Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2006979546
-        "Inner Sanctum"  -- INNER SANCTUM (Soundtrack Overhaul) [RP+ Compatible!] - https://steamcommunity.com/sharedfiles/filedetails/?id=3261943270
+        "Inner Sanctum",  -- INNER SANCTUM (Soundtrack Overhaul) [RP+ Compatible!] - https://steamcommunity.com/sharedfiles/filedetails/?id=3261943270
+        "ReScored",  -- Rescored: Beats To Repent To (An Original Alternate Soundtrack) - https://steamcommunity.com/sharedfiles/filedetails/?id=2521411460
+        --"Sacrilege",  -- Binding of Isaac-SACRILEGE Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2819468633
     },
     ["SoundtrackTitles"] = {  -- Song titles of each soundtrack
         ["Rebirth"] = {
@@ -2545,7 +2547,199 @@ local musicTable = {
             "",  -- Game Over (Jingle)
             "",  -- Game Over
             ""  -- "Boss (Hush Phase 1)"
-        }
+        },
+        ["ReScored"] = {
+            "Splattie - What Reeks Beneath",  -- Basement
+            "Splattie - Under the Floorboards",  -- Cellar
+            "Splattie - To Ashes",  -- Burning Basement
+            "Splattie - Fungal Boogie",  -- Caves
+            "Splattie - Where Corpses Lie",  -- Catacombs
+            "Splattie - Reverberations",  -- Flooded Caves
+            "Splattie - Cold Stone",  -- Depths
+            "Splattie - City of the Dead",  -- Necropolis
+            "Splattie - Sludgepit",  -- Dank Depths
+            "Splattie - Muffled Voices",  -- Womb/Utero
+            "Splattie - Hemorrhage",  -- Scarred Womb
+            "Splattie - Vacant",  -- Blue Womb
+            "Splattie - Damnation",  -- Sheol
+            "Splattie - Eternal Praise",  -- Cathedral
+            "Splattie - Punishment",  -- Dark Room
+            "Splattie - Unofficial Tomb",  -- Chest
+            "Splattie - Fabric of Reality",  -- Void
+        
+            "Splattie - Hidden Chapter",  -- Library
+            "Splattie - Blood Ritual",  -- Devil Room
+            "Splattie - Heaven's Bounty",  -- Angel Room
+            "Splattie - For a Price",  -- Shop
+            "Splattie - Game Jam",  -- Arcade
+            "Splattie - Dead Man's Riddle",  -- Secret Room
+            "Splattie - Bitter Respite",  -- Boss Defeated
+            "Splattie - Forbidden Trove",  -- Challenge Fight
+        
+            "Splattie - Blood Sweat and Tears",  -- Boss
+            "Splattie - Blood on the Floor",  -- Boss (Alt)
+            "Splattie - Sanctified Discipline",  -- Boss (Mom)
+            "Splattie - Heartbreaker",  -- Boss (Mom's Heart)
+            "Splattie - Inner Turmoil",  -- Boss (Isaac)
+            "Splattie - The Horned One",  -- Boss (Satan)
+            "Splattie - Seal Cracker",  -- Boss (The Lamb)
+            "Splattie - You're Already Dead",  -- Boss (???)
+            "Splattie - Don't Cry",  -- Boss (Hush)
+            "Splattie - Double Down",  -- Boss (Ultra Greed)
+            "Splattie - Wit's End",  -- Boss (Delirium)
+            "Splattie - The Horned One",  -- Boss (Mega Satan)
+        
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            "",  -- Boss Death (Hush)
+        
+            "Splattie - Nine",  -- Utero
+            "Splattie - Tides Of Fate",  -- Downpour
+            "Splattie - Thick Stench",  -- Dross
+            "Splattie - Toiling Hard",  -- Mines
+            "Splattie - Dune Baby",  -- Ashpit
+            "Splattie - Cult Worship",  -- Mausoleum
+            "Splattie - Trial By Fire",  -- Gehenna
+            "Splattie - Materna",  -- Corpse
+            "Splattie - Familiarity",  -- Home
+                
+            "Splattie - Delve Into The Dark",  -- Mineshaft Ambient
+            "Splattie - Off Track",  -- Mineshaft Escape
+            "Splattie - It Came From The Stars",  -- Planetarium
+            "Splattie - Demon's Whisper",  -- Secret Room (Alt)
+            "Splattie - Silent Call",  -- Secret Room (Alt Alt)
+                
+            "Splattie - Waves of Pain",  -- Boss Rush
+            "",  -- Boss Rush Start
+            "Splattie - Tainted Ground",  -- Boss Defeated (Twisted)
+            "",  -- Mom's Shadow Intro
+            "",  -- Strange Door
+            "Splattie - Blood Ritual",  -- Echoes Reverse
+                
+            "Splattie - Righteous Beatdown",  -- Boss (Alt Alt)
+            "Splattie - Monster",  -- Boss (Mother)
+            "",  -- Dogma Intro
+            "Splattie - Divine Command Reprise",  -- Boss (Dogma)
+            "Splattie - Mother of Harlots",  -- Boss (Beast)
+            "",  -- Boss Death (Alt Alt)
+            "",  -- Boss Mother Death
+            "",  -- Boss Dogma Death
+            "",  -- Boss Beast Death
+                
+            "Splattie - Sopping Reflection Reprise",  -- Downpour (Reversed)
+            "Splattie - Rank Replica Reprise",  -- Dross (Reversed)
+            "Splattie - More Than A Blur Reprise",  -- Genesis (Reversed)
+            
+            "",  -- Game Over (Jingle)
+            "Splattie - Peace",  -- Game Over
+            "Splattie - You're Already Dead"  -- "Boss (Hush Phase 1)"
+        }--[[,
+        ["Sacrilege"] = {
+            "P-Wave - Sacrificial",  -- Basement
+            "P-Wave - Penance",  -- Cellar
+            "P-Wave - To Those Who Sin",  -- Burning Basement
+            "P-Wave - Repentant",  -- Caves
+            "P-Wave - Atonement",  -- Catacombs
+            "P-Wave - Baptismal",  -- Flooded Caves
+            "P-Wave - Dreadful",  -- Depths
+            "P-Wave - Latter Days",  -- Necropolis
+            "P-Wave - Condemnation",  -- Dank Depths
+            "P-Wave - Apostate",  -- Womb/Utero
+            "P-Wave - Riven",  -- Scarred Womb
+            "P-Wave - Perdition",  -- Blue Womb
+            "P-Wave - A Mourner Unto Sheol",  -- Sheol
+            "P-Wave - Lament of the Angel",  -- Cathedral
+            "P-Wave - Disdain of the Abyss",  -- Dark Room
+            "P-Wave - Acceptance",  -- Chest
+            "P-Wave - Desolate",  -- Void
+        
+            "",  -- Library
+            "",  -- Devil Room
+            "",  -- Angel Room
+            "",  -- Shop
+            "",  -- Arcade
+            "",  -- Secret Room
+            "",  -- Boss Defeated
+            "",  -- Challenge Fight
+        
+            "",  -- Boss
+            "",  -- Boss (Alt)
+            "",  -- Boss (Mom)
+            "",  -- Boss (Mom's Heart)
+            "",  -- Boss (Isaac)
+            "",  -- Boss (Satan)
+            "P-Wave - Self-Annihilation",  -- Boss (The Lamb)
+            "P-Wave - Verity of the Mortal Coil",  -- Boss (???)
+            "P-Wave - Fallen Requiem",  -- Boss (Hush)
+            "P-Wave - Avarice",  -- Boss (Ultra Greed)
+            "P-Wave - ...Obliterate",  -- Boss (Delirium)
+            "P-Wave - Doomsday's Adversary",  -- Boss (Mega Satan)
+        
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            "",  -- Boss Death (Hush)
+        
+            "",  -- Utero
+            "",  -- Downpour
+            "",  -- Dross
+            "",  -- Mines
+            "",  -- Ashpit
+            "",  -- Mausoleum
+            "",  -- Gehenna
+            "",  -- Corpse
+            "",  -- Home
+                
+            "",  -- Mineshaft Ambient
+            "",  -- Mineshaft Escape
+            "",  -- Planetarium
+            "",  -- Secret Room (Alt)
+            "",  -- Secret Room (Alt Alt)
+                
+            "",  -- Boss Rush
+            "",  -- Boss Rush Start
+            "",  -- Boss Defeated (Twisted)
+            "",  -- Mom's Shadow Intro
+            "",  -- Strange Door
+            "",  -- Echoes Reverse
+                
+            "",  -- Boss (Alt Alt)
+            "",  -- Boss (Mother)
+            "",  -- Dogma Intro
+            "",  -- Boss (Dogma)
+            "",  -- Boss (Beast)
+            "",  -- Boss Death (Alt Alt)
+            "",  -- Boss Mother Death
+            "",  -- Boss Dogma Death
+            "",  -- Boss Beast Death
+                
+            "",  -- Downpour (Reversed)
+            "",  -- Dross (Reversed)
+            "",  -- Genesis (Reversed)
+            
+            "",  -- Game Over (Jingle)
+            "",  -- Game Over
+            "P-Wave - Verity of the Mortal Coil"  -- "Boss (Hush Phase 1)"
+        }]]
     },
     ["TrackTypes"] = {  -- Track types, as declared by Soundtrack Menu
         "Basement",

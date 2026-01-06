@@ -1,3 +1,7 @@
+v1.1.5
+- Added built-in support for new soundtracks.
+   * ReScored: Beats To Repent To
+
 v1.1.4
 - Fixed an issue, which caused titles defined by mods to not be displayed, if the soundtrack was already internally present.
 
@@ -13,19 +17,19 @@ v1.1.1
 v1.1.0
 - Fixed an issue, which caused jingles imported via Jukebox to not be omitted.
 - Added missing tracks to the following soundtracks.
-    * Darkest Dungeon
-    * Dead Cells
-    * FTL
+   * Darkest Dungeon
+   * Dead Cells
+   * FTL
 
 v1.0.9
 - Added support for all soundtrack mods that include functionality for Jukebox, as well as for variant music tracks of Soundtrack Menu.
-    * Thank you ☢ Nato Potato ☢ for providing the necessary adjustments!
+   * Thank you ☢ Nato Potato ☢ for providing the necessary adjustments!
 - Added built-in support for new soundtracks.
-    * Most of the listed soundtracks on the mod page of Jukebox, excluding Dubstep, JoJo and Necrodancer.
+   * Most of the listed soundtracks on the mod page of Jukebox, excluding Dubstep, JoJo and Necrodancer.
 
 v1.0.8
 - Added built-in support for new soundtracks.
-    * Excelsior Soundtrack
+   * Excelsior Soundtrack
 
 v1.0.7
 - Added rainbow colorization option for the notifications, enabled by setting all color values of the corresponding notification to -1.
