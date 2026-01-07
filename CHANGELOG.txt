@@ -1,3 +1,7 @@
+v1.1.6
+- Added built-in support for new soundtracks.
+   * REROLL YOUR SOUNDTRACK
+
 v1.1.5
 - Added built-in support for new soundtracks.
    * ReScored: Beats To Repent To

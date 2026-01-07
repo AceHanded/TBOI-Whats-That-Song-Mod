@@ -3,7 +3,7 @@
     <name>What's That Song?</name>
     <directory>whats that song</directory>
     <id>3267389419</id>
-    <description>[h1]Image Showcase[/h1]
+    <description>[url=https://github.com/AceHanded/TBOI-Whats-That-Song-Mod][img]https://img.shields.io/github/stars/AceHanded/TBOI-Whats-That-Song-Mod?style=for-the-badge&amp;logo=github&amp;labelColor=black[/img][/url]
 
 [img]https://raw.githubusercontent.com/AceHanded/TBOI-Whats-That-Song-Mod/main/Images/ModShowcase.gif[/img]
 [img]https://raw.githubusercontent.com/AceHanded/TBOI-Whats-That-Song-Mod/main/Images/ModShowcase2.gif[/img]
@@ -15,16 +15,19 @@
 
 This is a fairly simple mod that displays the name of the currently playing song, as it is in the official soundtrack.
 
-[b]NOTE:[/b] As of version 1.0.9, this mod automatically includes support for all soundtrack mods that function with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2507140347][REP] Jukebox[/url] (Thank you [url=https://steamcommunity.com/id/NAT0P0TAT0]☢ Nato Potato ☢[/url] for providing the necessary adjustments to make this happen!).
+[h1]Associated Mods[/h1]
+
+[b]NOTE:[/b] As of version 1.0.9, this mod automatically includes support for all soundtrack mods that function with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2507140347][REP] Jukebox[/url] (Thank you [url=https://steamcommunity.com/id/NAT0P0TAT0]☢ Nato Potato ☢[/url] for providing the necessary adjustments).
 
 The mod includes support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2681875787]Mod Config Menu Pure[/url], and in case you don't have that installed, and don't wish to, there is also a configuration file in the mod's directory (by default found at `/steam/steamapps/common/The Binding of Isaac Rebirth/mods/whats that song_3267389419/whatsThatConfig.lua`), where you can tweak certain aspects of the mod to your liking.
 
 There is also support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1933285222]Soundtrack Menu[/url], and you can get more tracks added by:
-[olist]
+[list]
     [*]Adding them directly to the `whatsThatMusicTableHell.lua` file (Not Recommended).
     [*]Utilizing the WhatsThatSongAPI interface in your own soundtrack mod.
     [*]Asking nicely.
-[/olist]
+[/list]
+
 [b]Soundtrack mods with built-in support:[/b]
 [list]
     [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2499546769]The Binding of Isaac: Mutations Soundtrack[/url]
@@ -33,43 +36,40 @@ There is also support for [url=https://steamcommunity.com/sharedfiles/filedetail
     [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2507009001]A Hat in Time Soundtrack[/url]
     [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3282947983]Disco Elysium Soundtrack[/url]
     [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2701118263]Excelsior Soundtrack[/url]
-    [*]Most of the listed soundtracks on the mod page of Jukebox, excluding Dubstep, JoJo and Necrodancer.
+    [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2521411460]ReScored: Beats To Repent To[/url]
+    [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2805335845]REROLL YOUR SOUNDTRACK[/url]
+    [*]Most of the soundtracks listed on the mod page of [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2507140347]Jukebox[/url].
 [/list]
+
 If you are using other music-altering mods besides these, the mod should still work perfectly fine for supported soundtracks. Additionally, if you opt for choice 1 for some reason, it would be oh so very kind of you to share your contribution with me, so I could add it for others' use as well.
 
-[h1]API Example[/h1]
+[h1]API[/h1]
 
-[b]Below is an example of how to use the WhatsThatSongAPI, alongside Soundtrack Menu.[/b]
-
-[code]YourModName = RegisterMod(&quot;ModName&quot;, 1)
+[code]YourModName = RegisterMod(&quot;YourModName&quot;, 1)
 
 local yourSoundtrackTitles = {
-    -- Here go the displayed titles, in correspondence with the formatting of Soundtrack Menu.
+    -- Here go the displayed titles, in correspondence with the formatting of Soundtrack Menu
 }
 
 YourModName:AddCallback(ModCallbacks.MC_POST_GAME_STARTED, function()
-    -- Check existance of Soundtrack Menu
+    -- Check existence of Soundtrack Menu
     if SoundtrackSongList then
-        -- The value used in place of &quot;Your Soundtrack Name&quot;
+        -- The value used in place of &quot;YourSoundtrackName&quot;
         -- should be same in both AddSoundtrackToMenu and WhatsThatSongAPI:AddSoundtrack
-        AddSoundtrackToMenu(&quot;Your Soundtrack Name&quot;)
+        AddSoundtrackToMenu(&quot;YourSoundtrackName&quot;)
 
-        -- Check existance of What's That Song?
+        -- Check existence of What's That Song?
         if WhatsThatSong then
-            -- Very simple to use; returns true if addition was successful, otherwise false
-            if WhatsThatSongAPI:AddSoundtrack(&quot;Your Soundtrack Name&quot;, yourSoundtrackTitles) then
-                Isaac.ConsoleOutput(&quot;Successfully added titles of Your Soundtrack to What's That Song?\n&quot;)
+            -- The function returns true if addition was successful, otherwise false
+            if WhatsThatSongAPI:AddSoundtrack(&quot;YourSoundtrackName&quot;, yourSoundtrackTitles) then
+                Isaac.ConsoleOutput(&quot;Successfully added titles of YourSoundtrackName to What's That Song?\n&quot;)
             else
-                Isaac.ConsoleOutput(&quot;Failed to add titles of Your Soundtrack to What's That Song?\n&quot;)
+                Isaac.ConsoleOutput(&quot;Failed to add titles of YourSoundtrackName to What's That Song?\n&quot;)
             end
         end
-    else
-        Isaac.ConsoleOutput(&quot;Soundtrack Menu is required for adding the soundtrack!\n&quot;)
     end
-end)[/code]
-
-All issues, suggestions and other concerns can be brought forth on the mod's [url=https://github.com/AceHanded/TBOI-Whats-That-Song-Mod/issues]GitHub page[/url].</description>
-    <version>1.1.5</version>
+end)[/code]</description>
+    <version>1.1.6</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Tweaks"/>

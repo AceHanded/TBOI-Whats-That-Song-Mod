@@ -52,6 +52,7 @@ local musicTable = {
         "Inner Sanctum",  -- INNER SANCTUM (Soundtrack Overhaul) [RP+ Compatible!] - https://steamcommunity.com/sharedfiles/filedetails/?id=3261943270
         "ReScored",  -- Rescored: Beats To Repent To (An Original Alternate Soundtrack) - https://steamcommunity.com/sharedfiles/filedetails/?id=2521411460
         --"Sacrilege",  -- Binding of Isaac-SACRILEGE Soundtrack - https://steamcommunity.com/sharedfiles/filedetails/?id=2819468633
+        "RYS"
     },
     ["SoundtrackTitles"] = {  -- Song titles of each soundtrack
         ["Rebirth"] = {
@@ -2643,7 +2644,7 @@ local musicTable = {
             "",  -- Game Over (Jingle)
             "Splattie - Peace",  -- Game Over
             "Splattie - You're Already Dead"  -- "Boss (Hush Phase 1)"
-        }--[[,
+        },--[[
         ["Sacrilege"] = {
             "P-Wave - Sacrificial",  -- Basement
             "P-Wave - Penance",  -- Cellar
@@ -2739,7 +2740,103 @@ local musicTable = {
             "",  -- Game Over (Jingle)
             "",  -- Game Over
             "P-Wave - Verity of the Mortal Coil"  -- "Boss (Hush Phase 1)"
-        }]]
+        },]]
+        ["RYS"] = {
+            "pittsbourne - my world",  -- Basement
+            "pittsbourne - destiny",  -- Cellar
+            "pittsbourne - my agony",  -- Burning Basement
+            "pittsbourne - brackwater",  -- Caves
+            "pittsbourne - the overlooked",  -- Catacombs
+            "pittsbourne - backwater",  -- Flooded Caves
+            "pittsbourne - figures in the mist",  -- Depths
+            "pittsbourne - architect's labyrinth",  -- Necropolis
+            "pittsbourne - shapes in the morass",  -- Dank Depths
+            "pittsbourne - umbilical",  -- Womb/Utero
+            "pittsbourne - congenital",  -- Scarred Womb
+            "pittsbourne - stasis",  -- Blue Womb
+            "pittsbourne - peccatum",  -- Sheol
+            "pittsbourne - proverbs 20-11",  -- Cathedral
+            "pittsbourne - dudael",  -- Dark Room
+            "pittsbourne - my kingdom",  -- Chest
+            "pittsbourne - THE END OF THE LINE",  -- Void
+        
+            "pittsbourne - the lost",  -- Library
+            "pittsbourne - topheth",  -- Devil Room
+            "pittsbourne - gifted",  -- Angel Room
+            "pittsbourne - miser",  -- Shop
+            "pittsbourne - !",  -- Arcade
+            "pittsbourne - perturbation",  -- Secret Room
+            "pittsbourne - inbetween",  -- Boss Defeated
+            "pittsbourne - lacero theater",  -- Challenge Fight
+        
+            "pittsbourne - mordax",  -- Boss
+            "pittsbourne - foreigner",  -- Boss (Alt)
+            "pittsbourne - omnipresence",  -- Boss (Mom)
+            "pittsbourne - stop stop stop stop stop stop stop stop",  -- Boss (Mom's Heart)
+            "pittsbourne - denying the light",  -- Boss (Isaac)
+            "pittsbourne - the serpent's grip",  -- Boss (Satan)
+            "pittsbourne - it's me",  -- Boss (The Lamb)
+            "pittsbourne - it's you",  -- Boss (???)
+            "pittsbourne - nothing",  -- Boss (Hush)
+            "pittsbourne - power",  -- Boss (Ultra Greed)
+            "pittsbourne - VANISHING",  -- Boss (Delirium)
+            "pittsbourne - coronation of ire",  -- Boss (Mega Satan)
+        
+            "",  -- Devil Room Find
+            "",  -- Angel Room Find
+            "",  -- Secret Room Find
+            "",  -- Treasure Room Entry 1
+            "",  -- Treasure Room Entry 2
+            "",  -- Treasure Room Entry 3
+            "",  -- Treasure Room Entry 4
+            "",  -- Challenge Entry
+            "",  -- Challenge Outro
+            "",  -- Boss Intro
+            "",  -- Boss Death
+            "",  -- Boss Death (Alt)
+            "",  -- Boss Death (Hush)
+        
+            "pittsbourne - wilted nerves",  -- Utero
+            "pittsbourne - deviating fate",  -- Downpour
+            "pittsbourne - choler",  -- Dross
+            "pittsbourne - raw steel",  -- Mines
+            "pittsbourne - branded earth",  -- Ashpit
+            "pittsbourne - below the walls",  -- Mausoleum
+            "pittsbourne - tower of the wicked",  -- Gehenna
+            "pittsbourne - carci",  -- Corpse
+            "pittsbourne - where love used to be",  -- Home
+                
+            "pittsbourne - echoes of echoes",  -- Mineshaft Ambient
+            "pittsbourne - run",  -- Mineshaft Escape
+            "pittsbourne - longing",  -- Planetarium
+            "pittsbourne - disquietude",  -- Secret Room (Alt)
+            "pittsbourne - panic",  -- Secret Room (Alt Alt)
+                
+            "pittsbourne - falling forever",  -- Boss Rush
+            "",  -- Boss Rush Start
+            "pittsbourne - outbetween",  -- Boss Defeated (Twisted)
+            "",  -- Mom's Shadow Intro
+            "",  -- Strange Door
+            "pittsbourne - our portent?",  -- Echoes Reverse
+                
+            "pittsbourne - excubitor",  -- Boss (Alt Alt)
+            "pittsbourne - vile",  -- Boss (Mother)
+            "",  -- Dogma Intro
+            "pittsbourne - FUNDAMENTAL TRUTH",  -- Boss (Dogma)
+            "pittsbourne - i understand",  -- Boss (Beast)
+            "",  -- Boss Death (Alt Alt)
+            "",  -- Boss Mother Death
+            "",  -- Boss Dogma Death
+            "",  -- Boss Beast Death
+                
+            "pittsbourne - fate deviating",  -- Downpour (Reversed)
+            "pittsbourne - cholera",  -- Dross (Reversed)
+            "pittsbourne - finding your way back",  -- Genesis (Reversed)
+            
+            "",  -- Game Over (Jingle)
+            "pittsbourne - ...",  -- Game Over
+            "pittsbourne - the cycle"  -- "Boss (Hush Phase 1)"
+        }
     },
     ["TrackTypes"] = {  -- Track types, as declared by Soundtrack Menu
         "Basement",

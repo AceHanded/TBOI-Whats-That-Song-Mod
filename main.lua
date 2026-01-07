@@ -145,7 +145,7 @@ else
     ModConfigMenu.AddText(modName, "Info", function() return "(ID: " .. tostring(musicID) .. ")" end)
     ModConfigMenu.AddSpace(modName, "Info")
     ModConfigMenu.AddText(modName, "Info", function() return "What's That Song?" end)
-    ModConfigMenu.AddText(modName, "Info", function() return "V1.1.5" end)
+    ModConfigMenu.AddText(modName, "Info", function() return "V1.1.6" end)
     ModConfigMenu.AddText(modName, "Info", function() return "Courtesy of AceHand" end)
     ModConfigMenu.AddSpace(modName, "Info")
     AddResetButton("Info", "ResetToDefaults", "Resets all configuration fields to their default values.")
@@ -258,6 +258,8 @@ function WhatsThatSong:PopulateMusicIDs()
     -- Resolve default soundtrack
     if ExcelsiorTrackList then
         musicTable.Default = "Excelsior"
+    elseif reyoso then
+        musicTable.Default = "RYS"
     elseif InnerSanctumSoundtrack then
         musicTable.Default = "Inner Sanctum"
     end
